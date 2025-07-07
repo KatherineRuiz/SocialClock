@@ -36,5 +36,10 @@ namespace Vistas.Formularios
             RedondearPanel(pnBienvenida, 40);
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
