@@ -10,3 +10,15 @@ C:\Users\garbr\OneDrive\Escritorio\Social_Clock\Vistas\obj\Debug\Vistas.exe
 C:\Users\garbr\OneDrive\Escritorio\Social_Clock\Vistas\obj\Debug\Vistas.pdb
 C:\Users\garbr\OneDrive\Escritorio\Social_Clock\Vistas\obj\Debug\Vistas.exe.config
 C:\Users\garbr\OneDrive\Escritorio\Social_Clock\Vistas\obj\Debug\Vistas.Formularios.prueba.resources
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\bin\Debug\Vistas.exe.config
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\bin\Debug\Vistas.exe
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\bin\Debug\Vistas.pdb
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\obj\Debug\Vistas.exe.config
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\obj\Debug\Vistas.Formularios.frmInicio.resources
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\obj\Debug\Vistas.Formularios.prueba.resources
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\obj\Debug\Vistas.Properties.Resources.resources
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\obj\Debug\Vistas.csproj.GenerateResource.cache
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\obj\Debug\Vistas.csproj.CoreCompileInputs.cache
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\obj\Debug\Vistas.exe
+C:\Users\garbr\OneDrive\Escritorio\Nueva carpeta\FormulariosHome\Vistas\obj\Debug\Vistas.pdb

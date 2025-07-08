@@ -16,6 +16,7 @@ namespace Vistas.Formularios
         public frmInicio()
         {
             InitializeComponent();
+
         }
 
         private void RedondearPanel(Panel panel, int radio)
@@ -35,9 +36,10 @@ namespace Vistas.Formularios
             RedondearPanel(pnFondo, 50);
             RedondearPanel(pnBienvenida, 40);
 
+
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnInscribir_Click(object sender, EventArgs e)
         {
 
         }
