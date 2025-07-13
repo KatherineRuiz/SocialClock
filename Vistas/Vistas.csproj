@@ -56,11 +56,35 @@
     <Compile Include="Controles\RedondearBoton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Formularios\frmEstudiantesRestirados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEstudiantesRestirados.Designer.cs">
+      <DependentUpon>frmEstudiantesRestirados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInicio1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInicio1.Designer.cs">
+      <DependentUpon>frmInicio1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInicio2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInicio2.Designer.cs">
+      <DependentUpon>frmInicio2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInicio3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInicio3.Designer.cs">
+      <DependentUpon>frmInicio3.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\prueba.cs">
       <SubType>Form</SubType>
@@ -70,8 +94,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmEstudiantesRestirados.resx">
+      <DependentUpon>frmEstudiantesRestirados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInicio1.resx">
+      <DependentUpon>frmInicio1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInicio2.resx">
+      <DependentUpon>frmInicio2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInicio3.resx">
+      <DependentUpon>frmInicio3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\prueba.resx">
       <DependentUpon>prueba.cs</DependentUpon>
@@ -141,6 +177,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

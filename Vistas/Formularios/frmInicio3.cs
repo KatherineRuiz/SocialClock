@@ -11,14 +11,18 @@ using System.Windows.Forms;
 
 namespace Vistas.Formularios
 {
-    public partial class frmInicio : Form
+    public partial class frmInicio3 : Form
     {
-        public frmInicio()
+        public frmInicio3()
         {
             InitializeComponent();
-
         }
 
+        private void frmInicio3_Load(object sender, EventArgs e)
+        {
+            RedondearPanel(pnFondo, 50);
+            RedondearPanel(pnBienvenida, 40);
+        }
         private void RedondearPanel(Panel panel, int radio)
         {
             GraphicsPath path = new GraphicsPath();
@@ -31,19 +35,5 @@ namespace Vistas.Formularios
             panel.Region = new Region(path);
         }
 
-        private void frmInicio_Load(object sender, EventArgs e)
-        {
-            RedondearPanel(pnFondo, 50);
-            RedondearPanel(pnBienvenida, 40);
-
-
-        }
-
-        private void btnInscribir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

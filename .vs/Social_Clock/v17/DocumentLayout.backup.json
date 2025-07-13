@@ -1,30 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\",
+  "WorkspaceRootPath": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|c:\\users\\estudiante\\desktop\\formularioshome\\vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\vistas\\formularios\\frminicio3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\vistas\\formularios\\frminicio2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\vistas\\formularios\\frminicio1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\vistas\\formularios\\frminicio.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\vistas\\formularios\\frmestudiantesrestirados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmestudiantesrestirados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\vistas\\formularios\\frmestudiantesrestirados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmestudiantesrestirados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\formularioshome\\vistas\\formularios\\frminicio.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\vistas\\controles\\redondearboton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\controles\\redondearboton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\formularioshome\\vistas\\formularios\\frminicio3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\formularioshome\\vistas\\formularios\\frminicio3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|c:\\users\\garbr\\onedrive\\escritorio\\formularioshome\\vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\vistas\\formularios\\prueba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\prueba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +54,144 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmInicio.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Formularios\\frmInicio.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio.cs",
-              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Formularios\\frmInicio.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Vistas\\Formularios\\frmInicio.cs [Dise\u00F1o]*",
+              "DocumentIndex": 8,
+              "Title": "frmInicio3.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio3.Designer.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio3.Designer.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio3.Designer.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmInicio3.Designer.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAIwFYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T00:59:32.645Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-13T21:23:30.613Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RedondearBoton.cs",
-              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Controles\\RedondearBoton.cs",
-              "RelativeDocumentMoniker": "Vistas\\Controles\\RedondearBoton.cs",
-              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Controles\\RedondearBoton.cs",
-              "RelativeToolTip": "Vistas\\Controles\\RedondearBoton.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAmwGoAAAA6AAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "frmInicio3.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio3.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio3.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio3.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmInicio3.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T01:04:40.459Z",
+              "WhenOpened": "2025-07-13T21:23:11.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmInicio.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio.Designer.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio.Designer.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio.Designer.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmInicio.Designer.cs",
+              "ViewState": "AgIAAO0BAAAAAAAAAAAIwA0CAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T19:21:07.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmEstudiantesRestirados.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmEstudiantesRestirados.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmEstudiantesRestirados.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmEstudiantesRestirados.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmEstudiantesRestirados.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T05:26:48.025Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "frmInicio.cs",
-              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Formularios\\frmInicio.cs",
+              "Title": "frmEstudiantesRestirados.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmEstudiantesRestirados.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmEstudiantesRestirados.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmEstudiantesRestirados.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmEstudiantesRestirados.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T05:17:21.337Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmInicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio.cs",
-              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Formularios\\frmInicio.cs*",
-              "RelativeToolTip": "Vistas\\Formularios\\frmInicio.cs*",
-              "ViewState": "AgIAABoAAAAAAAAAAAAowC0AAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmInicio.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T02:54:27.962Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmInicio1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio1.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio1.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmInicio1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T23:12:06.892Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmInicio2.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio2.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio2.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmInicio2.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T23:14:47.609Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmInicio3.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio3.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio3.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio3.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Vistas\\Formularios\\frmInicio3.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-12T23:19:15.541Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmInicio.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio.cs",
+              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Formularios\\frmInicio.cs",
+              "RelativeToolTip": "Vistas\\Formularios\\frmInicio.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAowC4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-05T01:17:01.968Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Program.cs",
               "RelativeDocumentMoniker": "Vistas\\Program.cs",
-              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Program.cs",
+              "ToolTip": "C:\\Users\\garbr\\OneDrive\\Escritorio\\FormulariosHome\\Vistas\\Program.cs",
               "RelativeToolTip": "Vistas\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-05T01:02:34.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "prueba.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Formularios\\prueba.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\prueba.cs",
-              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Formularios\\prueba.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Vistas\\Formularios\\prueba.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T03:29:41.674Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmInicio.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Formularios\\frmInicio.Designer.cs",
-              "RelativeDocumentMoniker": "Vistas\\Formularios\\frmInicio.Designer.cs",
-              "ToolTip": "C:\\Users\\Estudiante\\Desktop\\FormulariosHome\\Vistas\\Formularios\\frmInicio.Designer.cs*",
-              "RelativeToolTip": "Vistas\\Formularios\\frmInicio.Designer.cs*",
-              "ViewState": "AgIAAHMCAAAAAAAAAAAIwH8CAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T01:19:19.655Z",
               "EditorCaption": ""
             }
           ]
