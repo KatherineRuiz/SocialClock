@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Modelos;
+using Modelos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +36,18 @@ namespace Vistas.Formularios
         {
             RedondearPanel(pnFondo, 50);
             RedondearPanel(pnBienvenida, 40);
+
+            MostrarEstudiantes();
         }
 
+        //Creamos un metodo para mostrar la informacion de la base de datos 
+        private void MostrarEstudiantes()
+        {
+            dgvPrimerAño.DataSource = null;
+            dgvPrimerAño.DataSource = Estudiante.CargarEstudiantesPrimerAño();
+            {
+
+            }
+        }
     }
 }

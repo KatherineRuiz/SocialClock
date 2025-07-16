@@ -30,32 +30,33 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pnFondo = new System.Windows.Forms.Panel();
+            this.tlpMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAjustes = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
+            this.btnProyecto = new System.Windows.Forms.Button();
+            this.btnEstadistica = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.pnlContenido = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnBienvenida = new System.Windows.Forms.Panel();
+            this.pnlBienvenida = new System.Windows.Forms.Panel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblBienvenida = new System.Windows.Forms.Label();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.txtNie = new System.Windows.Forms.TextBox();
             this.lblNie = new System.Windows.Forms.Label();
-            this.btnInscribir = new Vistas.Clases.RedondearBoton();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCarnet = new System.Windows.Forms.TextBox();
-            this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.lblProyecto = new System.Windows.Forms.Label();
             this.lblCarnet = new System.Windows.Forms.Label();
             this.cbProyecto = new System.Windows.Forms.ComboBox();
+            this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -64,197 +65,234 @@
             this.lblNivelAcademico = new System.Windows.Forms.Label();
             this.lblSección = new System.Windows.Forms.Label();
             this.gbListadoEstudiantes = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnRetirados = new Vistas.Clases.RedondearBoton();
-            this.btnSegundoAño = new Vistas.Clases.RedondearBoton();
-            this.btnTercerAño = new Vistas.Clases.RedondearBoton();
+            this.pnlListadoEstudiantes = new System.Windows.Forms.Panel();
+            this.pnlEspacio1 = new System.Windows.Forms.Panel();
+            this.pnlPrimerAño = new System.Windows.Forms.Panel();
+            this.dgvPrimerAño = new System.Windows.Forms.DataGridView();
+            this.btnInscribir = new Vistas.Clases.RedondearBoton();
+            this.btnEditarPrimero = new Vistas.Clases.RedondearBoton();
             this.btnPrimerAño = new Vistas.Clases.RedondearBoton();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSeundoAño = new Vistas.Clases.RedondearBoton();
+            this.pnlEspacio2 = new System.Windows.Forms.Panel();
+            this.pnlSegundoAño = new System.Windows.Forms.Panel();
+            this.dgvSegundoAño = new System.Windows.Forms.DataGridView();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnTercerAño = new Vistas.Clases.RedondearBoton();
+            this.pnlEspacio3 = new System.Windows.Forms.Panel();
+            this.pnlTercerAño = new System.Windows.Forms.Panel();
+            this.dgvTercerAño = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnEstudiantesRetirados = new Vistas.Clases.RedondearBoton();
+            this.pnlEspacio4 = new System.Windows.Forms.Panel();
+            this.pnlEstudiantesRetirados = new System.Windows.Forms.Panel();
+            this.dgvEstudiantesRetirados = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.pnFondo.SuspendLayout();
+            this.tlpMenu.SuspendLayout();
+            this.pnlContenido.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.pnBienvenida.SuspendLayout();
+            this.pnlBienvenida.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.gbListadoEstudiantes.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
+            this.pnlListadoEstudiantes.SuspendLayout();
+            this.pnlPrimerAño.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrimerAño)).BeginInit();
+            this.pnlSegundoAño.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSegundoAño)).BeginInit();
+            this.pnlTercerAño.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTercerAño)).BeginInit();
+            this.pnlEstudiantesRetirados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantesRetirados)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1755F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pnFondo, 1, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1270F));
+            this.tableLayoutPanel1.Controls.Add(this.tlpMenu, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlContenido, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // tableLayoutPanel2
+            // tlpMenu
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.button4, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.button5, 0, 4);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.14939F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.90175F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.01493F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.31343F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.54229F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1, 743);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tlpMenu.ColumnCount = 1;
+            this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpMenu.Controls.Add(this.btnAjustes, 0, 0);
+            this.tlpMenu.Controls.Add(this.btnInicio, 0, 1);
+            this.tlpMenu.Controls.Add(this.btnProyecto, 0, 2);
+            this.tlpMenu.Controls.Add(this.btnEstadistica, 0, 3);
+            this.tlpMenu.Controls.Add(this.btnSalir, 0, 4);
+            this.tlpMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpMenu.Location = new System.Drawing.Point(3, 3);
+            this.tlpMenu.Name = "tlpMenu";
+            this.tlpMenu.RowCount = 5;
+            this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 136F));
+            this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 198F));
+            this.tlpMenu.Size = new System.Drawing.Size(94, 743);
+            this.tlpMenu.TabIndex = 2;
             // 
-            // button1
+            // btnAjustes
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::Vistas.Properties.Resources.ajustes;
-            this.button1.Location = new System.Drawing.Point(3, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(1, 106);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAjustes.BackColor = System.Drawing.Color.Transparent;
+            this.btnAjustes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAjustes.FlatAppearance.BorderSize = 0;
+            this.btnAjustes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAjustes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAjustes.Image = global::Vistas.Properties.Resources.ajustes;
+            this.btnAjustes.Location = new System.Drawing.Point(3, 3);
+            this.btnAjustes.Name = "btnAjustes";
+            this.btnAjustes.Size = new System.Drawing.Size(88, 142);
+            this.btnAjustes.TabIndex = 0;
+            this.btnAjustes.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnInicio
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::Vistas.Properties.Resources.home;
-            this.button2.Location = new System.Drawing.Point(3, 175);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(1, 75);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Image = global::Vistas.Properties.Resources.home_;
+            this.btnInicio.Location = new System.Drawing.Point(3, 151);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(88, 122);
+            this.btnInicio.TabIndex = 1;
+            this.btnInicio.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnProyecto
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::Vistas.Properties.Resources.proyectos1;
-            this.button3.Location = new System.Drawing.Point(3, 256);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(1, 120);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnProyecto.BackColor = System.Drawing.Color.Transparent;
+            this.btnProyecto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnProyecto.FlatAppearance.BorderSize = 0;
+            this.btnProyecto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnProyecto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProyecto.Image = global::Vistas.Properties.Resources.proyectos1;
+            this.btnProyecto.Location = new System.Drawing.Point(3, 279);
+            this.btnProyecto.Name = "btnProyecto";
+            this.btnProyecto.Size = new System.Drawing.Size(88, 130);
+            this.btnProyecto.TabIndex = 2;
+            this.btnProyecto.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnEstadistica
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::Vistas.Properties.Resources.graficos;
-            this.button4.Location = new System.Drawing.Point(3, 382);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(1, 122);
-            this.button4.TabIndex = 3;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnEstadistica.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEstadistica.FlatAppearance.BorderSize = 0;
+            this.btnEstadistica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEstadistica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEstadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstadistica.Image = global::Vistas.Properties.Resources.graficos;
+            this.btnEstadistica.Location = new System.Drawing.Point(3, 415);
+            this.btnEstadistica.Name = "btnEstadistica";
+            this.btnEstadistica.Size = new System.Drawing.Size(88, 127);
+            this.btnEstadistica.TabIndex = 3;
+            this.btnEstadistica.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnSalir
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
-            this.button5.Image = global::Vistas.Properties.Resources.salir;
-            this.button5.Location = new System.Drawing.Point(3, 650);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(1, 90);
-            this.button5.TabIndex = 4;
-            this.button5.Text = ".";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Image = global::Vistas.Properties.Resources.salir;
+            this.btnSalir.Location = new System.Drawing.Point(36, 671);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(55, 69);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
-            // pnFondo
+            // pnlContenido
             // 
-            this.pnFondo.BackColor = System.Drawing.Color.White;
-            this.pnFondo.Controls.Add(this.tableLayoutPanel3);
-            this.pnFondo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnFondo.Location = new System.Drawing.Point(-380, 20);
-            this.pnFondo.Margin = new System.Windows.Forms.Padding(5, 20, 20, 20);
-            this.pnFondo.Name = "pnFondo";
-            this.pnFondo.Size = new System.Drawing.Size(1730, 709);
-            this.pnFondo.TabIndex = 1;
+            this.pnlContenido.AutoScroll = true;
+            this.pnlContenido.AutoScrollMargin = new System.Drawing.Size(10, 10);
+            this.pnlContenido.AutoScrollMinSize = new System.Drawing.Size(0, 2500);
+            this.pnlContenido.BackColor = System.Drawing.Color.White;
+            this.pnlContenido.Controls.Add(this.tableLayoutPanel3);
+            this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlContenido.Location = new System.Drawing.Point(105, 20);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(5, 20, 20, 20);
+            this.pnlContenido.Name = "pnlContenido";
+            this.pnlContenido.Size = new System.Drawing.Size(1245, 657);
+            this.pnlContenido.TabIndex = 0;
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.pnBienvenida, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pnlBienvenida, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.gbListadoEstudiantes, 0, 2);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.94376F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.05624F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 422F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1730, 709);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.7855F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59.2145F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 2179F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1228, 2507);
+            this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // pnBienvenida
+            // pnlBienvenida
             // 
-            this.pnBienvenida.BackgroundImage = global::Vistas.Properties.Resources.fondo;
-            this.pnBienvenida.Controls.Add(this.tableLayoutPanel10);
-            this.pnBienvenida.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnBienvenida.Location = new System.Drawing.Point(10, 10);
-            this.pnBienvenida.Margin = new System.Windows.Forms.Padding(10);
-            this.pnBienvenida.Name = "pnBienvenida";
-            this.pnBienvenida.Size = new System.Drawing.Size(1710, 63);
-            this.pnBienvenida.TabIndex = 0;
+            this.pnlBienvenida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
+            this.pnlBienvenida.Controls.Add(this.tableLayoutPanel10);
+            this.pnlBienvenida.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlBienvenida.Location = new System.Drawing.Point(15, 15);
+            this.pnlBienvenida.Margin = new System.Windows.Forms.Padding(15);
+            this.pnlBienvenida.Name = "pnlBienvenida";
+            this.pnlBienvenida.Size = new System.Drawing.Size(1198, 103);
+            this.pnlBienvenida.TabIndex = 3;
             // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel10.ColumnCount = 1;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.txtBusqueda, 0, 1);
-            this.tableLayoutPanel10.Controls.Add(this.lblBienvenida, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1710, 63);
-            this.tableLayoutPanel10.TabIndex = 0;
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1198, 103);
+            this.tableLayoutPanel10.TabIndex = 1;
             // 
-            // txtBusqueda
+            // tableLayoutPanel2
             // 
-            this.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBusqueda.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.ForeColor = System.Drawing.Color.Silver;
-            this.txtBusqueda.Location = new System.Drawing.Point(255, 34);
-            this.txtBusqueda.Multiline = true;
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(1199, 26);
-            this.txtBusqueda.TabIndex = 1;
-            this.txtBusqueda.Text = "Ingrese el carnet del estudiante";
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.lblBienvenida, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1192, 45);
+            this.tableLayoutPanel2.TabIndex = 3;
             // 
             // lblBienvenida
             // 
@@ -263,12 +301,24 @@
             this.lblBienvenida.BackColor = System.Drawing.Color.Transparent;
             this.lblBienvenida.Font = new System.Drawing.Font("Perpetua Titling MT", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblBienvenida.Location = new System.Drawing.Point(423, 0);
+            this.lblBienvenida.Location = new System.Drawing.Point(164, 0);
             this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(863, 31);
-            this.lblBienvenida.TabIndex = 0;
+            this.lblBienvenida.Size = new System.Drawing.Size(863, 45);
+            this.lblBienvenida.TabIndex = 1;
             this.lblBienvenida.Text = "Administración de servicio social";
             this.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBusqueda.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.ForeColor = System.Drawing.Color.Silver;
+            this.txtBusqueda.Location = new System.Drawing.Point(157, 64);
+            this.txtBusqueda.Multiline = true;
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(884, 26);
+            this.txtBusqueda.TabIndex = 1;
+            this.txtBusqueda.Text = "Ingrese el carnet del estudiante";
             // 
             // groupBox1
             // 
@@ -276,10 +326,10 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox1.Location = new System.Drawing.Point(30, 113);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(30);
+            this.groupBox1.Location = new System.Drawing.Point(30, 143);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(30, 10, 30, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1670, 143);
+            this.groupBox1.Size = new System.Drawing.Size(1168, 174);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inscribir estudiante";
@@ -287,9 +337,9 @@
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.25F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.75F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 544F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.87978F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.12022F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 247F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel7, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
@@ -298,7 +348,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1664, 110);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1162, 141);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel7
@@ -306,14 +356,14 @@
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.btnInscribir, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.panel1, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(1123, 3);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(918, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.72043F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.87097F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(538, 104);
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.35294F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67.64706F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(241, 135);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
             // tableLayoutPanel8
@@ -328,15 +378,15 @@
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(532, 44);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(235, 37);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // txtNie
             // 
             this.txtNie.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNie.Location = new System.Drawing.Point(180, 5);
+            this.txtNie.Location = new System.Drawing.Point(80, 3);
             this.txtNie.Name = "txtNie";
-            this.txtNie.Size = new System.Drawing.Size(346, 34);
+            this.txtNie.Size = new System.Drawing.Size(151, 34);
             this.txtNie.TabIndex = 8;
             // 
             // lblNie
@@ -345,69 +395,51 @@
             this.lblNie.AutoSize = true;
             this.lblNie.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNie.ForeColor = System.Drawing.Color.Black;
-            this.lblNie.Location = new System.Drawing.Point(54, 4);
+            this.lblNie.Location = new System.Drawing.Point(5, 0);
             this.lblNie.Name = "lblNie";
             this.lblNie.Size = new System.Drawing.Size(67, 36);
             this.lblNie.TabIndex = 4;
             this.lblNie.Text = "NIE:";
             // 
-            // btnInscribir
+            // panel1
             // 
-            this.btnInscribir.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnInscribir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(96)))), ((int)(((byte)(128)))));
-            this.btnInscribir.BorderColor = System.Drawing.Color.Transparent;
-            this.btnInscribir.BorderRadius = 30;
-            this.btnInscribir.BorderSize = 0;
-            this.btnInscribir.FlatAppearance.BorderSize = 0;
-            this.btnInscribir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInscribir.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInscribir.ForeColor = System.Drawing.Color.White;
-            this.btnInscribir.Location = new System.Drawing.Point(127, 53);
-            this.btnInscribir.Name = "btnInscribir";
-            this.btnInscribir.Size = new System.Drawing.Size(283, 48);
-            this.btnInscribir.TabIndex = 1;
-            this.btnInscribir.Text = "Inscribir ";
-            this.btnInscribir.UseVisualStyleBackColor = false;
-            this.btnInscribir.Click += new System.EventHandler(this.btnInscribir_Click);
+            this.panel1.Controls.Add(this.btnInscribir);
+            this.panel1.Controls.Add(this.btnEditarPrimero);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(235, 86);
+            this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 429F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tableLayoutPanel6.Controls.Add(this.txtCarnet, 1, 2);
-            this.tableLayoutPanel6.Controls.Add(this.cbEspecialidad, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.lblEspecialidad, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.lblProyecto, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.lblCarnet, 0, 2);
             this.tableLayoutPanel6.Controls.Add(this.cbProyecto, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.cbEspecialidad, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(409, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(496, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 3;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.72043F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.87097F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.4086F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(708, 104);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(416, 135);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // txtCarnet
             // 
-            this.txtCarnet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCarnet.Location = new System.Drawing.Point(317, 70);
+            this.txtCarnet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCarnet.Location = new System.Drawing.Point(217, 90);
             this.txtCarnet.Name = "txtCarnet";
-            this.txtCarnet.Size = new System.Drawing.Size(352, 34);
+            this.txtCarnet.Size = new System.Drawing.Size(196, 34);
             this.txtCarnet.TabIndex = 7;
-            // 
-            // cbEspecialidad
-            // 
-            this.cbEspecialidad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbEspecialidad.FormattingEnabled = true;
-            this.cbEspecialidad.Location = new System.Drawing.Point(315, 5);
-            this.cbEspecialidad.Name = "cbEspecialidad";
-            this.cbEspecialidad.Size = new System.Drawing.Size(356, 35);
-            this.cbEspecialidad.TabIndex = 5;
             // 
             // lblEspecialidad
             // 
@@ -415,9 +447,9 @@
             this.lblEspecialidad.AutoSize = true;
             this.lblEspecialidad.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecialidad.ForeColor = System.Drawing.Color.Black;
-            this.lblEspecialidad.Location = new System.Drawing.Point(36, 0);
+            this.lblEspecialidad.Location = new System.Drawing.Point(3, 3);
             this.lblEspecialidad.Name = "lblEspecialidad";
-            this.lblEspecialidad.Size = new System.Drawing.Size(207, 32);
+            this.lblEspecialidad.Size = new System.Drawing.Size(207, 36);
             this.lblEspecialidad.TabIndex = 1;
             this.lblEspecialidad.Text = "Especialidad:";
             // 
@@ -427,9 +459,9 @@
             this.lblProyecto.AutoSize = true;
             this.lblProyecto.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProyecto.ForeColor = System.Drawing.Color.Black;
-            this.lblProyecto.Location = new System.Drawing.Point(65, 32);
+            this.lblProyecto.Location = new System.Drawing.Point(32, 46);
             this.lblProyecto.Name = "lblProyecto";
-            this.lblProyecto.Size = new System.Drawing.Size(149, 35);
+            this.lblProyecto.Size = new System.Drawing.Size(149, 36);
             this.lblProyecto.TabIndex = 2;
             this.lblProyecto.Text = "Proyecto:";
             // 
@@ -439,7 +471,7 @@
             this.lblCarnet.AutoSize = true;
             this.lblCarnet.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarnet.ForeColor = System.Drawing.Color.Black;
-            this.lblCarnet.Location = new System.Drawing.Point(78, 67);
+            this.lblCarnet.Location = new System.Drawing.Point(46, 93);
             this.lblCarnet.Name = "lblCarnet";
             this.lblCarnet.Size = new System.Drawing.Size(122, 36);
             this.lblCarnet.TabIndex = 3;
@@ -447,18 +479,27 @@
             // 
             // cbProyecto
             // 
-            this.cbProyecto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbProyecto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbProyecto.FormattingEnabled = true;
-            this.cbProyecto.Location = new System.Drawing.Point(317, 39);
+            this.cbProyecto.Location = new System.Drawing.Point(217, 45);
             this.cbProyecto.Name = "cbProyecto";
-            this.cbProyecto.Size = new System.Drawing.Size(352, 35);
+            this.cbProyecto.Size = new System.Drawing.Size(196, 35);
             this.cbProyecto.TabIndex = 6;
+            // 
+            // cbEspecialidad
+            // 
+            this.cbEspecialidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbEspecialidad.FormattingEnabled = true;
+            this.cbEspecialidad.Location = new System.Drawing.Point(217, 3);
+            this.cbEspecialidad.Name = "cbEspecialidad";
+            this.cbEspecialidad.Size = new System.Drawing.Size(196, 35);
+            this.cbEspecialidad.TabIndex = 5;
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 557F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
             this.tableLayoutPanel5.Controls.Add(this.lblNombre, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.txtNombre, 1, 2);
             this.tableLayoutPanel5.Controls.Add(this.cbNivelAcademico, 1, 0);
@@ -472,7 +513,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.72043F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.87097F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.4086F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(400, 104);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(487, 135);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // lblNombre
@@ -481,36 +522,36 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(3, 67);
+            this.lblNombre.Location = new System.Drawing.Point(70, 93);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(1, 36);
+            this.lblNombre.Size = new System.Drawing.Size(138, 36);
             this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "Nombre:";
             // 
             // txtNombre
             // 
-            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.Location = new System.Drawing.Point(7, 70);
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombre.Location = new System.Drawing.Point(282, 90);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(229, 34);
+            this.txtNombre.Size = new System.Drawing.Size(202, 34);
             this.txtNombre.TabIndex = 6;
             // 
             // cbNivelAcademico
             // 
-            this.cbNivelAcademico.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbNivelAcademico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbNivelAcademico.FormattingEnabled = true;
-            this.cbNivelAcademico.Location = new System.Drawing.Point(7, 5);
+            this.cbNivelAcademico.Location = new System.Drawing.Point(282, 3);
             this.cbNivelAcademico.Name = "cbNivelAcademico";
-            this.cbNivelAcademico.Size = new System.Drawing.Size(229, 35);
+            this.cbNivelAcademico.Size = new System.Drawing.Size(202, 35);
             this.cbNivelAcademico.TabIndex = 4;
             // 
             // cbSeccion
             // 
-            this.cbSeccion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbSeccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSeccion.FormattingEnabled = true;
-            this.cbSeccion.Location = new System.Drawing.Point(7, 39);
+            this.cbSeccion.Location = new System.Drawing.Point(282, 45);
             this.cbSeccion.Name = "cbSeccion";
-            this.cbSeccion.Size = new System.Drawing.Size(229, 35);
+            this.cbSeccion.Size = new System.Drawing.Size(202, 35);
             this.cbSeccion.TabIndex = 5;
             // 
             // lblNivelAcademico
@@ -519,9 +560,9 @@
             this.lblNivelAcademico.AutoSize = true;
             this.lblNivelAcademico.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNivelAcademico.ForeColor = System.Drawing.Color.Black;
-            this.lblNivelAcademico.Location = new System.Drawing.Point(3, 0);
+            this.lblNivelAcademico.Location = new System.Drawing.Point(4, 3);
             this.lblNivelAcademico.Name = "lblNivelAcademico";
-            this.lblNivelAcademico.Size = new System.Drawing.Size(1, 32);
+            this.lblNivelAcademico.Size = new System.Drawing.Size(271, 36);
             this.lblNivelAcademico.TabIndex = 1;
             this.lblNivelAcademico.Text = "Nivel académico:";
             // 
@@ -531,128 +572,311 @@
             this.lblSección.AutoSize = true;
             this.lblSección.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSección.ForeColor = System.Drawing.Color.Black;
-            this.lblSección.Location = new System.Drawing.Point(3, 32);
+            this.lblSección.Location = new System.Drawing.Point(71, 46);
             this.lblSección.Name = "lblSección";
-            this.lblSección.Size = new System.Drawing.Size(1, 35);
+            this.lblSección.Size = new System.Drawing.Size(137, 36);
             this.lblSección.TabIndex = 2;
             this.lblSección.Text = "Sección:";
             // 
             // gbListadoEstudiantes
             // 
-            this.gbListadoEstudiantes.Controls.Add(this.tableLayoutPanel9);
+            this.gbListadoEstudiantes.Controls.Add(this.pnlListadoEstudiantes);
             this.gbListadoEstudiantes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbListadoEstudiantes.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbListadoEstudiantes.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.gbListadoEstudiantes.Location = new System.Drawing.Point(30, 316);
-            this.gbListadoEstudiantes.Margin = new System.Windows.Forms.Padding(30);
+            this.gbListadoEstudiantes.Location = new System.Drawing.Point(30, 337);
+            this.gbListadoEstudiantes.Margin = new System.Windows.Forms.Padding(30, 10, 30, 10);
             this.gbListadoEstudiantes.Name = "gbListadoEstudiantes";
-            this.gbListadoEstudiantes.Size = new System.Drawing.Size(1670, 363);
+            this.gbListadoEstudiantes.Padding = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.gbListadoEstudiantes.Size = new System.Drawing.Size(1168, 2160);
             this.gbListadoEstudiantes.TabIndex = 2;
             this.gbListadoEstudiantes.TabStop = false;
             this.gbListadoEstudiantes.Text = "Listado de estudiantes";
             // 
-            // tableLayoutPanel9
+            // pnlListadoEstudiantes
             // 
-            this.tableLayoutPanel9.ColumnCount = 1;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Controls.Add(this.btnRetirados, 0, 3);
-            this.tableLayoutPanel9.Controls.Add(this.btnSegundoAño, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.btnTercerAño, 0, 2);
-            this.tableLayoutPanel9.Controls.Add(this.btnPrimerAño, 0, 0);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 30);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 4;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.75758F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.60606F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1664, 330);
-            this.tableLayoutPanel9.TabIndex = 0;
+            this.pnlListadoEstudiantes.Controls.Add(this.pnlEstudiantesRetirados);
+            this.pnlListadoEstudiantes.Controls.Add(this.pnlEspacio4);
+            this.pnlListadoEstudiantes.Controls.Add(this.btnEstudiantesRetirados);
+            this.pnlListadoEstudiantes.Controls.Add(this.panel5);
+            this.pnlListadoEstudiantes.Controls.Add(this.pnlTercerAño);
+            this.pnlListadoEstudiantes.Controls.Add(this.pnlEspacio3);
+            this.pnlListadoEstudiantes.Controls.Add(this.btnTercerAño);
+            this.pnlListadoEstudiantes.Controls.Add(this.panel3);
+            this.pnlListadoEstudiantes.Controls.Add(this.pnlSegundoAño);
+            this.pnlListadoEstudiantes.Controls.Add(this.pnlEspacio2);
+            this.pnlListadoEstudiantes.Controls.Add(this.btnSeundoAño);
+            this.pnlListadoEstudiantes.Controls.Add(this.panel2);
+            this.pnlListadoEstudiantes.Controls.Add(this.pnlPrimerAño);
+            this.pnlListadoEstudiantes.Controls.Add(this.pnlEspacio1);
+            this.pnlListadoEstudiantes.Controls.Add(this.btnPrimerAño);
+            this.pnlListadoEstudiantes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlListadoEstudiantes.Location = new System.Drawing.Point(10, 30);
+            this.pnlListadoEstudiantes.Name = "pnlListadoEstudiantes";
+            this.pnlListadoEstudiantes.Size = new System.Drawing.Size(1148, 2087);
+            this.pnlListadoEstudiantes.TabIndex = 0;
             // 
-            // btnRetirados
+            // pnlEspacio1
             // 
-            this.btnRetirados.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRetirados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(96)))), ((int)(((byte)(128)))));
-            this.btnRetirados.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnRetirados.BorderRadius = 30;
-            this.btnRetirados.BorderSize = 0;
-            this.btnRetirados.FlatAppearance.BorderSize = 0;
-            this.btnRetirados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRetirados.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRetirados.ForeColor = System.Drawing.Color.White;
-            this.btnRetirados.Location = new System.Drawing.Point(604, 275);
-            this.btnRetirados.Name = "btnRetirados";
-            this.btnRetirados.Size = new System.Drawing.Size(455, 47);
-            this.btnRetirados.TabIndex = 4;
-            this.btnRetirados.Text = "ESTUDIANTES RETIRADOS";
-            this.btnRetirados.UseVisualStyleBackColor = false;
+            this.pnlEspacio1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEspacio1.Location = new System.Drawing.Point(0, 69);
+            this.pnlEspacio1.Name = "pnlEspacio1";
+            this.pnlEspacio1.Size = new System.Drawing.Size(1148, 11);
+            this.pnlEspacio1.TabIndex = 2;
             // 
-            // btnSegundoAño
+            // pnlPrimerAño
             // 
-            this.btnSegundoAño.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSegundoAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(224)))));
-            this.btnSegundoAño.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnSegundoAño.BorderRadius = 60;
-            this.btnSegundoAño.BorderSize = 0;
-            this.btnSegundoAño.FlatAppearance.BorderSize = 0;
-            this.btnSegundoAño.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSegundoAño.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSegundoAño.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSegundoAño.Image = global::Vistas.Properties.Resources.segundo;
-            this.btnSegundoAño.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSegundoAño.Location = new System.Drawing.Point(77, 103);
-            this.btnSegundoAño.Name = "btnSegundoAño";
-            this.btnSegundoAño.Size = new System.Drawing.Size(1510, 68);
-            this.btnSegundoAño.TabIndex = 1;
-            this.btnSegundoAño.Text = "Segundo año";
-            this.btnSegundoAño.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSegundoAño.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSegundoAño.UseVisualStyleBackColor = false;
+            this.pnlPrimerAño.Controls.Add(this.dgvPrimerAño);
+            this.pnlPrimerAño.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlPrimerAño.Location = new System.Drawing.Point(0, 80);
+            this.pnlPrimerAño.Name = "pnlPrimerAño";
+            this.pnlPrimerAño.Size = new System.Drawing.Size(1148, 475);
+            this.pnlPrimerAño.TabIndex = 4;
             // 
-            // btnTercerAño
+            // dgvPrimerAño
             // 
-            this.btnTercerAño.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTercerAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
-            this.btnTercerAño.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnTercerAño.BorderRadius = 60;
-            this.btnTercerAño.BorderSize = 0;
-            this.btnTercerAño.FlatAppearance.BorderSize = 0;
-            this.btnTercerAño.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTercerAño.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTercerAño.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnTercerAño.Image = global::Vistas.Properties.Resources.tercero;
-            this.btnTercerAño.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTercerAño.Location = new System.Drawing.Point(77, 189);
-            this.btnTercerAño.Name = "btnTercerAño";
-            this.btnTercerAño.Size = new System.Drawing.Size(1510, 68);
-            this.btnTercerAño.TabIndex = 2;
-            this.btnTercerAño.Text = "Tercer año";
-            this.btnTercerAño.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTercerAño.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTercerAño.UseVisualStyleBackColor = false;
+            this.dgvPrimerAño.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPrimerAño.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPrimerAño.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvPrimerAño.Location = new System.Drawing.Point(0, 0);
+            this.dgvPrimerAño.Margin = new System.Windows.Forms.Padding(20);
+            this.dgvPrimerAño.Name = "dgvPrimerAño";
+            this.dgvPrimerAño.Size = new System.Drawing.Size(1148, 475);
+            this.dgvPrimerAño.TabIndex = 3;
+            // 
+            // btnInscribir
+            // 
+            this.btnInscribir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(96)))), ((int)(((byte)(128)))));
+            this.btnInscribir.BorderColor = System.Drawing.Color.Transparent;
+            this.btnInscribir.BorderRadius = 30;
+            this.btnInscribir.BorderSize = 0;
+            this.btnInscribir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInscribir.FlatAppearance.BorderSize = 0;
+            this.btnInscribir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInscribir.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInscribir.ForeColor = System.Drawing.Color.White;
+            this.btnInscribir.Location = new System.Drawing.Point(0, 0);
+            this.btnInscribir.Margin = new System.Windows.Forms.Padding(5);
+            this.btnInscribir.Name = "btnInscribir";
+            this.btnInscribir.Size = new System.Drawing.Size(235, 47);
+            this.btnInscribir.TabIndex = 2;
+            this.btnInscribir.Text = "Inscribir ";
+            this.btnInscribir.UseVisualStyleBackColor = false;
+            // 
+            // btnEditarPrimero
+            // 
+            this.btnEditarPrimero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
+            this.btnEditarPrimero.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnEditarPrimero.BorderRadius = 30;
+            this.btnEditarPrimero.BorderSize = 0;
+            this.btnEditarPrimero.FlatAppearance.BorderSize = 0;
+            this.btnEditarPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarPrimero.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarPrimero.ForeColor = System.Drawing.Color.White;
+            this.btnEditarPrimero.Image = global::Vistas.Properties.Resources.editar;
+            this.btnEditarPrimero.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarPrimero.Location = new System.Drawing.Point(101, 48);
+            this.btnEditarPrimero.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            this.btnEditarPrimero.Name = "btnEditarPrimero";
+            this.btnEditarPrimero.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEditarPrimero.Size = new System.Drawing.Size(134, 38);
+            this.btnEditarPrimero.TabIndex = 4;
+            this.btnEditarPrimero.Text = "Editar";
+            this.btnEditarPrimero.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditarPrimero.UseVisualStyleBackColor = false;
             // 
             // btnPrimerAño
             // 
-            this.btnPrimerAño.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrimerAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(232)))), ((int)(((byte)(235)))));
             this.btnPrimerAño.BorderColor = System.Drawing.Color.Aquamarine;
             this.btnPrimerAño.BorderRadius = 60;
             this.btnPrimerAño.BorderSize = 0;
+            this.btnPrimerAño.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPrimerAño.FlatAppearance.BorderSize = 0;
             this.btnPrimerAño.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrimerAño.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrimerAño.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnPrimerAño.Image = global::Vistas.Properties.Resources.primero;
             this.btnPrimerAño.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrimerAño.Location = new System.Drawing.Point(77, 14);
+            this.btnPrimerAño.Location = new System.Drawing.Point(0, 0);
+            this.btnPrimerAño.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.btnPrimerAño.Name = "btnPrimerAño";
-            this.btnPrimerAño.Size = new System.Drawing.Size(1510, 68);
-            this.btnPrimerAño.TabIndex = 0;
+            this.btnPrimerAño.Size = new System.Drawing.Size(1148, 69);
+            this.btnPrimerAño.TabIndex = 1;
             this.btnPrimerAño.Text = "Primer año";
             this.btnPrimerAño.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrimerAño.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrimerAño.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 555);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1148, 17);
+            this.panel2.TabIndex = 5;
+            // 
+            // btnSeundoAño
+            // 
+            this.btnSeundoAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(224)))));
+            this.btnSeundoAño.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnSeundoAño.BorderRadius = 60;
+            this.btnSeundoAño.BorderSize = 0;
+            this.btnSeundoAño.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSeundoAño.FlatAppearance.BorderSize = 0;
+            this.btnSeundoAño.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeundoAño.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeundoAño.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSeundoAño.Image = global::Vistas.Properties.Resources.segundo;
+            this.btnSeundoAño.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeundoAño.Location = new System.Drawing.Point(0, 572);
+            this.btnSeundoAño.Name = "btnSeundoAño";
+            this.btnSeundoAño.Size = new System.Drawing.Size(1148, 68);
+            this.btnSeundoAño.TabIndex = 6;
+            this.btnSeundoAño.Text = "Segundo año";
+            this.btnSeundoAño.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSeundoAño.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSeundoAño.UseVisualStyleBackColor = false;
+            // 
+            // pnlEspacio2
+            // 
+            this.pnlEspacio2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEspacio2.Location = new System.Drawing.Point(0, 640);
+            this.pnlEspacio2.Name = "pnlEspacio2";
+            this.pnlEspacio2.Size = new System.Drawing.Size(1148, 12);
+            this.pnlEspacio2.TabIndex = 7;
+            // 
+            // pnlSegundoAño
+            // 
+            this.pnlSegundoAño.Controls.Add(this.dgvSegundoAño);
+            this.pnlSegundoAño.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSegundoAño.Location = new System.Drawing.Point(0, 652);
+            this.pnlSegundoAño.Name = "pnlSegundoAño";
+            this.pnlSegundoAño.Size = new System.Drawing.Size(1148, 475);
+            this.pnlSegundoAño.TabIndex = 8;
+            // 
+            // dgvSegundoAño
+            // 
+            this.dgvSegundoAño.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSegundoAño.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSegundoAño.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvSegundoAño.Location = new System.Drawing.Point(0, 0);
+            this.dgvSegundoAño.Margin = new System.Windows.Forms.Padding(20);
+            this.dgvSegundoAño.Name = "dgvSegundoAño";
+            this.dgvSegundoAño.Size = new System.Drawing.Size(1148, 475);
+            this.dgvSegundoAño.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 1127);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1148, 17);
+            this.panel3.TabIndex = 9;
+            // 
+            // btnTercerAño
+            // 
+            this.btnTercerAño.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
+            this.btnTercerAño.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnTercerAño.BorderRadius = 60;
+            this.btnTercerAño.BorderSize = 0;
+            this.btnTercerAño.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTercerAño.FlatAppearance.BorderSize = 0;
+            this.btnTercerAño.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTercerAño.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTercerAño.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnTercerAño.Image = global::Vistas.Properties.Resources.tercero;
+            this.btnTercerAño.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTercerAño.Location = new System.Drawing.Point(0, 1144);
+            this.btnTercerAño.Name = "btnTercerAño";
+            this.btnTercerAño.Size = new System.Drawing.Size(1148, 68);
+            this.btnTercerAño.TabIndex = 10;
+            this.btnTercerAño.Text = "Tercer año";
+            this.btnTercerAño.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTercerAño.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTercerAño.UseVisualStyleBackColor = false;
+            // 
+            // pnlEspacio3
+            // 
+            this.pnlEspacio3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEspacio3.Location = new System.Drawing.Point(0, 1212);
+            this.pnlEspacio3.Name = "pnlEspacio3";
+            this.pnlEspacio3.Size = new System.Drawing.Size(1148, 12);
+            this.pnlEspacio3.TabIndex = 11;
+            // 
+            // pnlTercerAño
+            // 
+            this.pnlTercerAño.Controls.Add(this.dgvTercerAño);
+            this.pnlTercerAño.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTercerAño.Location = new System.Drawing.Point(0, 1224);
+            this.pnlTercerAño.Name = "pnlTercerAño";
+            this.pnlTercerAño.Size = new System.Drawing.Size(1148, 475);
+            this.pnlTercerAño.TabIndex = 12;
+            // 
+            // dgvTercerAño
+            // 
+            this.dgvTercerAño.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTercerAño.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTercerAño.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvTercerAño.Location = new System.Drawing.Point(0, 0);
+            this.dgvTercerAño.Margin = new System.Windows.Forms.Padding(20);
+            this.dgvTercerAño.Name = "dgvTercerAño";
+            this.dgvTercerAño.Size = new System.Drawing.Size(1148, 475);
+            this.dgvTercerAño.TabIndex = 3;
+            // 
+            // panel5
+            // 
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 1699);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1148, 17);
+            this.panel5.TabIndex = 13;
+            // 
+            // btnEstudiantesRetirados
+            // 
+            this.btnEstudiantesRetirados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(96)))), ((int)(((byte)(128)))));
+            this.btnEstudiantesRetirados.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnEstudiantesRetirados.BorderRadius = 30;
+            this.btnEstudiantesRetirados.BorderSize = 0;
+            this.btnEstudiantesRetirados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEstudiantesRetirados.FlatAppearance.BorderSize = 0;
+            this.btnEstudiantesRetirados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstudiantesRetirados.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstudiantesRetirados.ForeColor = System.Drawing.Color.White;
+            this.btnEstudiantesRetirados.Location = new System.Drawing.Point(0, 1716);
+            this.btnEstudiantesRetirados.Name = "btnEstudiantesRetirados";
+            this.btnEstudiantesRetirados.Size = new System.Drawing.Size(1148, 50);
+            this.btnEstudiantesRetirados.TabIndex = 14;
+            this.btnEstudiantesRetirados.Text = "ESTUDIANTES RETIRADOS";
+            this.btnEstudiantesRetirados.UseVisualStyleBackColor = false;
+            // 
+            // pnlEspacio4
+            // 
+            this.pnlEspacio4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEspacio4.Location = new System.Drawing.Point(0, 1766);
+            this.pnlEspacio4.Name = "pnlEspacio4";
+            this.pnlEspacio4.Size = new System.Drawing.Size(1148, 17);
+            this.pnlEspacio4.TabIndex = 15;
+            // 
+            // pnlEstudiantesRetirados
+            // 
+            this.pnlEstudiantesRetirados.Controls.Add(this.dgvEstudiantesRetirados);
+            this.pnlEstudiantesRetirados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEstudiantesRetirados.Location = new System.Drawing.Point(0, 1783);
+            this.pnlEstudiantesRetirados.Name = "pnlEstudiantesRetirados";
+            this.pnlEstudiantesRetirados.Size = new System.Drawing.Size(1148, 304);
+            this.pnlEstudiantesRetirados.TabIndex = 16;
+            // 
+            // dgvEstudiantesRetirados
+            // 
+            this.dgvEstudiantesRetirados.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(96)))), ((int)(((byte)(128)))));
+            this.dgvEstudiantesRetirados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstudiantesRetirados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEstudiantesRetirados.Location = new System.Drawing.Point(0, 0);
+            this.dgvEstudiantesRetirados.Margin = new System.Windows.Forms.Padding(20);
+            this.dgvEstudiantesRetirados.Name = "dgvEstudiantesRetirados";
+            this.dgvEstudiantesRetirados.Size = new System.Drawing.Size(1148, 304);
+            this.dgvEstudiantesRetirados.TabIndex = 3;
             // 
             // frmInicio
             // 
@@ -666,23 +890,34 @@
             this.Text = "frmInicio";
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.pnFondo.ResumeLayout(false);
+            this.tlpMenu.ResumeLayout(false);
+            this.pnlContenido.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.pnBienvenida.ResumeLayout(false);
+            this.pnlBienvenida.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.gbListadoEstudiantes.ResumeLayout(false);
-            this.tableLayoutPanel9.ResumeLayout(false);
+            this.pnlListadoEstudiantes.ResumeLayout(false);
+            this.pnlPrimerAño.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrimerAño)).EndInit();
+            this.pnlSegundoAño.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSegundoAño)).EndInit();
+            this.pnlTercerAño.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTercerAño)).EndInit();
+            this.pnlEstudiantesRetirados.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantesRetirados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -690,45 +925,62 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel pnFondo;
+        private System.Windows.Forms.TableLayoutPanel tlpMenu;
+        private System.Windows.Forms.Button btnAjustes;
+        private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Button btnProyecto;
+        private System.Windows.Forms.Button btnEstadistica;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel pnlContenido;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Panel pnBienvenida;
+        private System.Windows.Forms.Panel pnlBienvenida;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lblBienvenida;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Label lblNivelAcademico;
-        private System.Windows.Forms.Label lblSección;
-        private System.Windows.Forms.Label lblEspecialidad;
-        private System.Windows.Forms.Label lblProyecto;
-        private System.Windows.Forms.Label lblCarnet;
-        private System.Windows.Forms.ComboBox cbSeccion;
-        private System.Windows.Forms.ComboBox cbNivelAcademico;
-        private System.Windows.Forms.TextBox txtCarnet;
-        private System.Windows.Forms.ComboBox cbProyecto;
-        private System.Windows.Forms.ComboBox cbEspecialidad;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TextBox txtNie;
         private System.Windows.Forms.Label lblNie;
-        private Clases.RedondearBoton btnInscribir;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.GroupBox gbListadoEstudiantes;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private Clases.RedondearBoton btnPrimerAño;
-        private Clases.RedondearBoton btnSegundoAño;
-        private Clases.RedondearBoton btnTercerAño;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Clases.RedondearBoton btnRetirados;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TextBox txtCarnet;
+        private System.Windows.Forms.Label lblEspecialidad;
+        private System.Windows.Forms.Label lblProyecto;
+        private System.Windows.Forms.Label lblCarnet;
+        private System.Windows.Forms.ComboBox cbProyecto;
+        private System.Windows.Forms.ComboBox cbEspecialidad;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.ComboBox cbNivelAcademico;
+        private System.Windows.Forms.ComboBox cbSeccion;
+        private System.Windows.Forms.Label lblNivelAcademico;
+        private System.Windows.Forms.Label lblSección;
+        private System.Windows.Forms.GroupBox gbListadoEstudiantes;
+        private Clases.RedondearBoton btnEditarPrimero;
+        private System.Windows.Forms.Panel panel1;
+        private Clases.RedondearBoton btnInscribir;
+        private System.Windows.Forms.Panel pnlListadoEstudiantes;
+        private Clases.RedondearBoton btnPrimerAño;
+        private System.Windows.Forms.Panel pnlEspacio1;
+        private System.Windows.Forms.Panel pnlPrimerAño;
+        private System.Windows.Forms.DataGridView dgvPrimerAño;
+        private System.Windows.Forms.Panel panel2;
+        private Clases.RedondearBoton btnSeundoAño;
+        private System.Windows.Forms.Panel pnlEspacio2;
+        private System.Windows.Forms.Panel pnlSegundoAño;
+        private System.Windows.Forms.DataGridView dgvSegundoAño;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlEspacio3;
+        private Clases.RedondearBoton btnTercerAño;
+        private System.Windows.Forms.Panel pnlTercerAño;
+        private System.Windows.Forms.DataGridView dgvTercerAño;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlEspacio4;
+        private Clases.RedondearBoton btnEstudiantesRetirados;
+        private System.Windows.Forms.Panel pnlEstudiantesRetirados;
+        private System.Windows.Forms.DataGridView dgvEstudiantesRetirados;
     }
 }

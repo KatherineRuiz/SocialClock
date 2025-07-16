@@ -36,7 +36,6 @@ C:\Users\Estudiante\Desktop\FormulariosHome\Vistas\obj\Debug\Vistas.pdb
 C:\Users\Estudiante\Desktop\FormulariosHome\Vistas\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\Estudiante\Desktop\FormulariosHome\Vistas\obj\Debug\Vistas.csproj.Up2Date
 C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
-C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\obj\Debug\Vistas.exe.config
 C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\obj\Debug\Vistas.Formularios.frmInicio.resources
 C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\obj\Debug\Vistas.Formularios.frmInicio1.resources
 C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\obj\Debug\Vistas.Formularios.frmInicio2.resources
@@ -53,3 +52,6 @@ C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\bin\Debug\Vistas.pdb
 C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\obj\Debug\Vistas.csproj.Up2Date
 C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\obj\Debug\Vistas.Formularios.frmEstudiantesRestirados.resources
+C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\bin\Debug\Modelos.dll
+C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\bin\Debug\Modelos.pdb
+C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\obj\Debug\Vistas.exe.config
