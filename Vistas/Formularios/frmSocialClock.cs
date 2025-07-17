@@ -39,39 +39,8 @@ namespace Vistas.Formularios
         private void frmInicio_Load(object sender, EventArgs e)
         {
             
-
-            OcultarSubTabla(false);
         }
 
-       //Método para ocultar subtablas
-        private void OcultarSubTabla(bool estado)
-        {
-            pnlPrimerAño.Visible = estado;
-            pnlEspacio1.Visible = estado;
-            pnlSegundoAño.Visible = estado;
-            pnlEspacio2.Visible = estado;
-            pnlTercerAño.Visible = estado;
-            pnlEspacio3.Visible = estado;
-            pnlEstudiantesRetirados.Visible = estado;
-            pnlEspacio4.Visible = estado;
-        }
-        
-
-        private void btnInscribir_Click(object sender, EventArgs e)
-        {
-            //Creamos un objeto Estudiante
-            Estudiante es = new Estudiante();
-            es.Carnet = int.Parse(txtCarnet.Text);
-            es.NombreEstudiante = txtNombre.Text;
-            es.Nie = int.Parse(txtNie.Text);
-            es.NivelAcademico = cbNivelAcademico.Text;
-            es.Seccion = cbSeccion.Text;
-            es.Especialidad = cbEspecialidad.Text;
-            es.Proyecto = cbProyecto.Text;
-            es.Estado = true;
-
-            es.InsertarEstudiantes();
-        }
 
         #region "Metodo para pintar formularios"
         //Creamos un atributo
@@ -96,7 +65,7 @@ namespace Vistas.Formularios
             formularioPintar.BringToFront();
             formularioPintar.Show();
         }
-
+        #endregion
         private void btnInicio_Click(object sender, EventArgs e)
         {
             abrirForm(new frmInicio());

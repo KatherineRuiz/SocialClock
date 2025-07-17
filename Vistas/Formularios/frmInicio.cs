@@ -15,7 +15,6 @@ namespace Vistas.Formularios
     {
         public frmSocialClock()
         {
-            InitializeComponent();
         }
 
         private void RedondearPanel(Panel panel, int radio)
