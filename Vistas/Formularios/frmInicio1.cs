@@ -34,7 +34,7 @@ namespace Vistas.Formularios
 
         private void frmInicio1_Load(object sender, EventArgs e)
         {
-            RedondearPanel(pnFondo, 50);
+            RedondearPanel(pn, 50);
             RedondearPanel(pnBienvenida, 40);
 
             MostrarEstudiantes();

@@ -32,7 +32,7 @@ namespace Vistas.Formularios
 
         private void frmEstudiantesRestirados_Load(object sender, EventArgs e)
         {
-            RedondearPanel(pnFondo, 50);
+            RedondearPanel(pnlContenido, 50);
             RedondearPanel(pnBienvenida, 40);
         }
     }

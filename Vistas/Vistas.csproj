@@ -40,6 +40,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,11 +63,11 @@
     <Compile Include="Formularios\frmEstudiantesRestirados.Designer.cs">
       <DependentUpon>frmEstudiantesRestirados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmInicio.cs">
+    <Compile Include="Formularios\frmSocialClock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmInicio.Designer.cs">
-      <DependentUpon>frmInicio.cs</DependentUpon>
+    <Compile Include="Formularios\frmSocialClock.Designer.cs">
+      <DependentUpon>frmSocialClock.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmInicio1.cs">
       <SubType>Form</SubType>
@@ -74,11 +75,11 @@
     <Compile Include="Formularios\frmInicio1.Designer.cs">
       <DependentUpon>frmInicio1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmInicio2.cs">
+    <Compile Include="Formularios\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmInicio2.Designer.cs">
-      <DependentUpon>frmInicio2.cs</DependentUpon>
+    <Compile Include="Formularios\frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmInicio3.cs">
       <SubType>Form</SubType>
@@ -97,14 +98,14 @@
     <EmbeddedResource Include="Formularios\frmEstudiantesRestirados.resx">
       <DependentUpon>frmEstudiantesRestirados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmInicio.resx">
-      <DependentUpon>frmInicio.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmSocialClock.resx">
+      <DependentUpon>frmSocialClock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInicio1.resx">
       <DependentUpon>frmInicio1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmInicio2.resx">
-      <DependentUpon>frmInicio2.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmInicio3.resx">
       <DependentUpon>frmInicio3.cs</DependentUpon>
@@ -195,6 +196,21 @@
       <Project>{ab299c24-3266-4099-b3a7-d641a621f34a}</Project>
       <Name>Modelos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicio2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proyectos2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estadistica.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
