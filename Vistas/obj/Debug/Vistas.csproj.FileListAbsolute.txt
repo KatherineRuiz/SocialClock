@@ -55,3 +55,7 @@ C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\obj\Debug\Vistas.Formu
 C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\bin\Debug\Modelos.dll
 C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\bin\Debug\Modelos.pdb
 C:\Users\garbr\OneDrive\Escritorio\FormulariosHome\Vistas\obj\Debug\Vistas.exe.config
+C:\Users\David S\Desktop\Nueva carpeta\SocialClock\Vistas\obj\Debug\Vistas.csproj.AssemblyReference.cache
+C:\Users\David S\Desktop\Nueva carpeta\SocialClock\Vistas\obj\Debug\Vistas.exe.config
+C:\Users\David S\Desktop\Nueva carpeta\SocialClock\Vistas\obj\Debug\Vistas.exe
+C:\Users\David S\Desktop\Nueva carpeta\SocialClock\Vistas\obj\Debug\Vistas.pdb

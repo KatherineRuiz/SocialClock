@@ -63,6 +63,18 @@
     <Compile Include="Formularios\frmEstudiantesRestirados.Designer.cs">
       <DependentUpon>frmEstudiantesRestirados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmListaProyectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmListaProyectos.Designer.cs">
+      <DependentUpon>frmListaProyectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmResultado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmResultado.Designer.cs">
+      <DependentUpon>frmResultado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmSocialClock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\frmEstudiantesRestirados.resx">
       <DependentUpon>frmEstudiantesRestirados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmListaProyectos.resx">
+      <DependentUpon>frmListaProyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmResultado.resx">
+      <DependentUpon>frmResultado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSocialClock.resx">
       <DependentUpon>frmSocialClock.cs</DependentUpon>
