@@ -77,5 +77,10 @@ namespace Vistas.Formularios
         {
             Environment.Exit(0);
         }
+
+        private void btnProyecto_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmListaProyectos());
+        }
     }
 }

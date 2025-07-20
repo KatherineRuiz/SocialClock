@@ -33,28 +33,10 @@ namespace Vistas.Formularios
 
         private void frmListaProyectos_Load(object sender, EventArgs e)
         {
-
+            RedondearPanel(pnlListadoProyectos, 50);
         }
 
-        private void tlpInicio_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tlpInicio_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblBienvenida_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblListaProyectos_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -64,6 +46,7 @@ namespace Vistas.Formularios
             comboBox1.SelectedIndex = 0;  // Arranca en “PRIMER AÑO”
             lblTitulo.Text = comboBox1.SelectedItem.ToString();
         }
+
        
     }
 }
