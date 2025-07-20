@@ -69,6 +69,54 @@ namespace Modelos.Entidades
             return dataVirtual;
         }
 
+        public static DataTable CargarEstudiantesSegundoAño()
+        {
+            //Creamso una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
+            SqlConnection conexion = Conexion.Conectar();
+
+            string consultaQuery = "select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
+                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], estadoEstudiante As " +
+                "\r\n[Estado],  Proyecto.nombreProyecto As [Proyecto]\r\nfrom Estudiante " +
+                "\r\nINNER JOIN\r\nProyecto on Estudiante.id_Proyecto = Proyecto.idProyecto" +
+                "\r\nINNER JOIN\r\nEsp_Niv_Sec on Estudiante.id_EspNivSec = Esp_Niv_Sec.idEsp_Niv_Sec" +
+                "\r\nINNER JOIN\r\nEspecialidad on Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad" +
+                "\r\nINNER JOIN \r\nNivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico" +
+                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where NivelAcademico.idNivelAcademico = 2";
+
+            //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
+            SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+            //Creamos un objeto DataTable, una tabla donde se guardara la informacion
+            DataTable dataVirtual = new DataTable();
+            //Pasamos la informacion de adaptador a la tabla
+            add.Fill(dataVirtual);
+
+            return dataVirtual;
+        }
+
+        public static DataTable CargarEstudiantesTercerAño()
+        {
+            //Creamso una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
+            SqlConnection conexion = Conexion.Conectar();
+
+            string consultaQuery = "select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
+                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], estadoEstudiante As " +
+                "\r\n[Estado],  Proyecto.nombreProyecto As [Proyecto]\r\nfrom Estudiante " +
+                "\r\nINNER JOIN\r\nProyecto on Estudiante.id_Proyecto = Proyecto.idProyecto" +
+                "\r\nINNER JOIN\r\nEsp_Niv_Sec on Estudiante.id_EspNivSec = Esp_Niv_Sec.idEsp_Niv_Sec" +
+                "\r\nINNER JOIN\r\nEspecialidad on Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad" +
+                "\r\nINNER JOIN \r\nNivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico" +
+                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where NivelAcademico.idNivelAcademico = 3";
+
+            //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
+            SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+            //Creamos un objeto DataTable, una tabla donde se guardara la informacion
+            DataTable dataVirtual = new DataTable();
+            //Pasamos la informacion de adaptador a la tabla
+            add.Fill(dataVirtual);
+
+            return dataVirtual;
+        }
+
 
         //Metodo Insertar
         public bool InsertarEstudiantes()
