@@ -71,22 +71,6 @@ namespace Vistas.Formularios
             abrirForm(new frmInicio());
         }
 
-
-
-        //private void btnPrimerAño_Click(object sender, EventArgs e)
-        //{
-        //    frmInicio1 fi1 = new frmInicio1();
-        //    fi1.Show();
-        //    this.Hide();
-        //}
-
-        //private void btnSegundoAño_Click(object sender, EventArgs e)
-        //{
-        //    frmInicio2 fi2 = new frmInicio2();
-        //    fi2.Show();
-        //    this.Hide();
-        //}
-
         //private void btnTercerAño_Click(object sender, EventArgs e)
         //{
         //    frmInicio3 fi3 = new frmInicio3();
