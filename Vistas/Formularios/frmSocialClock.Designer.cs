@@ -155,8 +155,6 @@
             // pnlContenido
             // 
             this.pnlContenido.AutoScroll = true;
-            this.pnlContenido.AutoScrollMargin = new System.Drawing.Size(10, 10);
-            this.pnlContenido.AutoScrollMinSize = new System.Drawing.Size(0, 2500);
             this.pnlContenido.BackColor = System.Drawing.Color.White;
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlContenido.Location = new System.Drawing.Point(100, 21);

@@ -1,25 +1,39 @@
-﻿using System;
+﻿using Modelos;
+using Modelos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vistas.Formularios
 {
-    public partial class frmSocialClock : Form
+    public partial class frmInicio : Form
     {
-        public frmSocialClock()
+        public frmInicio()
         {
+            InitializeComponent();
+            RedondearPanel(pnlBienvenida, 40);
+            ocultarSubTabla(false);
+            mostrarNivelAcademico();
+            mostrarProyecto();
+            mostrarSeccion();
+            mostrarEspecialidad();
         }
 
+        //Metodo para redondear las esquinas de los paneles
         private void RedondearPanel(Panel panel, int radio)
         {
+            //Creamos un objeto de tipo GraphicsPath
             GraphicsPath path = new GraphicsPath();
+            //Dibujamos la figura
             path.StartFigure();
             path.AddArc(new Rectangle(0, 0, radio, radio), 180, 90);
             path.AddArc(new Rectangle(panel.Width - radio, 0, radio, radio), 270, 90);
@@ -29,11 +43,173 @@ namespace Vistas.Formularios
             panel.Region = new Region(path);
         }
 
-        private void frmInicio2_Load(object sender, EventArgs e)
+        //Método para ocultar subtablas
+        private void ocultarSubTabla(bool estado)
         {
-            RedondearPanel(pnFondo, 50);
-            RedondearPanel( pnBienvenida, 40);
+            pnlPrimerAño.Visible = estado;
+            pnlEspacio1.Visible = estado;
+            pnlSegundoAño.Visible = estado;
+            pnlEspacio2.Visible = estado;
+            pnlTercerAño.Visible = estado;
+            pnlEspacio3.Visible = estado;
+            pnlEstudiantesRetirados.Visible = estado;
+            pnlEspacio4.Visible = estado;
         }
 
+        #region Gestión de botones del listado de estudiantes
+
+        private void btnPrimerAño_Click(object sender, EventArgs e)
+        {
+            pnlSegundoAño.Visible = false;
+            pnlEspacio2.Visible = false;
+            pnlTercerAño.Visible = false;
+            pnlEspacio3.Visible = false;
+            pnlEstudiantesRetirados.Visible = false;
+            pnlEspacio4.Visible = false;
+            if (pnlPrimerAño.Visible == false)
+            {
+                pnlPrimerAño.Visible = true;
+                pnlEspacio1.Visible = true;
+            }
+            else
+            {
+                ocultarSubTabla(false);
+            }
+
+            MostrarEstudiantePrimerAño();
+        }
+
+        private void btnSeundoAño_Click(object sender, EventArgs e)
+        {
+            pnlPrimerAño.Visible = false;
+            pnlEspacio1.Visible = false;
+            pnlTercerAño.Visible = false;
+            pnlEspacio3.Visible = false;
+            pnlEstudiantesRetirados.Visible = false;
+            pnlEspacio4.Visible = false;
+            if (pnlSegundoAño.Visible == false)
+            {
+                pnlSegundoAño.Visible = true;
+                pnlEspacio2.Visible = true;
+            }
+            else
+            {
+                ocultarSubTabla(false);
+            }
+        }
+
+        private void btnTercerAño_Click_1(object sender, EventArgs e)
+        {
+            pnlPrimerAño.Visible = false;
+            pnlEspacio1.Visible = false;
+            pnlSegundoAño.Visible = false;
+            pnlEspacio2.Visible = false;
+            pnlEstudiantesRetirados.Visible = false;
+            pnlEspacio4.Visible = false;
+            if (pnlTercerAño.Visible == false)
+            {
+                pnlTercerAño.Visible = true;
+                pnlEspacio3.Visible = true;
+            }
+            else
+            {
+                ocultarSubTabla(false);
+            }
+        }
+
+        private void btnEstudiantesRetirados_Click_1(object sender, EventArgs e)
+        {
+            pnlPrimerAño.Visible = false;
+            pnlEspacio1.Visible = false;
+            pnlSegundoAño.Visible = false;
+            pnlEspacio2.Visible = false;
+            pnlTercerAño.Visible = false;
+            pnlEspacio3.Visible = false;
+            if (pnlEstudiantesRetirados.Visible == false)
+            {
+                pnlEstudiantesRetirados.Visible = true;
+                pnlEspacio4.Visible = true;
+            }
+            else
+            {
+                ocultarSubTabla(false);
+            }
+        }
+
+        #endregion
+
+
+
+        #region Metodos para mostrar las opciones disponibles de los combo box
+        private void mostrarNivelAcademico()
+        {
+            cbNivelAcademico.DataSource = null;
+            cbNivelAcademico.DataSource = NivelAcademico.cargarNivelAcademico();
+            cbNivelAcademico.DisplayMember = "nombreNivel";
+            cbNivelAcademico.ValueMember = "idNivelAcademico";
+            cbNivelAcademico.SelectedIndex = -1;
+        }
+
+        private void mostrarEspecialidad()
+        {
+            cbEspecialidad.DataSource = null;
+            cbEspecialidad.DataSource = Especialidad.cargarEspecialidad();
+            cbEspecialidad.DisplayMember = "nombreEspecialidad";
+            cbEspecialidad.ValueMember = "idEspecialidad";
+            cbEspecialidad.SelectedIndex = -1;
+        }
+
+        private void mostrarSeccion()
+        {
+            cbSeccion.DataSource = null;
+            cbSeccion.DataSource = Seccion.cargarSeccion();
+            cbSeccion.DisplayMember = "nombreSeccion";
+            cbSeccion.ValueMember = "idSeccion";
+            cbSeccion.SelectedIndex = -1;
+        }
+
+        private void mostrarProyecto()
+        {
+            cbProyecto.DataSource = null;
+            cbProyecto.DataSource = Proyecto.cargarProyecto();
+            cbProyecto.DisplayMember = "nombreProyecto";
+            cbProyecto.ValueMember = "idProyecto";
+            cbProyecto.SelectedIndex = -1;
+        }
+        #endregion
+
+        private void MostrarEstudiantePrimerAño()
+        {
+            dgvPrimerAño.DataSource = null;
+            dgvPrimerAño.DataSource = Estudiante.CargarEstudiantesPrimerAño();
+        }
+
+        
+
+        public void frmInicio_Load(object sender, EventArgs e)
+        {
+            RedondearPanel(pnlBienvenida, 40);
+            ocultarSubTabla(false);
+        }
+
+        private void btnInscribir_Click(object sender, EventArgs e)
+        {
+            //Creamos un objeto Estudiante
+            Estudiante es = new Estudiante();
+            es.Carnet = int.Parse(txtCarnet.Text);
+            es.NombreEstudiante = txtNombre.Text;
+            es.Nie = int.Parse(txtNie.Text);
+            es.Proyecto = Convert.ToInt32(cbProyecto.SelectedValue);
+            es.Estado = 0;
+
+            es.Especialidad = Convert.ToInt32(cbEspecialidad.SelectedValue);
+            es.NivelAcademico = Convert.ToInt32(cbEspecialidad.SelectedValue);
+            es.Seccion = Convert.ToInt32(cbSeccion.SelectedValue);
+
+            es.InsertarEstudiantes();
+            MostrarEstudiantePrimerAño();
+
+
+        }
     }
 }

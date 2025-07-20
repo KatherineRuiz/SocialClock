@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vistas.Formularios;
 
 namespace Vistas.Formularios
 {
@@ -38,7 +39,8 @@ namespace Vistas.Formularios
 
         private void frmInicio_Load(object sender, EventArgs e)
         {
-            
+            RedondearPanel(pnlContenido, 50);
+            abrirForm(new frmInicio());
         }
 
 
@@ -71,12 +73,7 @@ namespace Vistas.Formularios
             abrirForm(new frmInicio());
         }
 
-        //private void btnTercerAño_Click(object sender, EventArgs e)
-        //{
-        //    frmInicio3 fi3 = new frmInicio3();
-        //    fi3.Show();
-        //    this.Hide();
-        //}
+
 
 
     }
