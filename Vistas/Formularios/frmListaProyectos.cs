@@ -40,5 +40,30 @@ namespace Vistas.Formularios
         {
 
         }
+
+        private void tlpInicio_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblBienvenida_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblListaProyectos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add("PRIMER AÑO");
+            comboBox1.Items.Add("SEGUNDO AÑO");
+            comboBox1.Items.Add("TERCER AÑO");
+            comboBox1.SelectedIndex = 0;  // Arranca en “PRIMER AÑO”
+            lblTitulo.Text = comboBox1.SelectedItem.ToString();
+        }
+       
     }
 }

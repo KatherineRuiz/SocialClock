@@ -10,7 +10,7 @@ namespace Modelos
 {
     public class Conexion
     {
-        private static string servidor = "DESKTOP-V2L6QH5\\SQLEXPRESS";
+        private static string servidor = "LAPTOP-0LLFB3RC\\SQLEXPRESS";
         private static string baseDeDatos = "SocialClock";
 
         public static SqlConnection Conectar()

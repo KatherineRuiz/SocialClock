@@ -73,8 +73,9 @@ namespace Vistas.Formularios
             abrirForm(new frmInicio());
         }
 
-
-
-
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

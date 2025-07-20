@@ -51,8 +51,9 @@
             this.pnlMenuPrincipal.Controls.Add(this.btnAjustes);
             this.pnlMenuPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenuPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlMenuPrincipal.Name = "pnlMenuPrincipal";
-            this.pnlMenuPrincipal.Size = new System.Drawing.Size(100, 749);
+            this.pnlMenuPrincipal.Size = new System.Drawing.Size(133, 922);
             this.pnlMenuPrincipal.TabIndex = 0;
             // 
             // btnSalir
@@ -63,11 +64,13 @@
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::Vistas.Properties.Resources.salir;
-            this.btnSalir.Location = new System.Drawing.Point(39, 680);
+            this.btnSalir.Location = new System.Drawing.Point(52, 837);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(55, 69);
+            this.btnSalir.Size = new System.Drawing.Size(73, 85);
             this.btnSalir.TabIndex = 5;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEstadistica
             // 
@@ -77,9 +80,10 @@
             this.btnEstadistica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEstadistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstadistica.Image = global::Vistas.Properties.Resources.estadistica;
-            this.btnEstadistica.Location = new System.Drawing.Point(0, 394);
+            this.btnEstadistica.Location = new System.Drawing.Point(0, 485);
+            this.btnEstadistica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEstadistica.Name = "btnEstadistica";
-            this.btnEstadistica.Size = new System.Drawing.Size(100, 127);
+            this.btnEstadistica.Size = new System.Drawing.Size(133, 156);
             this.btnEstadistica.TabIndex = 4;
             this.btnEstadistica.UseVisualStyleBackColor = true;
             // 
@@ -92,9 +96,10 @@
             this.btnProyecto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnProyecto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProyecto.Image = global::Vistas.Properties.Resources.proyectos2;
-            this.btnProyecto.Location = new System.Drawing.Point(0, 264);
+            this.btnProyecto.Location = new System.Drawing.Point(0, 325);
+            this.btnProyecto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProyecto.Name = "btnProyecto";
-            this.btnProyecto.Size = new System.Drawing.Size(100, 130);
+            this.btnProyecto.Size = new System.Drawing.Size(133, 160);
             this.btnProyecto.TabIndex = 3;
             this.btnProyecto.UseVisualStyleBackColor = false;
             // 
@@ -106,9 +111,10 @@
             this.btnInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.Image = global::Vistas.Properties.Resources.inicio2;
-            this.btnInicio.Location = new System.Drawing.Point(0, 142);
+            this.btnInicio.Location = new System.Drawing.Point(0, 175);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(100, 122);
+            this.btnInicio.Size = new System.Drawing.Size(133, 150);
             this.btnInicio.TabIndex = 2;
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -123,33 +129,37 @@
             this.btnAjustes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAjustes.Image = global::Vistas.Properties.Resources.ajustes2;
             this.btnAjustes.Location = new System.Drawing.Point(0, 0);
+            this.btnAjustes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAjustes.Name = "btnAjustes";
-            this.btnAjustes.Size = new System.Drawing.Size(100, 142);
+            this.btnAjustes.Size = new System.Drawing.Size(133, 175);
             this.btnAjustes.TabIndex = 1;
             this.btnAjustes.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(100, 0);
+            this.panel1.Location = new System.Drawing.Point(133, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1270, 21);
+            this.panel1.Size = new System.Drawing.Size(1694, 26);
             this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(100, 689);
+            this.panel2.Location = new System.Drawing.Point(133, 848);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1270, 60);
+            this.panel2.Size = new System.Drawing.Size(1694, 74);
             this.panel2.TabIndex = 2;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1360, 21);
+            this.panel3.Location = new System.Drawing.Point(1814, 26);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 668);
+            this.panel3.Size = new System.Drawing.Size(13, 822);
             this.panel3.TabIndex = 3;
             // 
             // pnlContenido
@@ -157,24 +167,25 @@
             this.pnlContenido.AutoScroll = true;
             this.pnlContenido.BackColor = System.Drawing.Color.White;
             this.pnlContenido.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlContenido.Location = new System.Drawing.Point(100, 21);
-            this.pnlContenido.Margin = new System.Windows.Forms.Padding(5, 20, 20, 20);
+            this.pnlContenido.Location = new System.Drawing.Point(133, 26);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(7, 25, 27, 25);
             this.pnlContenido.Name = "pnlContenido";
-            this.pnlContenido.Size = new System.Drawing.Size(1260, 657);
+            this.pnlContenido.Size = new System.Drawing.Size(1681, 809);
             this.pnlContenido.TabIndex = 4;
             // 
             // frmSocialClock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1827, 922);
             this.Controls.Add(this.pnlContenido);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMenuPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmSocialClock";
             this.Text = "frmSocialClock";
             this.Load += new System.EventHandler(this.frmInicio_Load);
