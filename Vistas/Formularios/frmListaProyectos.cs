@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Modelos;
+using Modelos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -16,6 +19,8 @@ namespace Vistas.Formularios
         public frmListaProyectos()
         {
             InitializeComponent();
+            mostrarProyecto();
+          
         }
         private void RedondearPanel(Panel panel, int radio)
         {
@@ -30,23 +35,58 @@ namespace Vistas.Formularios
             path.CloseFigure();
             panel.Region = new Region(path);
         }
+       
 
         private void frmListaProyectos_Load(object sender, EventArgs e)
         {
-            RedondearPanel(pnlListadoProyectos, 50);
+            
+
         }
 
-       
+        private void tlpInicio_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tlpInicio_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblBienvenida_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblListaProyectos_Click(object sender, EventArgs e)
+        {
+            
+        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("PRIMER AÑO");
-            comboBox1.Items.Add("SEGUNDO AÑO");
-            comboBox1.Items.Add("TERCER AÑO");
-            comboBox1.SelectedIndex = 0;  // Arranca en “PRIMER AÑO”
-            lblTitulo.Text = comboBox1.SelectedItem.ToString();
+          
         }
 
-       
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void dgvContenido_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnProyectos_Click(object sender, EventArgs e)
+        {
+            dgvContenido.DataSource = null;
+            dgvContenido.DataSource = Proyecto.cargarProyecto();
+        }
+        private void mostrarProyecto()
+        {
+            dgvContenido.DataSource = null;
+            dgvContenido.DataSource = Proyecto.cargarProyecto();
+        }
     }
 }

@@ -212,6 +212,9 @@ namespace Vistas.Formularios
 
         }
 
+        private void frmInicio_Load_1(object sender, EventArgs e)
+        {
 
-
-    }}
+        }
+    }
+}

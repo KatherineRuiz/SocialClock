@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,7 @@ namespace Vistas.Formularios
             panel.Region = new Region(path);
         }
 
+      
 
         private void frmResultado_Load(object sender, EventArgs e)
         {
