@@ -119,3 +119,4 @@ C:\Users\David S\Desktop\clone2\SocialClock\Vistas\bin\Debug\FontAwesome.Sharp.d
 C:\Users\David S\Desktop\clone2\SocialClock\Vistas\bin\Debug\Modelos.dll
 C:\Users\David S\Desktop\clone2\SocialClock\Vistas\bin\Debug\Modelos.pdb
 C:\Users\David S\Desktop\clone2\SocialClock\Vistas\obj\Debug\Vistas.csproj.Up2Date
+C:\Users\David S\Desktop\clone2\SocialClock\Vistas\obj\Debug\Vistas.Formularios.ListaProyectosEditar.resources

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\David S\\Desktop\\clone2\\SocialClock\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|c:\\users\\david s\\desktop\\clone2\\socialclock\\vistas\\formularios\\frmlistaproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmlistaproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\David S\\Desktop\\clone2\\SocialClock\\vistas\\formularios\\frmlistaproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmlistaproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|C:\\Users\\David S\\Desktop\\clone2\\SocialClock\\vistas\\formularios\\frmlistaproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49B1D86A-E762-48B8-9B6C-C10FBA6036D5}|Vistas\\Vistas.csproj|solutionrelative:vistas\\formularios\\frmlistaproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AB299C24-3266-4099-B3A7-D641A621F34A}|Modelos\\Modelos.csproj|C:\\Users\\David S\\Desktop\\clone2\\SocialClock\\modelos\\entidades\\proyecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -95,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmListaProyectos.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\David S\\Desktop\\clone2\\SocialClock\\Vistas\\Formularios\\frmListaProyectos.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmListaProyectos.cs",
@@ -140,13 +140,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmListaProyectos.cs",
               "DocumentMoniker": "C:\\Users\\David S\\Desktop\\clone2\\SocialClock\\Vistas\\Formularios\\frmListaProyectos.cs",
               "RelativeDocumentMoniker": "Vistas\\Formularios\\frmListaProyectos.cs",
               "ToolTip": "C:\\Users\\David S\\Desktop\\clone2\\SocialClock\\Vistas\\Formularios\\frmListaProyectos.cs",
               "RelativeToolTip": "Vistas\\Formularios\\frmListaProyectos.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAA0wBUAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAIwBUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-19T19:41:19.876Z",
               "EditorCaption": ""
