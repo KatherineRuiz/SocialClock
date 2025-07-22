@@ -1,6 +1,6 @@
-CREATE DATABASE SocialClock
+CREATE DATABASE Social_Clock
 GO
-USE SocialClock;
+USE Social_Clock;
 GO
 
 
@@ -13,7 +13,7 @@ Go
 Create table Proyecto (
 idProyecto int identity (1,1) primary key,
 nombreProyecto varchar (40) not null,
-estadoProyecto int default 0 not null
+estadoProyecto bit default 0 not null
 );
 Go
 
@@ -55,7 +55,7 @@ Create table Usuario (
 idUsuario int identity (1,1) primary key,
 nombreUsuario varchar (30) unique not null,
 clave varchar (10) unique not null,
-estadoUsuario int default 0 not null,
+estadoUsuario bit default 0 not null,
 id_Rol int not null,
 constraint fkRol foreign key (id_Rol)
 references Rol(idRol) on delete cascade,
@@ -78,9 +78,9 @@ Go
 Create table Estudiante (
 idEstudiante int identity (1,1) primary key,
 nombreEstudiante varchar (70) not null,
-carnet int unique not null,
-nie int unique not null ,
-estadoEstudiante int default 0 not null,
+carnet varchar(8) unique not null,
+nie varchar(20) default 0,
+estadoEstudiante bit default 0 not null,
 id_Proyecto int not null,
 id_EspNivSec int not null,
 constraint fkProyecto foreign key (id_Proyecto)
@@ -89,8 +89,6 @@ constraint fkEspNivSec foreign key (id_EspNivSec)
 references Esp_Niv_Sec(idEsp_Niv_Sec) on delete cascade,
 );
 Go
-ALTER TABLE Estudiante
-ADD CONSTRAINT DF_Nie DEFAULT 0 FOR nie;
 
 Create table BitacoraSocial (
 idBitacora int identity (1,1) primary key,
@@ -111,14 +109,41 @@ insert into Proyecto values
 ('Stant Cultural',0),
 ('Psicología',0);
 
+insert into Proyecto values
+('OPV asistencia',0),
+('Vida comunitaria',0),
+('Mural de enfermería',0),
+('Tutor de inglés',0),
+('Tutor de software',0),
+('Tutor de arquitectura',0),
+('Orquesta ITR',0),
+('Comunicaciones',0),
+('Desafío matemático',0),
+('Evanelización',0),
+('Gestion de mobiliario',0),
+('Logística',0),
+('Infraestructura tecnológica',0),
+('Seguridad y emergencia',0),
+('Protocolo',0),
+('Cultural',0),
+('Técnico científico',0),
+('Seleccion deportiva',0),
+('Coreografía RICO',0),
+('Apoyo en psicología',0),
+('Teatro logística',0),
+('Escuela prof.Sandor',0),
+('Teletón',0),
+('Externo',0);
+
 insert into Especialidad values
 ('Desarrollo de software'),
 ('Diseño gráfico'),
 ('Electromecánica'),
 ('Arquitectura'),
-('Administración contable'),
+('Administrativo contable'),
 ('Electrónica'),
-('Energías renovables');
+('Energías renovables'),
+('Mantenimiento Automotriz');
 
 insert into Seccion values 
 ('A-1'),
@@ -140,6 +165,228 @@ insert into Esp_Niv_Sec values
 (1,1,1),
 (1,1,2);
 
+--Para software
+insert into Esp_Niv_Sec values 
+(1,1,3),
+(1,1,4),
+(1,1,5),
+(1,1,6),
+(1,1,7),
+(1,1,8),
+(1,1,9),
+(1,2,1),
+(1,2,2),
+(1,2,3),
+(1,2,4),
+(1,2,6),
+(1,2,7),
+(1,2,8),
+(1,2,9),
+(1,3,1),
+(1,3,2),
+(1,3,3),
+(1,3,4),
+(1,3,6),
+(1,3,7),
+(1,3,8),
+(1,3,9);
+
+--Para Diseño Grafico
+insert into Esp_Niv_Sec values 
+(2,1,1),
+(2,1,2),
+(2,1,3),
+(2,1,4),
+(2,1,5),
+(2,1,6),
+(2,1,7),
+(2,1,8),
+(2,1,9),
+(2,2,1),
+(2,2,2),
+(2,2,3),
+(2,2,4),
+(2,2,6),
+(2,2,7),
+(2,2,8),
+(2,2,9),
+(2,3,1),
+(2,3,2),
+(2,3,3),
+(2,3,4),
+(2,3,6),
+(2,3,7),
+(2,3,8),
+(2,3,9);
+
+--Para EMCA
+insert into Esp_Niv_Sec values 
+(3,1,1),
+(3,1,2),
+(3,1,3),
+(3,1,4),
+(3,1,5),
+(3,1,6),
+(3,1,7),
+(3,1,8),
+(3,1,9),
+(3,2,1),
+(3,2,2),
+(3,2,3),
+(3,2,4),
+(3,2,6),
+(3,2,7),
+(3,2,8),
+(3,2,9),
+(3,3,1),
+(3,3,2),
+(3,3,3),
+(3,3,4),
+(3,3,6),
+(3,3,7),
+(3,3,8),
+(3,3,9);
+
+--Para Arquitectura
+insert into Esp_Niv_Sec values 
+(4,1,1),
+(4,1,2),
+(4,1,3),
+(4,1,4),
+(4,1,5),
+(4,1,6),
+(4,1,7),
+(4,1,8),
+(4,1,9),
+(4,2,1),
+(4,2,2),
+(4,2,3),
+(4,2,4),
+(4,2,6),
+(4,2,7),
+(4,2,8),
+(4,2,9),
+(4,3,1),
+(4,3,2),
+(4,3,3),
+(4,3,4),
+(4,3,6),
+(4,3,7),
+(4,3,8),
+(4,3,9);
+
+--Para Administracion Contable
+insert into Esp_Niv_Sec values 
+(5,1,1),
+(5,1,2),
+(5,1,3),
+(5,1,4),
+(5,1,5),
+(5,1,6),
+(5,1,7),
+(5,1,8),
+(5,1,9),
+(5,2,1),
+(5,2,2),
+(5,2,3),
+(5,2,4),
+(5,2,6),
+(5,2,7),
+(5,2,8),
+(5,2,9),
+(5,3,1),
+(5,3,2),
+(5,3,3),
+(5,3,4),
+(5,3,6),
+(5,3,7),
+(5,3,8),
+(5,3,9);
+
+--Para ECA
+insert into Esp_Niv_Sec values 
+(6,1,1),
+(6,1,2),
+(6,1,3),
+(6,1,4),
+(6,1,5),
+(6,1,6),
+(6,1,7),
+(6,1,8),
+(6,1,9),
+(6,2,1),
+(6,2,2),
+(6,2,3),
+(6,2,4),
+(6,2,6),
+(6,2,7),
+(6,2,8),
+(6,2,9),
+(6,3,1),
+(6,3,2),
+(6,3,3),
+(6,3,4),
+(6,3,6),
+(6,3,7),
+(6,3,8),
+(6,3,9);
+
+--Para Enerías renobables
+insert into Esp_Niv_Sec values 
+(7,1,1),
+(7,1,2),
+(7,1,3),
+(7,1,4),
+(7,1,5),
+(7,1,6),
+(7,1,7),
+(7,1,8),
+(7,1,9),
+(7,2,1),
+(7,2,2),
+(7,2,3),
+(7,2,4),
+(7,2,6),
+(7,2,7),
+(7,2,8),
+(7,2,9),
+(7,3,1),
+(7,3,2),
+(7,3,3),
+(7,3,4),
+(7,3,6),
+(7,3,7),
+(7,3,8),
+(7,3,9);
+
+--Para Automotriz
+insert into Esp_Niv_Sec values 
+(8,1,1),
+(8,1,2),
+(8,1,3),
+(8,1,4),
+(8,1,5),
+(8,1,6),
+(8,1,7),
+(8,1,8),
+(8,1,9),
+(8,2,1),
+(8,2,2),
+(8,2,3),
+(8,2,4),
+(8,2,6),
+(8,2,7),
+(8,2,8),
+(8,2,9),
+(8,3,1),
+(8,3,2),
+(8,3,3),
+(8,3,4),
+(8,3,6),
+(8,3,7),
+(8,3,8),
+(8,3,9);
+
 
 insert into Usuario values
 ('Ana Cecilia Ordoñez',544854,0,1),
@@ -150,8 +397,8 @@ insert into Evento values
 ('Retiro de padres', 'Los estudiantes de protocolo ordenaran las sillas', '2025/7/19','2025/7/10 11:30:00', 2);
 
 insert into Estudiante values
-('Katherine Andrea Ruiz Bonilla',20250409,665464,0,1,2),
-('Abraham Isaac Rodríguez Velasquez',20230129,1651653,0,2,1);
+('Katherine Andrea Ruiz Bonilla','20250409','665464',0,1,2),
+('Abraham Isaac Rodríguez Velasquez','20230129','1651653',0,2,1);
 
 insert into BitacoraSocial values 
 (50, 'Creación de stand cultural', 1),
@@ -161,7 +408,7 @@ insert into BitacoraSocial values
 
 --Primer Inner Join--
 
-Select  Especialidad.nombreEspecialidad As [Especialidad], NivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion]
+Select idEsp_Niv_Sec, Especialidad.nombreEspecialidad As [Especialidad], NivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion]
 from Esp_Niv_Sec
 INNER JOIN
 NivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico
@@ -189,9 +436,14 @@ Usuario on Evento.idUsuario = Usuario.idUsuario
 -- Cuarto inner join --
 
 select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad],
-NivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], estadoEstudiante As 
-[Estado],  Proyecto.nombreProyecto As [Proyecto]
+NivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante
+when 0 then 'ACTIVO'
+when 1 then 'INACTIVO'
+END As [Estado],
+Proyecto.nombreProyecto As [Proyecto], BitacoraSocial.registroHoras As [No. Horas]
 from Estudiante 
+LEFT JOIN 
+BitacoraSocial on BitacoraSocial.idEstudiante = Estudiante.idEstudiante
 INNER JOIN
 Proyecto on Estudiante.id_Proyecto = Proyecto.idProyecto
 INNER JOIN
@@ -201,7 +453,8 @@ Especialidad on Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad
 INNER JOIN 
 NivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico
 INNER JOIN 
-Seccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where NivelAcademico.idNivelAcademico = 1
+Seccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion;
+
 
  
 select *from Seccion
@@ -214,5 +467,9 @@ select *from Estudiante
 select *from Evento
 select *from BitacoraSocial
 select *from Esp_Niv_Sec
+SELECT * FROM Esp_Niv_Sec;
+
+SELECT idEsp_Niv_Sec FROM Esp_Niv_Sec WHERE id_Especialidad = 6 AND id_NivelAcademico = 3 AND id_Seccion = 7
  
  SELECT idEsp_Niv_Sec FROM Esp_Niv_Sec WHERE id_Especialidad = 1 AND id_NivelAcademico = 1 AND id_Seccion = 1;
+

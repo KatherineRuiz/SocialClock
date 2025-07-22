@@ -26,6 +26,10 @@ namespace Vistas.Formularios
             mostrarProyecto();
             mostrarSeccion();
             mostrarEspecialidad();
+            MostrarEstudiantePrimerAño();
+            MostrarEstudianteSegundoAño();
+            MostrarEstudianteTercerAño();
+            MostrarEstudianteRetirado();
         }
 
         //Metodo para redondear las esquinas de los paneles
@@ -184,7 +188,24 @@ namespace Vistas.Formularios
             dgvPrimerAño.DataSource = Estudiante.CargarEstudiantesPrimerAño();
         }
 
-        
+        private void MostrarEstudianteSegundoAño()
+        {
+            dgvSegundoAño.DataSource = null;
+            dgvSegundoAño.DataSource = Estudiante.CargarEstudiantesSegundoAño();
+        }
+
+        private void MostrarEstudianteTercerAño()
+        {
+            dgvTercerAño.DataSource = null;
+            dgvTercerAño.DataSource = Estudiante.CargarEstudiantesTercerAño();
+        }
+
+        private void MostrarEstudianteRetirado()
+        {
+            dgvEstudiantesRetirados.DataSource = null;
+            dgvEstudiantesRetirados.DataSource = Estudiante.CargarEstudiantesRetirados();
+        }
+
 
         public void frmInicio_Load(object sender, EventArgs e)
         {
@@ -196,25 +217,36 @@ namespace Vistas.Formularios
         {
             //Creamos un objeto Estudiante
             Estudiante es = new Estudiante();
-            es.Carnet = int.Parse(txtCarnet.Text);
+            es.Carnet = txtCarnet.Text;
             es.NombreEstudiante = txtNombre.Text;
-            es.Nie = int.Parse(txtNie.Text);
+            es.Nie = txtNie.Text;
             es.Proyecto = Convert.ToInt32(cbProyecto.SelectedValue);
-            es.Estado = 0;
-
             es.Especialidad = Convert.ToInt32(cbEspecialidad.SelectedValue);
-            es.NivelAcademico = Convert.ToInt32(cbEspecialidad.SelectedValue);
+            es.NivelAcademico = Convert.ToInt32(cbNivelAcademico.SelectedValue);
             es.Seccion = Convert.ToInt32(cbSeccion.SelectedValue);
+
+            if (rbActivo.Checked == true)
+            {
+                es.Estado = false;
+            }
+            else if (rbInactivo.Checked == true)
+            {
+                es.Estado = true;
+            }
 
             es.InsertarEstudiantes();
             MostrarEstudiantePrimerAño();
-
-
+            MostrarEstudianteSegundoAño();
+            MostrarEstudianteTercerAño();
+            MostrarEstudianteRetirado();
         }
 
-        private void frmInicio_Load_1(object sender, EventArgs e)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            txtNombre.Text = "";
+            txtCarnet.Text = "";
+            txtNie.Text = "";
+            rbActivo.Checked = true;
         }
     }
 }

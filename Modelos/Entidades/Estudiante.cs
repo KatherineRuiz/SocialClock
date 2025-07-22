@@ -9,18 +9,19 @@ using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Modelos.Entidades
 {
 
     public class Estudiante
     {
-        //Declaramso los atributos de la entidad
+        //Declaramos los atributos de la entidad
         private int id;
         private string nombreEstudiante;
-        private int carnet;
-        private int nie;
-        private int estado;
+        private string carnet;
+        private string nie;
+        private bool estado;
         private int proyecto;
         private int espNivSec;
 
@@ -31,9 +32,9 @@ namespace Modelos.Entidades
 
         public int Id { get => id; set => id = value; }
         public string NombreEstudiante { get => nombreEstudiante; set => nombreEstudiante = value; }
-        public int Carnet { get => carnet; set => carnet = value; }
-        public int Nie { get => nie; set => nie = value; }
-        public int Estado { get => estado; set => estado = value; }
+        public string Carnet { get => carnet; set => carnet = value; }
+        public string Nie { get => nie; set => nie = value; }
+        public bool Estado { get => estado; set => estado = value; }
         public int Proyecto { get => proyecto; set => proyecto = value; }
         public int EspNivSec { get => espNivSec; set => espNivSec = value; }
 
@@ -51,13 +52,18 @@ namespace Modelos.Entidades
             SqlConnection conexion = Conexion.Conectar();
 
             string consultaQuery = "select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
-                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], estadoEstudiante As " +
-                "\r\n[Estado],  Proyecto.nombreProyecto As [Proyecto]\r\nfrom Estudiante " +
+                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante" +
+                "\r\nwhen 0 then 'ACTIVO'" +
+                "\r\nwhen 1 then 'INACTIVO'" +
+                "\r\nEND As [Estado],\r\nProyecto.nombreProyecto As [Proyecto], BitacoraSocial.registroHoras As [No. Horas]" +
+                "\r\nfrom Estudiante " +
+                "\r\nLEFT JOIN \r\nBitacoraSocial on BitacoraSocial.idEstudiante = Estudiante.idEstudiante" +
                 "\r\nINNER JOIN\r\nProyecto on Estudiante.id_Proyecto = Proyecto.idProyecto" +
                 "\r\nINNER JOIN\r\nEsp_Niv_Sec on Estudiante.id_EspNivSec = Esp_Niv_Sec.idEsp_Niv_Sec" +
                 "\r\nINNER JOIN\r\nEspecialidad on Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad" +
                 "\r\nINNER JOIN \r\nNivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico" +
-                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where NivelAcademico.idNivelAcademico = 1";
+                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where NivelAcademico.idNivelAcademico = 1" +
+                "\r\nand estadoEstudiante = 0;";
 
             //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
             SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
@@ -71,17 +77,22 @@ namespace Modelos.Entidades
 
         public static DataTable CargarEstudiantesSegundoAño()
         {
-            //Creamso una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
+            //Creamos una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
             SqlConnection conexion = Conexion.Conectar();
 
             string consultaQuery = "select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
-                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], estadoEstudiante As " +
-                "\r\n[Estado],  Proyecto.nombreProyecto As [Proyecto]\r\nfrom Estudiante " +
+                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante" +
+                "\r\nwhen 0 then 'ACTIVO'" +
+                "\r\nwhen 1 then 'INACTIVO'" +
+                "\r\nEND As [Estado],\r\nProyecto.nombreProyecto As [Proyecto], BitacoraSocial.registroHoras As [No. Horas]" +
+                "\r\nfrom Estudiante " +
+                "\r\nLEFT JOIN \r\nBitacoraSocial on BitacoraSocial.idEstudiante = Estudiante.idEstudiante" +
                 "\r\nINNER JOIN\r\nProyecto on Estudiante.id_Proyecto = Proyecto.idProyecto" +
                 "\r\nINNER JOIN\r\nEsp_Niv_Sec on Estudiante.id_EspNivSec = Esp_Niv_Sec.idEsp_Niv_Sec" +
                 "\r\nINNER JOIN\r\nEspecialidad on Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad" +
                 "\r\nINNER JOIN \r\nNivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico" +
-                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where NivelAcademico.idNivelAcademico = 2";
+                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where NivelAcademico.idNivelAcademico = 2" +
+                "\r\nand estadoEstudiante = 0;";
 
             //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
             SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
@@ -95,17 +106,22 @@ namespace Modelos.Entidades
 
         public static DataTable CargarEstudiantesTercerAño()
         {
-            //Creamso una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
+            //Creamos una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
             SqlConnection conexion = Conexion.Conectar();
 
             string consultaQuery = "select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
-                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], estadoEstudiante As " +
-                "\r\n[Estado],  Proyecto.nombreProyecto As [Proyecto]\r\nfrom Estudiante " +
+                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante" +
+                "\r\nwhen 0 then 'ACTIVO'" +
+                "\r\nwhen 1 then 'INACTIVO'" +
+                "\r\nEND As [Estado]," +
+                "\r\nProyecto.nombreProyecto As [Proyecto], BitacoraSocial.registroHoras As [No. Horas]" +
+                "\r\nfrom Estudiante " +
+                "\r\nLEFT JOIN \r\nBitacoraSocial on BitacoraSocial.idEstudiante = Estudiante.idEstudiante" +
                 "\r\nINNER JOIN\r\nProyecto on Estudiante.id_Proyecto = Proyecto.idProyecto" +
                 "\r\nINNER JOIN\r\nEsp_Niv_Sec on Estudiante.id_EspNivSec = Esp_Niv_Sec.idEsp_Niv_Sec" +
                 "\r\nINNER JOIN\r\nEspecialidad on Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad" +
                 "\r\nINNER JOIN \r\nNivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico" +
-                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where NivelAcademico.idNivelAcademico = 3";
+                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where estadoEstudiante = 0 and idNivelAcademico = 3;";
 
             //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
             SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
@@ -117,6 +133,33 @@ namespace Modelos.Entidades
             return dataVirtual;
         }
 
+        public static DataTable CargarEstudiantesRetirados()
+        {
+            //Creamso una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
+            SqlConnection conexion = Conexion.Conectar();
+
+            string consultaQuery = "select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
+                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante" +
+                "\r\nwhen 0 then 'ACTIVO'" +
+                "\r\nwhen 1 then 'INACTIVO'" +
+                "\r\nEND As [Estado],\r\nProyecto.nombreProyecto As [Proyecto], BitacoraSocial.registroHoras As [No. Horas]" +
+                "\r\nfrom Estudiante " +
+                "\r\nLEFT JOIN \r\nBitacoraSocial on BitacoraSocial.idEstudiante = Estudiante.idEstudiante" +
+                "\r\nINNER JOIN\r\nProyecto on Estudiante.id_Proyecto = Proyecto.idProyecto" +
+                "\r\nINNER JOIN\r\nEsp_Niv_Sec on Estudiante.id_EspNivSec = Esp_Niv_Sec.idEsp_Niv_Sec" +
+                "\r\nINNER JOIN\r\nEspecialidad on Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad" +
+                "\r\nINNER JOIN \r\nNivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico" +
+                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where estadoEstudiante = 1;";
+
+            //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
+            SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+            //Creamos un objeto DataTable, una tabla donde se guardara la informacion
+            DataTable dataVirtual = new DataTable();
+            //Pasamos la informacion de adaptador a la tabla
+            add.Fill(dataVirtual);
+
+            return dataVirtual;
+        }
 
         //Metodo Insertar
         public bool InsertarEstudiantes()
@@ -133,20 +176,22 @@ namespace Modelos.Entidades
             SqlCommand cmd = new SqlCommand(consultaQuery, conexion);
 
             //Sustituimos los valores temporales por los astributos
-            cmd.Parameters.AddWithValue("@nombreEstudiante", NombreEstudiante);
-            cmd.Parameters.AddWithValue("@carnet", Carnet);
-            cmd.Parameters.AddWithValue("@nie", Nie);
-            cmd.Parameters.AddWithValue("@estadoEstudiante", Estado);
-            cmd.Parameters.AddWithValue("@id_Proyecto", Proyecto);
+            cmd.Parameters.AddWithValue("@nombreEstudiante", nombreEstudiante);
+            cmd.Parameters.AddWithValue("@carnet", carnet);
+            cmd.Parameters.AddWithValue("@nie", nie);
+            cmd.Parameters.AddWithValue("@estadoEstudiante", estado);
+            cmd.Parameters.AddWithValue("@id_Proyecto", proyecto);
             cmd.Parameters.AddWithValue("@id_EspNivSec", EspNivSec);
 
             //Enviamos el comando a SqlServer
             if (cmd.ExecuteNonQuery() > 0)
             {
+                MessageBox.Show("Ingreso correcto");
                 return true;
             }
             else
             {
+                MessageBox.Show("Error");
                 return false;
             }
 
@@ -176,7 +221,7 @@ namespace Modelos.Entidades
                 }
             }
 
-            return resultado; 
+            return resultado;
         }
 
 
@@ -184,3 +229,4 @@ namespace Modelos.Entidades
 
 
 }
+
