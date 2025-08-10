@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Vistas.Formularios
 {
-    public partial class prueba : Form
+    public partial class frmProyectos_Colaborador : Form
     {
-        public prueba()
+        public frmProyectos_Colaborador()
         {
             InitializeComponent();
         }
-
     }
 }

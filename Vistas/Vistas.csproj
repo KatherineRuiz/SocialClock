@@ -57,17 +57,41 @@
     <Compile Include="Controles\RedondearBoton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Formularios\frmEstudiantesRestirados.cs">
+    <Compile Include="Formularios\frmCreacionUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmEstudiantesRestirados.Designer.cs">
-      <DependentUpon>frmEstudiantesRestirados.cs</DependentUpon>
+    <Compile Include="Formularios\frmCreacionUsuario.Designer.cs">
+      <DependentUpon>frmCreacionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInicio-Colaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInicio-Colaborador.Designer.cs">
+      <DependentUpon>frmInicio-Colaborador.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmListaProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmListaProyectos.Designer.cs">
       <DependentUpon>frmListaProyectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLogin-Colaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogin-Colaborador.Designer.cs">
+      <DependentUpon>frmLogin-Colaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmProyectos-Colaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmProyectos-Colaborador.Designer.cs">
+      <DependentUpon>frmProyectos-Colaborador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmResultado-Colaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmResultado-Colaborador.Designer.cs">
+      <DependentUpon>frmResultado-Colaborador.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmResultado.cs">
       <SubType>Form</SubType>
@@ -80,6 +104,12 @@
     </Compile>
     <Compile Include="Formularios\frmSeleccionDeRol.Designer.cs">
       <DependentUpon>frmSeleccionDeRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSocialClock-Colaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSocialClock-Colaborador.Designer.cs">
+      <DependentUpon>frmSocialClock-Colaborador.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmSocialClock.cs">
       <SubType>Form</SubType>
@@ -99,25 +129,34 @@
     <Compile Include="Formularios\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\prueba.Designer.cs">
-      <DependentUpon>prueba.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\frmEstudiantesRestirados.resx">
-      <DependentUpon>frmEstudiantesRestirados.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmCreacionUsuario.resx">
+      <DependentUpon>frmCreacionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmInicio-Colaborador.resx">
+      <DependentUpon>frmInicio-Colaborador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmListaProyectos.resx">
       <DependentUpon>frmListaProyectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLogin-Colaborador.resx">
+      <DependentUpon>frmLogin-Colaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmProyectos-Colaborador.resx">
+      <DependentUpon>frmProyectos-Colaborador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmResultado-Colaborador.resx">
+      <DependentUpon>frmResultado-Colaborador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmResultado.resx">
       <DependentUpon>frmResultado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSeleccionDeRol.resx">
       <DependentUpon>frmSeleccionDeRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSocialClock-Colaborador.resx">
+      <DependentUpon>frmSocialClock-Colaborador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSocialClock.resx">
       <DependentUpon>frmSocialClock.cs</DependentUpon>
@@ -127,9 +166,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\prueba.resx">
-      <DependentUpon>prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -241,6 +277,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\socialc1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colaboradores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

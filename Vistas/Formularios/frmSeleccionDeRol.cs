@@ -32,5 +32,23 @@ namespace Vistas.Formularios
             panel.Region = new Region(path);
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAdministrador_Click(object sender, EventArgs e)
+        {
+            frmLogin lg = new frmLogin();
+            lg.Show();
+            this.Hide();
+        }
+
+        private void btnColaborador_Click(object sender, EventArgs e)
+        {
+            frmLogin_Colaborador lg = new frmLogin_Colaborador();
+           lg .Show();
+            this.Hide();
+        }
     }
 }

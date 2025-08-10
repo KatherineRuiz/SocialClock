@@ -10,6 +10,7 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 
 namespace Vistas.Formularios
@@ -20,7 +21,8 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
             mostrarProyecto();
-          
+            proyectoConexion();
+
         }
         private void RedondearPanel(Panel panel, int radio)
         {
@@ -37,56 +39,60 @@ namespace Vistas.Formularios
         }
        
 
-        private void frmListaProyectos_Load(object sender, EventArgs e)
+        //private void btnProyectos_Click(object sender, EventArgs e)
+        //{
+        //    dgvContenido.DataSource = null;
+        //    dgvContenido.DataSource = Proyecto.cargarTodosProyectos();
+        //}
+        private void mostrarProyecto()
         {
-            
-
+            dgvContenido.DataSource = null;
+            dgvContenido.DataSource = Proyecto.cargarTodosProyectos();
         }
 
-        private void tlpInicio_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void proyectoConexion()
+        {
+            dgvBitacoraEstudiantes.DataSource = null;
+            dgvBitacoraEstudiantes.DataSource = Proyecto.cargarEstudianteProyecto();
         }
 
-        private void tlpInicio_Paint_1(object sender, PaintEventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
+            Proyecto p = new Proyecto();
+            p.NombreProyecto = txtNombreProyecto.Text;
+            if (rbnActivo.Checked == true)
+            {
+                p.EstadoProyecto = false;
+            }
+            else
+            {
+                p.EstadoProyecto = true;
 
-        }
+            }
 
-        private void lblBienvenida_Click(object sender, EventArgs e)
-        {
+            p.InsertarProyecto();
+            MessageBox.Show("Exito", "Datos ingresados correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            mostrarProyecto();
 
-        }
-
-        private void lblListaProyectos_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
-        
         }
 
         private void dgvContenido_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0) // Asegura que no sea encabezado
+            {
+                // Leer los datos del registro seleccionado
+                DataGridViewRow fila = dgvContenido.Rows[e.RowIndex];
 
-        }
+                string id = fila.Cells["Num."].Value.ToString();
+                string Proyecto = fila.Cells["Proyecto"].Value.ToString();
 
-        private void btnProyectos_Click(object sender, EventArgs e)
-        {
-            dgvContenido.DataSource = null;
-            dgvContenido.DataSource = Proyecto.cargarProyecto();
-        }
-        private void mostrarProyecto()
-        {
-            dgvContenido.DataSource = null;
-            dgvContenido.DataSource = Proyecto.cargarProyecto();
+
+                // cbProyecto.Text = Proyecto ;
+
+
+                tabControl1.SelectedTab = tpEstudiantesProyecto;
+            }
         }
     }
 }

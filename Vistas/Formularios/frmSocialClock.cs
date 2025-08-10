@@ -75,7 +75,9 @@ namespace Vistas.Formularios
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            frmSeleccionDeRol se = new frmSeleccionDeRol();
+            se.Show();
+            this.Close();
         }
 
         private void btnProyecto_Click(object sender, EventArgs e)
@@ -83,6 +85,9 @@ namespace Vistas.Formularios
             abrirForm(new frmListaProyectos());
         }
 
-
+        private void btnAjustes_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmCreacionUsuario());
+        }
     }
 }

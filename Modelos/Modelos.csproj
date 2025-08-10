@@ -50,7 +50,9 @@
     <Compile Include="Entidades\Estudiante.cs" />
     <Compile Include="Entidades\NivelAcademico.cs" />
     <Compile Include="Entidades\Proyecto.cs" />
+    <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Seccion.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

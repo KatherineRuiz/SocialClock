@@ -94,6 +94,7 @@ Create table BitacoraSocial (
 idBitacora int identity (1,1) primary key,
 registroHoras int not null,
 descripcion nvarchar(100) not null,
+fechaBitacora date not null,
 idEstudiante int not null,
 constraint fkEstudiante foreign key(idEstudiante)
 references Estudiante(idEstudiante) on delete cascade,
@@ -392,19 +393,51 @@ insert into Usuario values
 ('Ana Cecilia Ordoñez',544854,0,1),
 ('Mirna Espinoza Anzora',277423,0,2);
 
+insert into Usuario values 
+('Eliseo_Criostomo',654697,0,2),
+('Dina_Alfaro',674459,0,2),
+('Iris_Chavez',255485,0,2),
+('Roxana_Rodríguez',467145,0,2),
+('Cristian_Faguada',654657,0,2),
+('Jenni_Carpio',485487,0,2),
+('Josue_Guinea',24586,0,2),
+('Ricardo_Paz',658945,0,2),
+('Rodrigo_Duenas',744464,0,2),
+('Eduardo Barrera', 648547,0,2),
+('Karina_Hernandez',625148,0, 1),
+('Veronica_Sanchez',8456321,0,2),
+('Yolanda_Canales',214585,0,2);
+
 insert into Evento values 
 ('Día de la madre', 'Los estudiantes de cultural realizarán la decoración', '2025/5/5','2025/5/1 10:30:00', 1),
 ('Retiro de padres', 'Los estudiantes de protocolo ordenaran las sillas', '2025/7/19','2025/7/10 11:30:00', 2);
 
 insert into Estudiante values
 ('Katherine Andrea Ruiz Bonilla','20250409','665464',0,1,2),
-('Abraham Isaac Rodríguez Velasquez','20230129','1651653',0,2,1);
+('Abraham Isaac Rodríguez Velasquez','20230129','1651653',0,2,1),
+('Noe David Saravia Siliezar',20250065,'549875',0,9,1),
+('Rodrigo Alejandro Tisnado corpeno',20250488,'',0,11,1);
+
+insert into Estudiante values
+('Ariela Melissa Barahona Carranza',20230449,'448559',0,12,1),
+('Estefany Gabriela Garcia Mina', 20220212,'654855',0,14,2),
+('Cesar Eduardo Orozco Rivas',20220056,'154258',0,3,2),
+('Mateo Amilcar Gonzalez Cardoza',20240574,'',0,9,1),
+('Ever Dasahev Henriquez Abarca',20250247,'543226',0,5,1),
+('Gabriela Michelle Mayen Gonzales',20220423,'',0,7,1),
+('Camila Celeste Fabian Echegoyen',20230746,'',0,15,1),
+('Julio Wilfredo Flores Cuevas',20250155,'547856',0,11,2),
+('Rudy Enrique Pineda Azucar', 20220181,'',0,6,2),
+('Juan Pablo Contreras Chavez',20250248,'654867',0,12,1),
+('Ryan Alexander Baxter Segovia',20230485,'',0,13,1);
+insert into Estudiante values
+('Ariela Melissa Barahona Carranza',20230449,'448559',0,12,1);
 
 insert into BitacoraSocial values 
 (50, 'Creación de stand cultural', 1),
 (40, 'Participación en obra de teatro', 2);
 
-
+delete Estudiante where idEstudiante=21
 
 --Primer Inner Join--
 
@@ -420,7 +453,10 @@ Especialidad on Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad
 
 --Segundo Inner Join--
 
-select Usuario.idUsuario, Usuario.nombreUsuario As [Usuario], Rol.nombreRol As [Rol], clave As [Contraseña], estadoUsuario As [Estado]
+select Usuario.idUsuario, Usuario.nombreUsuario As [Usuario], Rol.nombreRol As [Rol], clave As [Contraseña], CASE estadoUsuario
+when 0 then 'ACTIVO'
+when 1 then 'INACTIVO'
+END As [Estado]
 from Usuario
 inner join
 Rol On Usuario.id_Rol = Rol.idRol
@@ -455,7 +491,11 @@ NivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademic
 INNER JOIN 
 Seccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion;
 
-
+select  nombreProyecto As Proyecto, CASE estadoProyecto
+when 0 then 'ACTIVO'
+when 1 then 'INACTIVO'
+END As [Estado]
+from Proyecto 
  
 select *from Seccion
 select *from Rol
@@ -472,4 +512,3 @@ SELECT * FROM Esp_Niv_Sec;
 SELECT idEsp_Niv_Sec FROM Esp_Niv_Sec WHERE id_Especialidad = 6 AND id_NivelAcademico = 3 AND id_Seccion = 7
  
  SELECT idEsp_Niv_Sec FROM Esp_Niv_Sec WHERE id_Especialidad = 1 AND id_NivelAcademico = 1 AND id_Seccion = 1;
-

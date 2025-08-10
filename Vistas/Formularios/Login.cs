@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelos.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,6 +35,37 @@ namespace Vistas.Formularios
             panel.Region = new Region(path);
         }
 
-        
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            Usuario usr = new Usuario();
+
+            string claveBD = "";
+            claveBD = usr.ConsultarClave(txtUsuario.Text);
+
+            //MessageBox.Show("claveBD " + claveBD, "Error");
+            if (claveBD != null)
+            {
+                if (txtClave.Text == claveBD)
+                {
+                    frmSocialClock fe = new frmSocialClock();
+                    fe.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o clave no coinciden", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o clave no coinciden", "Error");
+            }
+            
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,6 +30,10 @@ namespace Vistas.Formularios
             MostrarEstudianteSegundoAño();
             MostrarEstudianteTercerAño();
             MostrarEstudianteRetirado();
+
+            lblEstado.Visible = false;
+            rbActivo.Visible = false;
+            rbInactivo.Visible = false;
         }
 
         //Metodo para redondear las esquinas de los paneles
@@ -239,6 +243,7 @@ namespace Vistas.Formularios
             MostrarEstudianteSegundoAño();
             MostrarEstudianteTercerAño();
             MostrarEstudianteRetirado();
+            MessageBox.Show("Exelente. Datos registrados", "Inscripción exitosa");
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -247,6 +252,134 @@ namespace Vistas.Formularios
             txtCarnet.Text = "";
             txtNie.Text = "";
             rbActivo.Checked = true;
+
+            lblEstado.Visible = false;
+            rbActivo.Visible = false;
+            rbInactivo.Visible = false;
+        }
+
+        #region Metodos para cargar datos que se actualizaran
+        private void dgvPrimerAño_DoubleClick(object sender, EventArgs e)
+        {
+            txtCarnet.Text = dgvPrimerAño.CurrentRow.Cells[1].Value.ToString();
+            txtNombre.Text = dgvPrimerAño.CurrentRow.Cells[2].Value.ToString();
+            //cbEspecialidad.SelectedValue = Convert.ToInt32(dgvPrimerAño.CurrentRow.Cells[3].Value);
+            //cbNivelAcademico.SelectedValue = Convert.ToInt32(dgvPrimerAño.CurrentRow.Cells[4].Value.ToString());
+            //cbSeccion.SelectedValue = Convert.ToInt32(dgvPrimerAño.CurrentRow.Cells[5].Value.ToString());
+            txtNie.Text = dgvPrimerAño.CurrentRow.Cells[6].Value.ToString();
+            //cbProyecto.SelectedValue = Convert.ToInt32(dgvPrimerAño.CurrentRow.Cells[8].Value.ToString());
+
+            lblEstado.Visible = true;
+            rbActivo.Visible = true;
+            rbInactivo.Visible = true;
+        }
+
+        private void dgvSegundoAño_DoubleClick(object sender, EventArgs e)
+        {
+            txtCarnet.Text = dgvSegundoAño.CurrentRow.Cells[1].Value.ToString();
+            txtNombre.Text = dgvSegundoAño.CurrentRow.Cells[2].Value.ToString();
+            txtNie.Text = dgvSegundoAño.CurrentRow.Cells[6].Value.ToString();
+            //cbEspecialidad.SelectedValue = Convert.ToInt32(dgvSegundoAño.CurrentRow.Cells[3].Value.ToString());
+            //cbNivelAcademico.SelectedValue = Convert.ToInt32(dgvSegundoAño.CurrentRow.Cells[4].Value.ToString());
+            //cbSeccion.SelectedValue = Convert.ToInt32(dgvSegundoAño.CurrentRow.Cells[5].Value.ToString());
+            //cbProyecto.SelectedValue = Convert.ToInt32(dgvSegundoAño.CurrentRow.Cells[8].Value.ToString());
+
+            lblEstado.Visible = true;
+            rbActivo.Visible = true;
+            rbInactivo.Visible = true;
+        }
+
+        private void dgvTercerAño_DoubleClick(object sender, EventArgs e)
+        {
+            txtCarnet.Text = dgvTercerAño.CurrentRow.Cells[1].Value.ToString();
+            txtNombre.Text = dgvTercerAño.CurrentRow.Cells[2].Value.ToString();
+            txtNie.Text = dgvTercerAño.CurrentRow.Cells[6].Value.ToString();
+            //cbEspecialidad.SelectedValue = Convert.ToInt32(dgvTercerAño.CurrentRow.Cells[3].Value.ToString());
+            //cbNivelAcademico.SelectedValue = Convert.ToInt32(dgvTercerAño.CurrentRow.Cells[4].Value.ToString());
+            //cbSeccion.SelectedValue = Convert.ToInt32(dgvTercerAño.CurrentRow.Cells[5].Value.ToString());
+            //cbProyecto.SelectedValue = Convert.ToInt32(dgvTercerAño.CurrentRow.Cells[8].Value.ToString());
+
+            lblEstado.Visible = true;
+            rbActivo.Visible = true;
+            rbInactivo.Visible = true;
+        }
+
+        private void dgvEstudiantesRetirados_DoubleClick(object sender, EventArgs e)
+        {
+            txtCarnet.Text = dgvEstudiantesRetirados.CurrentRow.Cells[1].Value.ToString();
+            txtNombre.Text = dgvEstudiantesRetirados.CurrentRow.Cells[2].Value.ToString();
+            txtNie.Text = dgvEstudiantesRetirados.CurrentRow.Cells[6].Value.ToString();
+            if (int.TryParse(dgvPrimerAño.CurrentRow.Cells[2]?.Value?.ToString(), out int especialidadId))
+                cbEspecialidad.SelectedValue = especialidadId;
+
+            if (int.TryParse(dgvPrimerAño.CurrentRow.Cells[3]?.Value?.ToString(), out int nivelId))
+                cbNivelAcademico.SelectedValue = nivelId;
+
+            if (int.TryParse(dgvPrimerAño.CurrentRow.Cells[4]?.Value?.ToString(), out int seccionId))
+                cbSeccion.SelectedValue = seccionId;
+
+            if (int.TryParse(dgvPrimerAño.CurrentRow.Cells[7]?.Value?.ToString(), out int proyectoId))
+                cbProyecto.SelectedValue = proyectoId;
+            //cbEspecialidad.SelectedValue = Convert.ToInt32(dgvEstudiantesRetirados.CurrentRow.Cells[3].Value.ToString());
+            //cbNivelAcademico.SelectedValue = Convert.ToInt32(dgvEstudiantesRetirados.CurrentRow.Cells[4].Value.ToString());
+            //cbSeccion.SelectedValue = Convert.ToInt32(dgvEstudiantesRetirados.CurrentRow.Cells[5].Value.ToString());
+            //cbProyecto.SelectedValue = Convert.ToInt32(dgvEstudiantesRetirados.CurrentRow.Cells[8].Value.ToString());
+
+            lblEstado.Visible = true;
+            rbActivo.Visible = true;
+            rbInactivo.Visible = true;
+        }
+        #endregion
+
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //int niv = 
+
+            Estudiante es = new Estudiante();
+            es.Carnet = txtCarnet.Text;
+            es.NombreEstudiante = txtNombre.Text;
+            es.Nie = txtNie.Text;
+            es.Especialidad = Convert.ToInt32(cbEspecialidad.SelectedValue);
+            es.NivelAcademico = Convert.ToInt32(cbNivelAcademico.SelectedValue);
+            es.Seccion = Convert.ToInt32(cbSeccion.SelectedValue);
+            if (rbActivo.Checked == true)
+            {
+                es.Estado = false;
+            }
+            else if (rbInactivo.Checked == true)
+            {
+                es.Estado = true;
+            }
+
+            if (es.NivelAcademico == 1 && es.Estado == false)
+            {
+                es.Id = int.Parse(dgvPrimerAño.CurrentRow.Cells[0].Value.ToString());
+            }
+            else if(es.NivelAcademico == 2 && es.Estado == false)
+            {
+                es.Id = int.Parse(dgvSegundoAño.CurrentRow.Cells[0].Value.ToString());
+            }
+            else if (es.NivelAcademico == 2 && es.Estado == false)
+            {
+                es.Id = int.Parse(dgvTercerAño.CurrentRow.Cells[0].Value.ToString());
+            }
+            else
+            {
+                es.Id = int.Parse(dgvEstudiantesRetirados.CurrentRow.Cells[0].Value.ToString());
+            }
+            if (es.actualizarEstudiantes())
+            {
+                MostrarEstudiantePrimerAño();
+                MostrarEstudianteSegundoAño();
+                MostrarEstudianteTercerAño();
+                MostrarEstudianteRetirado();
+            }
+            else
+            {
+                MessageBox.Show("Error al actualizar la información", "La actualización falló");
+
+            }
         }
     }
 }

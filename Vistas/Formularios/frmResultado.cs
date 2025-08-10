@@ -32,26 +32,5 @@ namespace Vistas.Formularios
             panel.Region = new Region(path);
         }
 
-      
-
-        private void frmResultado_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tlpInicio_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dgvResultado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

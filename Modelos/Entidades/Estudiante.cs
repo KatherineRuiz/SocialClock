@@ -51,7 +51,7 @@ namespace Modelos.Entidades
             //Creamso una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
             SqlConnection conexion = Conexion.Conectar();
 
-            string consultaQuery = "select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
+            string consultaQuery = "select Estudiante.idEstudiante As [N°], carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
                 "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante" +
                 "\r\nwhen 0 then 'ACTIVO'" +
                 "\r\nwhen 1 then 'INACTIVO'" +
@@ -80,7 +80,7 @@ namespace Modelos.Entidades
             //Creamos una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
             SqlConnection conexion = Conexion.Conectar();
 
-            string consultaQuery = "select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
+            string consultaQuery = "select Estudiante.idEstudiante As [N°], carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
                 "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante" +
                 "\r\nwhen 0 then 'ACTIVO'" +
                 "\r\nwhen 1 then 'INACTIVO'" +
@@ -109,7 +109,7 @@ namespace Modelos.Entidades
             //Creamos una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
             SqlConnection conexion = Conexion.Conectar();
 
-            string consultaQuery = "select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
+            string consultaQuery = "select Estudiante.idEstudiante As [N°], carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
                 "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante" +
                 "\r\nwhen 0 then 'ACTIVO'" +
                 "\r\nwhen 1 then 'INACTIVO'" +
@@ -138,7 +138,7 @@ namespace Modelos.Entidades
             //Creamso una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
             SqlConnection conexion = Conexion.Conectar();
 
-            string consultaQuery = "select  carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
+            string consultaQuery = "select Estudiante.idEstudiante As [N°], carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
                 "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante" +
                 "\r\nwhen 0 then 'ACTIVO'" +
                 "\r\nwhen 1 then 'INACTIVO'" +
@@ -224,6 +224,32 @@ namespace Modelos.Entidades
             return resultado;
         }
 
+        public bool actualizarEstudiantes()
+        {
+            espNivSec = BuscarEspNivSec(especialidad, nivelAcademico, seccion);
+            try
+            {
+                SqlConnection conexion = Conexion.Conectar(); ;
+                string consultaUpdate = "Update Estudiante set nombreEstudiante = @nombreEstudiante, carnet = @carnet, nie = @nie, estadoEstudiante = @estadoEstudiante, id_Proyecto=@proyecto, id_EspNivSec = @espNivSec where id = @id";
+                SqlCommand actualizar = new SqlCommand(consultaUpdate, conexion);
+                actualizar.Parameters.AddWithValue("@carnet", carnet);
+                actualizar.Parameters.AddWithValue("@nombreEstudiante", nombreEstudiante);
+                actualizar.Parameters.AddWithValue("@nie", nie);
+                actualizar.Parameters.AddWithValue("@estadoEstudiante", estado);
+                actualizar.Parameters.AddWithValue("@proyecto", proyecto);
+                actualizar.Parameters.AddWithValue("@espNivSec", espNivSec);
+                actualizar.Parameters.AddWithValue("@id", id);
+
+                actualizar.ExecuteNonQuery();
+                MessageBox.Show("Datos actualizados", "Actualizar");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar los datos" + ex);
+                return false;
+            }
+        }
 
     }
 
