@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreacionUsuario));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbUsuarios = new System.Windows.Forms.GroupBox();
@@ -90,7 +89,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.42857F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.57143F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 433F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1353, 788);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 788);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // gbUsuarios
@@ -102,7 +101,7 @@
             this.gbUsuarios.Location = new System.Drawing.Point(30, 364);
             this.gbUsuarios.Margin = new System.Windows.Forms.Padding(30, 10, 30, 10);
             this.gbUsuarios.Name = "gbUsuarios";
-            this.gbUsuarios.Size = new System.Drawing.Size(1293, 414);
+            this.gbUsuarios.Size = new System.Drawing.Size(1310, 414);
             this.gbUsuarios.TabIndex = 10;
             this.gbUsuarios.TabStop = false;
             this.gbUsuarios.Text = "Usuarios";
@@ -112,14 +111,6 @@
             this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsuarios.Location = new System.Drawing.Point(3, 30);
             this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2);
@@ -130,7 +121,7 @@
             this.dgvUsuarios.RowTemplate.Height = 24;
             this.dgvUsuarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(1287, 381);
+            this.dgvUsuarios.Size = new System.Drawing.Size(1304, 381);
             this.dgvUsuarios.TabIndex = 6;
             // 
             // gbCrearUsuario
@@ -142,7 +133,7 @@
             this.gbCrearUsuario.Location = new System.Drawing.Point(30, 149);
             this.gbCrearUsuario.Margin = new System.Windows.Forms.Padding(30, 10, 30, 10);
             this.gbCrearUsuario.Name = "gbCrearUsuario";
-            this.gbCrearUsuario.Size = new System.Drawing.Size(1293, 195);
+            this.gbCrearUsuario.Size = new System.Drawing.Size(1310, 195);
             this.gbCrearUsuario.TabIndex = 5;
             this.gbCrearUsuario.TabStop = false;
             this.gbCrearUsuario.Text = "Crear Usuario";
@@ -161,7 +152,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1287, 162);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1304, 162);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // panel4
@@ -171,9 +162,9 @@
             this.panel4.Controls.Add(this.btnAgregar);
             this.panel4.Controls.Add(this.btnEditar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(941, 3);
+            this.panel4.Location = new System.Drawing.Point(957, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(343, 156);
+            this.panel4.Size = new System.Drawing.Size(344, 156);
             this.panel4.TabIndex = 1;
             // 
             // btnEliminar
@@ -268,21 +259,21 @@
             this.tableLayoutPanel6.Controls.Add(this.lblRol, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.lblEstadoUsuario, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(458, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(466, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.62385F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.37615F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(477, 156);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(485, 156);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.cmbRol);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(187, 2);
+            this.panel1.Location = new System.Drawing.Point(195, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(288, 71);
@@ -304,7 +295,7 @@
             this.panel2.Controls.Add(this.rbnInactivo);
             this.panel2.Controls.Add(this.rbnActivo);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(187, 77);
+            this.panel2.Location = new System.Drawing.Point(195, 77);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(288, 77);
@@ -345,7 +336,7 @@
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRol.ForeColor = System.Drawing.Color.Black;
-            this.lblRol.Location = new System.Drawing.Point(60, 19);
+            this.lblRol.Location = new System.Drawing.Point(64, 19);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(65, 36);
             this.lblRol.TabIndex = 2;
@@ -357,7 +348,7 @@
             this.lblEstadoUsuario.AutoSize = true;
             this.lblEstadoUsuario.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblEstadoUsuario.Location = new System.Drawing.Point(33, 97);
+            this.lblEstadoUsuario.Location = new System.Drawing.Point(37, 97);
             this.lblEstadoUsuario.Name = "lblEstadoUsuario";
             this.lblEstadoUsuario.Size = new System.Drawing.Size(118, 36);
             this.lblEstadoUsuario.TabIndex = 1;
@@ -380,13 +371,13 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.63935F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(449, 156);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(457, 156);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // txtClave
             // 
             this.txtClave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtClave.Location = new System.Drawing.Point(202, 98);
+            this.txtClave.Location = new System.Drawing.Point(210, 98);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(244, 34);
             this.txtClave.TabIndex = 7;
@@ -394,7 +385,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsuario.Location = new System.Drawing.Point(203, 20);
+            this.txtUsuario.Location = new System.Drawing.Point(211, 20);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(242, 34);
             this.txtUsuario.TabIndex = 8;
@@ -405,7 +396,7 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblUsuario.Location = new System.Drawing.Point(36, 19);
+            this.lblUsuario.Location = new System.Drawing.Point(40, 19);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(126, 36);
             this.lblUsuario.TabIndex = 1;
@@ -417,7 +408,7 @@
             this.lblClave.AutoSize = true;
             this.lblClave.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave.ForeColor = System.Drawing.Color.Black;
-            this.lblClave.Location = new System.Drawing.Point(45, 97);
+            this.lblClave.Location = new System.Drawing.Point(49, 97);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(108, 36);
             this.lblClave.TabIndex = 2;
@@ -431,7 +422,7 @@
             this.pnlBienvenida.Location = new System.Drawing.Point(20, 15);
             this.pnlBienvenida.Margin = new System.Windows.Forms.Padding(20, 15, 20, 15);
             this.pnlBienvenida.Name = "pnlBienvenida";
-            this.pnlBienvenida.Size = new System.Drawing.Size(1313, 109);
+            this.pnlBienvenida.Size = new System.Drawing.Size(1330, 109);
             this.pnlBienvenida.TabIndex = 4;
             // 
             // tableLayoutPanel10
@@ -447,7 +438,7 @@
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1313, 109);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1330, 109);
             this.tableLayoutPanel10.TabIndex = 1;
             // 
             // panel3
@@ -457,7 +448,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 57);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1307, 49);
+            this.panel3.Size = new System.Drawing.Size(1324, 49);
             this.panel3.TabIndex = 9;
             // 
             // btnBuscar
@@ -470,7 +461,7 @@
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(856, 0);
+            this.btnBuscar.Location = new System.Drawing.Point(865, 0);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(141, 40);
             this.btnBuscar.TabIndex = 3;
@@ -482,7 +473,7 @@
             this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBuscar.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.Silver;
-            this.txtBuscar.Location = new System.Drawing.Point(279, 9);
+            this.txtBuscar.Location = new System.Drawing.Point(288, 9);
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(532, 26);
@@ -499,7 +490,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1307, 48);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1324, 48);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // lblConfiguracion
@@ -509,7 +500,7 @@
             this.lblConfiguracion.BackColor = System.Drawing.Color.Transparent;
             this.lblConfiguracion.Font = new System.Drawing.Font("Perpetua Titling MT", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfiguracion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblConfiguracion.Location = new System.Drawing.Point(446, 0);
+            this.lblConfiguracion.Location = new System.Drawing.Point(455, 0);
             this.lblConfiguracion.Name = "lblConfiguracion";
             this.lblConfiguracion.Size = new System.Drawing.Size(414, 48);
             this.lblConfiguracion.TabIndex = 1;
@@ -523,7 +514,7 @@
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(1200, 788);
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1387, 749);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCreacionUsuario";

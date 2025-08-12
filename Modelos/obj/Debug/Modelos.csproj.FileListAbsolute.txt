@@ -58,3 +58,12 @@ C:\Users\David S\Desktop\SocialClock\Modelos\obj\Debug\Modelos.csproj.CoreCompil
 C:\Users\David S\Desktop\SocialClock\Modelos\obj\Debug\Modelos.csproj.Up2Date
 C:\Users\David S\Desktop\SocialClock\Modelos\obj\Debug\Modelos.dll
 C:\Users\David S\Desktop\SocialClock\Modelos\obj\Debug\Modelos.pdb
+C:\Users\Estudiante\Desktop\SocialClock\Modelos\bin\Debug\Modelos.dll
+C:\Users\Estudiante\Desktop\SocialClock\Modelos\bin\Debug\Modelos.pdb
+C:\Users\Estudiante\Desktop\SocialClock\Modelos\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Estudiante\Desktop\SocialClock\Modelos\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Estudiante\Desktop\SocialClock\Modelos\obj\Debug\Modelos.csproj.AssemblyReference.cache
+C:\Users\Estudiante\Desktop\SocialClock\Modelos\obj\Debug\Modelos.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante\Desktop\SocialClock\Modelos\obj\Debug\Modelos.csproj.Up2Date
+C:\Users\Estudiante\Desktop\SocialClock\Modelos\obj\Debug\Modelos.dll
+C:\Users\Estudiante\Desktop\SocialClock\Modelos\obj\Debug\Modelos.pdb

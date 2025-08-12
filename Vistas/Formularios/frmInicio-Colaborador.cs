@@ -17,7 +17,6 @@ namespace Vistas.Formularios
         public frmInicio_Colaborador()
         {
             InitializeComponent();
-            InitializeComponent();
             RedondearPanel(pnlBienvenida, 40);
             ocultarSubTabla(false);
             mostrarNivelAcademico();

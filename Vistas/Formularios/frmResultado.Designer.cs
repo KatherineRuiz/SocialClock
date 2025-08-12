@@ -30,6 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResultado));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.gbServicioSocial = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblActividad = new System.Windows.Forms.Label();
+            this.lblNumEstudiante = new System.Windows.Forms.Label();
+            this.lblHoras = new System.Windows.Forms.Label();
+            this.txtNumEstudiante = new System.Windows.Forms.TextBox();
+            this.txtActvidad = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.txtHoras = new System.Windows.Forms.TextBox();
+            this.dtpFechaBitacora = new System.Windows.Forms.DateTimePicker();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnEliminarBitacora = new Vistas.Clases.RedondearBoton();
+            this.redondearBoton1 = new Vistas.Clases.RedondearBoton();
+            this.btnVerBitacora = new Vistas.Clases.RedondearBoton();
+            this.btnLimpiarBitacora = new Vistas.Clases.RedondearBoton();
+            this.btnRegistrar = new Vistas.Clases.RedondearBoton();
             this.gbEstudianteEncontrado = new System.Windows.Forms.GroupBox();
             this.dgvEstudianteEncontrado = new System.Windows.Forms.DataGridView();
             this.gbModificar = new System.Windows.Forms.GroupBox();
@@ -71,29 +93,13 @@
             this.lblBienvenida = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
-            this.gbServicioSocial = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblActividad = new System.Windows.Forms.Label();
-            this.lblNumEstudiante = new System.Windows.Forms.Label();
-            this.lblHoras = new System.Windows.Forms.Label();
-            this.txtNumEstudiante = new System.Windows.Forms.TextBox();
-            this.txtActvidad = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.txtHoras = new System.Windows.Forms.TextBox();
-            this.dtpFechaBitacora = new System.Windows.Forms.DateTimePicker();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnEliminarBitacora = new Vistas.Clases.RedondearBoton();
-            this.redondearBoton1 = new Vistas.Clases.RedondearBoton();
-            this.btnVerBitacora = new Vistas.Clases.RedondearBoton();
-            this.btnLimpiarBitacora = new Vistas.Clases.RedondearBoton();
-            this.btnRegistrar = new Vistas.Clases.RedondearBoton();
             this.tableLayoutPanel1.SuspendLayout();
+            this.gbServicioSocial.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.gbEstudianteEncontrado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudianteEncontrado)).BeginInit();
             this.gbModificar.SuspendLayout();
@@ -108,12 +114,6 @@
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.gbServicioSocial.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -134,6 +134,333 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1353, 902);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // gbServicioSocial
+            // 
+            this.gbServicioSocial.Controls.Add(this.tableLayoutPanel2);
+            this.gbServicioSocial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbServicioSocial.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbServicioSocial.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.gbServicioSocial.Location = new System.Drawing.Point(30, 436);
+            this.gbServicioSocial.Margin = new System.Windows.Forms.Padding(30, 10, 30, 10);
+            this.gbServicioSocial.Name = "gbServicioSocial";
+            this.gbServicioSocial.Size = new System.Drawing.Size(1293, 236);
+            this.gbServicioSocial.TabIndex = 14;
+            this.gbServicioSocial.TabStop = false;
+            this.gbServicioSocial.Text = "Servicio social";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.60784F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.39216F));
+            this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 30);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 203F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1287, 203);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.radioButton7);
+            this.panel3.Controls.Add(this.tableLayoutPanel9);
+            this.panel3.Controls.Add(this.radioButton8);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(967, 197);
+            this.panel3.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(315, 233);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 36);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Estado:";
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
+            this.radioButton7.Location = new System.Drawing.Point(585, 238);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(129, 34);
+            this.radioButton7.TabIndex = 8;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "Inactivo";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 644F));
+            this.tableLayoutPanel9.Controls.Add(this.lblActividad, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.lblNumEstudiante, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.lblHoras, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.txtNumEstudiante, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.txtActvidad, 1, 2);
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel3, 1, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 3;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.42373F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.87248F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.2953F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(967, 197);
+            this.tableLayoutPanel9.TabIndex = 1;
+            // 
+            // lblActividad
+            // 
+            this.lblActividad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblActividad.AutoSize = true;
+            this.lblActividad.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActividad.ForeColor = System.Drawing.Color.Black;
+            this.lblActividad.Location = new System.Drawing.Point(9, 135);
+            this.lblActividad.Name = "lblActividad";
+            this.lblActividad.Size = new System.Drawing.Size(304, 36);
+            this.lblActividad.TabIndex = 2;
+            this.lblActividad.Text = "Actividad realizada:";
+            // 
+            // lblNumEstudiante
+            // 
+            this.lblNumEstudiante.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNumEstudiante.AutoSize = true;
+            this.lblNumEstudiante.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumEstudiante.ForeColor = System.Drawing.Color.Black;
+            this.lblNumEstudiante.Location = new System.Drawing.Point(55, 6);
+            this.lblNumEstudiante.Name = "lblNumEstudiante";
+            this.lblNumEstudiante.Size = new System.Drawing.Size(212, 36);
+            this.lblNumEstudiante.TabIndex = 1;
+            this.lblNumEstudiante.Text = "N° Estudiante:";
+            // 
+            // lblHoras
+            // 
+            this.lblHoras.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblHoras.AutoSize = true;
+            this.lblHoras.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoras.ForeColor = System.Drawing.Color.Black;
+            this.lblHoras.Location = new System.Drawing.Point(70, 61);
+            this.lblHoras.Name = "lblHoras";
+            this.lblHoras.Size = new System.Drawing.Size(183, 36);
+            this.lblHoras.TabIndex = 1;
+            this.lblHoras.Text = "Num. Horas:";
+            // 
+            // txtNumEstudiante
+            // 
+            this.txtNumEstudiante.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtNumEstudiante.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumEstudiante.Location = new System.Drawing.Point(326, 9);
+            this.txtNumEstudiante.Name = "txtNumEstudiante";
+            this.txtNumEstudiante.ReadOnly = true;
+            this.txtNumEstudiante.Size = new System.Drawing.Size(332, 31);
+            this.txtNumEstudiante.TabIndex = 7;
+            this.txtNumEstudiante.Text = "         ";
+            // 
+            // txtActvidad
+            // 
+            this.txtActvidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtActvidad.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtActvidad.Location = new System.Drawing.Point(327, 122);
+            this.txtActvidad.Multiline = true;
+            this.txtActvidad.Name = "txtActvidad";
+            this.txtActvidad.Size = new System.Drawing.Size(636, 61);
+            this.txtActvidad.TabIndex = 9;
+            this.txtActvidad.Text = "         ";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.95349F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.04651F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 298F));
+            this.tableLayoutPanel3.Controls.Add(this.lblFecha, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtHoras, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.dtpFechaBitacora, 2, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(326, 52);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(638, 54);
+            this.tableLayoutPanel3.TabIndex = 10;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.Color.Black;
+            this.lblFecha.Location = new System.Drawing.Point(222, 9);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(112, 36);
+            this.lblFecha.TabIndex = 9;
+            this.lblFecha.Text = "Fecha:";
+            // 
+            // txtHoras
+            // 
+            this.txtHoras.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtHoras.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoras.Location = new System.Drawing.Point(3, 11);
+            this.txtHoras.Name = "txtHoras";
+            this.txtHoras.Size = new System.Drawing.Size(210, 31);
+            this.txtHoras.TabIndex = 8;
+            this.txtHoras.Text = "         ";
+            // 
+            // dtpFechaBitacora
+            // 
+            this.dtpFechaBitacora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpFechaBitacora.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaBitacora.Location = new System.Drawing.Point(343, 11);
+            this.dtpFechaBitacora.MinDate = new System.DateTime(2025, 8, 9, 16, 29, 5, 0);
+            this.dtpFechaBitacora.Name = "dtpFechaBitacora";
+            this.dtpFechaBitacora.Size = new System.Drawing.Size(291, 31);
+            this.dtpFechaBitacora.TabIndex = 10;
+            this.dtpFechaBitacora.Value = new System.DateTime(2025, 8, 9, 16, 29, 5, 0);
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton8.Checked = true;
+            this.radioButton8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
+            this.radioButton8.Location = new System.Drawing.Point(470, 238);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(109, 34);
+            this.radioButton8.TabIndex = 9;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "Activo";
+            this.radioButton8.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnEliminarBitacora);
+            this.panel2.Controls.Add(this.redondearBoton1);
+            this.panel2.Controls.Add(this.btnVerBitacora);
+            this.panel2.Controls.Add(this.btnLimpiarBitacora);
+            this.panel2.Controls.Add(this.btnRegistrar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(976, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(308, 197);
+            this.panel2.TabIndex = 4;
+            // 
+            // btnEliminarBitacora
+            // 
+            this.btnEliminarBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
+            this.btnEliminarBitacora.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnEliminarBitacora.BorderRadius = 30;
+            this.btnEliminarBitacora.BorderSize = 0;
+            this.btnEliminarBitacora.FlatAppearance.BorderSize = 0;
+            this.btnEliminarBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarBitacora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarBitacora.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarBitacora.Image = global::Vistas.Properties.Resources.eliminar;
+            this.btnEliminarBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminarBitacora.Location = new System.Drawing.Point(4, 152);
+            this.btnEliminarBitacora.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            this.btnEliminarBitacora.Name = "btnEliminarBitacora";
+            this.btnEliminarBitacora.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEliminarBitacora.Size = new System.Drawing.Size(263, 41);
+            this.btnEliminarBitacora.TabIndex = 7;
+            this.btnEliminarBitacora.Text = "Eliminar";
+            this.btnEliminarBitacora.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminarBitacora.UseVisualStyleBackColor = false;
+            // 
+            // redondearBoton1
+            // 
+            this.redondearBoton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
+            this.redondearBoton1.BorderColor = System.Drawing.Color.Aquamarine;
+            this.redondearBoton1.BorderRadius = 30;
+            this.redondearBoton1.BorderSize = 0;
+            this.redondearBoton1.FlatAppearance.BorderSize = 0;
+            this.redondearBoton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.redondearBoton1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redondearBoton1.ForeColor = System.Drawing.Color.White;
+            this.redondearBoton1.Image = ((System.Drawing.Image)(resources.GetObject("redondearBoton1.Image")));
+            this.redondearBoton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.redondearBoton1.Location = new System.Drawing.Point(138, 107);
+            this.redondearBoton1.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            this.redondearBoton1.Name = "redondearBoton1";
+            this.redondearBoton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.redondearBoton1.Size = new System.Drawing.Size(130, 39);
+            this.redondearBoton1.TabIndex = 8;
+            this.redondearBoton1.Text = "Editar";
+            this.redondearBoton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.redondearBoton1.UseVisualStyleBackColor = false;
+            // 
+            // btnVerBitacora
+            // 
+            this.btnVerBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(96)))), ((int)(((byte)(128)))));
+            this.btnVerBitacora.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnVerBitacora.BorderRadius = 30;
+            this.btnVerBitacora.BorderSize = 0;
+            this.btnVerBitacora.FlatAppearance.BorderSize = 0;
+            this.btnVerBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerBitacora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerBitacora.ForeColor = System.Drawing.Color.White;
+            this.btnVerBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerBitacora.Location = new System.Drawing.Point(4, 58);
+            this.btnVerBitacora.Name = "btnVerBitacora";
+            this.btnVerBitacora.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnVerBitacora.Size = new System.Drawing.Size(264, 45);
+            this.btnVerBitacora.TabIndex = 7;
+            this.btnVerBitacora.Text = "Ver bitacora";
+            this.btnVerBitacora.UseVisualStyleBackColor = false;
+            // 
+            // btnLimpiarBitacora
+            // 
+            this.btnLimpiarBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
+            this.btnLimpiarBitacora.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnLimpiarBitacora.BorderRadius = 30;
+            this.btnLimpiarBitacora.BorderSize = 0;
+            this.btnLimpiarBitacora.FlatAppearance.BorderSize = 0;
+            this.btnLimpiarBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarBitacora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarBitacora.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiarBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiarBitacora.Location = new System.Drawing.Point(4, 107);
+            this.btnLimpiarBitacora.Name = "btnLimpiarBitacora";
+            this.btnLimpiarBitacora.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLimpiarBitacora.Size = new System.Drawing.Size(128, 39);
+            this.btnLimpiarBitacora.TabIndex = 6;
+            this.btnLimpiarBitacora.Text = "Limpiar";
+            this.btnLimpiarBitacora.UseVisualStyleBackColor = false;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
+            this.btnRegistrar.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.BorderRadius = 30;
+            this.btnRegistrar.BorderSize = 0;
+            this.btnRegistrar.FlatAppearance.BorderSize = 0;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(5, 5);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(263, 48);
+            this.btnRegistrar.TabIndex = 4;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
             // 
             // gbEstudianteEncontrado
             // 
@@ -179,7 +506,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.78571F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.21429F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel7, 0, 0);
@@ -213,14 +540,14 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.4086F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(497, 161);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(496, 161);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
             // txtNie
             // 
             this.txtNie.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNie.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNie.Location = new System.Drawing.Point(249, 124);
+            this.txtNie.Location = new System.Drawing.Point(248, 124);
             this.txtNie.Name = "txtNie";
             this.txtNie.Size = new System.Drawing.Size(245, 31);
             this.txtNie.TabIndex = 8;
@@ -229,7 +556,7 @@
             // 
             this.txtCarnet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCarnet.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCarnet.Location = new System.Drawing.Point(249, 81);
+            this.txtCarnet.Location = new System.Drawing.Point(248, 81);
             this.txtCarnet.Name = "txtCarnet";
             this.txtCarnet.Size = new System.Drawing.Size(245, 31);
             this.txtCarnet.TabIndex = 7;
@@ -276,7 +603,7 @@
             this.lblCarnet.AutoSize = true;
             this.lblCarnet.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarnet.ForeColor = System.Drawing.Color.Black;
-            this.lblCarnet.Location = new System.Drawing.Point(62, 80);
+            this.lblCarnet.Location = new System.Drawing.Point(61, 80);
             this.lblCarnet.Name = "lblCarnet";
             this.lblCarnet.Size = new System.Drawing.Size(122, 36);
             this.lblCarnet.TabIndex = 3;
@@ -288,7 +615,7 @@
             this.cbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEspecialidad.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEspecialidad.FormattingEnabled = true;
-            this.cbEspecialidad.Location = new System.Drawing.Point(249, 3);
+            this.cbEspecialidad.Location = new System.Drawing.Point(248, 3);
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(245, 30);
             this.cbEspecialidad.TabIndex = 5;
@@ -299,7 +626,7 @@
             this.cbProyecto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProyecto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProyecto.FormattingEnabled = true;
-            this.cbProyecto.Location = new System.Drawing.Point(249, 41);
+            this.cbProyecto.Location = new System.Drawing.Point(248, 41);
             this.cbProyecto.Name = "cbProyecto";
             this.cbProyecto.Size = new System.Drawing.Size(245, 30);
             this.cbProyecto.TabIndex = 6;
@@ -310,11 +637,11 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(1046, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(1045, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.35294F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(238, 161);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(239, 161);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // panel6
@@ -325,7 +652,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(232, 155);
+            this.panel6.Size = new System.Drawing.Size(233, 155);
             this.panel6.TabIndex = 2;
             // 
             // btnEliminar
@@ -695,333 +1022,6 @@
             this.btnRegresar.TabIndex = 0;
             this.btnRegresar.UseVisualStyleBackColor = false;
             // 
-            // gbServicioSocial
-            // 
-            this.gbServicioSocial.Controls.Add(this.tableLayoutPanel2);
-            this.gbServicioSocial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbServicioSocial.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbServicioSocial.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.gbServicioSocial.Location = new System.Drawing.Point(30, 436);
-            this.gbServicioSocial.Margin = new System.Windows.Forms.Padding(30, 10, 30, 10);
-            this.gbServicioSocial.Name = "gbServicioSocial";
-            this.gbServicioSocial.Size = new System.Drawing.Size(1293, 236);
-            this.gbServicioSocial.TabIndex = 14;
-            this.gbServicioSocial.TabStop = false;
-            this.gbServicioSocial.Text = "Servicio social";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.60784F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.39216F));
-            this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 30);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1287, 203);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.radioButton7);
-            this.panel3.Controls.Add(this.tableLayoutPanel9);
-            this.panel3.Controls.Add(this.radioButton8);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(967, 197);
-            this.panel3.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(315, 233);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 36);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Estado:";
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
-            this.radioButton7.Location = new System.Drawing.Point(585, 238);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(129, 34);
-            this.radioButton7.TabIndex = 8;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Inactivo";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel9
-            // 
-            this.tableLayoutPanel9.ColumnCount = 2;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 644F));
-            this.tableLayoutPanel9.Controls.Add(this.lblActividad, 0, 2);
-            this.tableLayoutPanel9.Controls.Add(this.lblNumEstudiante, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.lblHoras, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.txtNumEstudiante, 1, 0);
-            this.tableLayoutPanel9.Controls.Add(this.txtActvidad, 1, 2);
-            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel3, 1, 1);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 3;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.42373F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.87248F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.2953F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(967, 197);
-            this.tableLayoutPanel9.TabIndex = 1;
-            // 
-            // lblActividad
-            // 
-            this.lblActividad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblActividad.AutoSize = true;
-            this.lblActividad.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActividad.ForeColor = System.Drawing.Color.Black;
-            this.lblActividad.Location = new System.Drawing.Point(9, 135);
-            this.lblActividad.Name = "lblActividad";
-            this.lblActividad.Size = new System.Drawing.Size(304, 36);
-            this.lblActividad.TabIndex = 2;
-            this.lblActividad.Text = "Actividad realizada:";
-            // 
-            // lblNumEstudiante
-            // 
-            this.lblNumEstudiante.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblNumEstudiante.AutoSize = true;
-            this.lblNumEstudiante.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumEstudiante.ForeColor = System.Drawing.Color.Black;
-            this.lblNumEstudiante.Location = new System.Drawing.Point(55, 6);
-            this.lblNumEstudiante.Name = "lblNumEstudiante";
-            this.lblNumEstudiante.Size = new System.Drawing.Size(212, 36);
-            this.lblNumEstudiante.TabIndex = 1;
-            this.lblNumEstudiante.Text = "N° Estudiante:";
-            // 
-            // lblHoras
-            // 
-            this.lblHoras.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblHoras.AutoSize = true;
-            this.lblHoras.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoras.ForeColor = System.Drawing.Color.Black;
-            this.lblHoras.Location = new System.Drawing.Point(70, 61);
-            this.lblHoras.Name = "lblHoras";
-            this.lblHoras.Size = new System.Drawing.Size(183, 36);
-            this.lblHoras.TabIndex = 1;
-            this.lblHoras.Text = "Num. Horas:";
-            // 
-            // txtNumEstudiante
-            // 
-            this.txtNumEstudiante.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNumEstudiante.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumEstudiante.Location = new System.Drawing.Point(326, 9);
-            this.txtNumEstudiante.Name = "txtNumEstudiante";
-            this.txtNumEstudiante.ReadOnly = true;
-            this.txtNumEstudiante.Size = new System.Drawing.Size(332, 31);
-            this.txtNumEstudiante.TabIndex = 7;
-            this.txtNumEstudiante.Text = "         ";
-            // 
-            // txtActvidad
-            // 
-            this.txtActvidad.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtActvidad.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtActvidad.Location = new System.Drawing.Point(327, 122);
-            this.txtActvidad.Multiline = true;
-            this.txtActvidad.Name = "txtActvidad";
-            this.txtActvidad.Size = new System.Drawing.Size(636, 61);
-            this.txtActvidad.TabIndex = 9;
-            this.txtActvidad.Text = "         ";
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.95349F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.04651F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297F));
-            this.tableLayoutPanel3.Controls.Add(this.lblFecha, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.txtHoras, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dtpFechaBitacora, 2, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(326, 52);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(638, 54);
-            this.tableLayoutPanel3.TabIndex = 10;
-            // 
-            // lblFecha
-            // 
-            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(223, 9);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(112, 36);
-            this.lblFecha.TabIndex = 9;
-            this.lblFecha.Text = "Fecha:";
-            // 
-            // txtHoras
-            // 
-            this.txtHoras.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtHoras.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoras.Location = new System.Drawing.Point(3, 11);
-            this.txtHoras.Name = "txtHoras";
-            this.txtHoras.Size = new System.Drawing.Size(210, 31);
-            this.txtHoras.TabIndex = 8;
-            this.txtHoras.Text = "         ";
-            // 
-            // dtpFechaBitacora
-            // 
-            this.dtpFechaBitacora.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpFechaBitacora.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaBitacora.Location = new System.Drawing.Point(343, 11);
-            this.dtpFechaBitacora.MinDate = new System.DateTime(2025, 8, 9, 16, 29, 5, 0);
-            this.dtpFechaBitacora.Name = "dtpFechaBitacora";
-            this.dtpFechaBitacora.Size = new System.Drawing.Size(291, 31);
-            this.dtpFechaBitacora.TabIndex = 10;
-            this.dtpFechaBitacora.Value = new System.DateTime(2025, 8, 9, 16, 29, 5, 0);
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton8.Checked = true;
-            this.radioButton8.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
-            this.radioButton8.Location = new System.Drawing.Point(470, 238);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(109, 34);
-            this.radioButton8.TabIndex = 9;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Activo";
-            this.radioButton8.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnEliminarBitacora);
-            this.panel2.Controls.Add(this.redondearBoton1);
-            this.panel2.Controls.Add(this.btnVerBitacora);
-            this.panel2.Controls.Add(this.btnLimpiarBitacora);
-            this.panel2.Controls.Add(this.btnRegistrar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(976, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(308, 197);
-            this.panel2.TabIndex = 4;
-            // 
-            // btnEliminarBitacora
-            // 
-            this.btnEliminarBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
-            this.btnEliminarBitacora.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnEliminarBitacora.BorderRadius = 30;
-            this.btnEliminarBitacora.BorderSize = 0;
-            this.btnEliminarBitacora.FlatAppearance.BorderSize = 0;
-            this.btnEliminarBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarBitacora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarBitacora.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarBitacora.Image = global::Vistas.Properties.Resources.eliminar;
-            this.btnEliminarBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminarBitacora.Location = new System.Drawing.Point(4, 152);
-            this.btnEliminarBitacora.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
-            this.btnEliminarBitacora.Name = "btnEliminarBitacora";
-            this.btnEliminarBitacora.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEliminarBitacora.Size = new System.Drawing.Size(263, 41);
-            this.btnEliminarBitacora.TabIndex = 7;
-            this.btnEliminarBitacora.Text = "Eliminar";
-            this.btnEliminarBitacora.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminarBitacora.UseVisualStyleBackColor = false;
-            // 
-            // redondearBoton1
-            // 
-            this.redondearBoton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
-            this.redondearBoton1.BorderColor = System.Drawing.Color.Aquamarine;
-            this.redondearBoton1.BorderRadius = 30;
-            this.redondearBoton1.BorderSize = 0;
-            this.redondearBoton1.FlatAppearance.BorderSize = 0;
-            this.redondearBoton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.redondearBoton1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.redondearBoton1.ForeColor = System.Drawing.Color.White;
-            this.redondearBoton1.Image = ((System.Drawing.Image)(resources.GetObject("redondearBoton1.Image")));
-            this.redondearBoton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.redondearBoton1.Location = new System.Drawing.Point(138, 107);
-            this.redondearBoton1.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
-            this.redondearBoton1.Name = "redondearBoton1";
-            this.redondearBoton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.redondearBoton1.Size = new System.Drawing.Size(130, 39);
-            this.redondearBoton1.TabIndex = 8;
-            this.redondearBoton1.Text = "Editar";
-            this.redondearBoton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.redondearBoton1.UseVisualStyleBackColor = false;
-            // 
-            // btnVerBitacora
-            // 
-            this.btnVerBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(96)))), ((int)(((byte)(128)))));
-            this.btnVerBitacora.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnVerBitacora.BorderRadius = 30;
-            this.btnVerBitacora.BorderSize = 0;
-            this.btnVerBitacora.FlatAppearance.BorderSize = 0;
-            this.btnVerBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerBitacora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerBitacora.ForeColor = System.Drawing.Color.White;
-            this.btnVerBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerBitacora.Location = new System.Drawing.Point(4, 58);
-            this.btnVerBitacora.Name = "btnVerBitacora";
-            this.btnVerBitacora.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnVerBitacora.Size = new System.Drawing.Size(264, 45);
-            this.btnVerBitacora.TabIndex = 7;
-            this.btnVerBitacora.Text = "Ver bitacora";
-            this.btnVerBitacora.UseVisualStyleBackColor = false;
-            // 
-            // btnLimpiarBitacora
-            // 
-            this.btnLimpiarBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
-            this.btnLimpiarBitacora.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnLimpiarBitacora.BorderRadius = 30;
-            this.btnLimpiarBitacora.BorderSize = 0;
-            this.btnLimpiarBitacora.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarBitacora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiarBitacora.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiarBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarBitacora.Location = new System.Drawing.Point(4, 107);
-            this.btnLimpiarBitacora.Name = "btnLimpiarBitacora";
-            this.btnLimpiarBitacora.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnLimpiarBitacora.Size = new System.Drawing.Size(128, 39);
-            this.btnLimpiarBitacora.TabIndex = 6;
-            this.btnLimpiarBitacora.Text = "Limpiar";
-            this.btnLimpiarBitacora.UseVisualStyleBackColor = false;
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
-            this.btnRegistrar.BorderColor = System.Drawing.Color.Transparent;
-            this.btnRegistrar.BorderRadius = 30;
-            this.btnRegistrar.BorderSize = 0;
-            this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(5, 5);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(5);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(263, 48);
-            this.btnRegistrar.TabIndex = 4;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            // 
             // frmResultado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1035,6 +1035,15 @@
             this.Name = "frmResultado";
             this.Text = "frmResultado";
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.gbServicioSocial.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.gbEstudianteEncontrado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudianteEncontrado)).EndInit();
             this.gbModificar.ResumeLayout(false);
@@ -1054,15 +1063,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.gbServicioSocial.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.tableLayoutPanel9.ResumeLayout(false);
-            this.tableLayoutPanel9.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

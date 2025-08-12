@@ -431,10 +431,10 @@ insert into Estudiante values
 ('Juan Pablo Contreras Chavez',20250248,'654867',0,12,1),
 ('Ryan Alexander Baxter Segovia',20230485,'',0,13,1);
 insert into Estudiante values
-('Ariela Melissa Barahona Carranza',20230449,'448559',0,12,1);
+('Ariela Melissa Barahona Carranza',20237449,'448559',0,12,1);
 
 insert into BitacoraSocial values 
-(50, 'Creación de stand cultural', 1),
+(50, 'Creación de stand cultural', 2025/11/26),	
 (40, 'Participación en obra de teatro', 2);
 
 delete Estudiante where idEstudiante=21

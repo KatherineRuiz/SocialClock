@@ -18,7 +18,7 @@ namespace Vistas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSeleccionDeRol());
+            Application.Run(new frmProyectos_Colaborador());
            
         }
     }

@@ -47,6 +47,8 @@
             this.dtpFechaBitacora = new System.Windows.Forms.DateTimePicker();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnEliminarBitacora = new Vistas.Clases.RedondearBoton();
+            this.redondearBoton1 = new Vistas.Clases.RedondearBoton();
             this.btnVerBitacora = new Vistas.Clases.RedondearBoton();
             this.btnLimpiarBitacora = new Vistas.Clases.RedondearBoton();
             this.btnRegistrar = new Vistas.Clases.RedondearBoton();
@@ -65,7 +67,9 @@
             this.cbProyecto = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnEliminar = new Vistas.Clases.RedondearBoton();
             this.btnLimpiarDatos = new Vistas.Clases.RedondearBoton();
+            this.btnEditar = new Vistas.Clases.RedondearBoton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
@@ -85,10 +89,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblBienvenida = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnEliminarBitacora = new Vistas.Clases.RedondearBoton();
-            this.redondearBoton1 = new Vistas.Clases.RedondearBoton();
-            this.btnEliminar = new Vistas.Clases.RedondearBoton();
-            this.btnEditar = new Vistas.Clases.RedondearBoton();
             this.btnRegresar = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbServicioSocial.SuspendLayout();
@@ -285,7 +285,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.95349F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.04651F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 298F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 299F));
             this.tableLayoutPanel3.Controls.Add(this.lblFecha, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtHoras, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.dtpFechaBitacora, 2, 0);
@@ -303,7 +303,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(222, 9);
+            this.lblFecha.Location = new System.Drawing.Point(221, 9);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(112, 36);
             this.lblFecha.TabIndex = 9;
@@ -323,7 +323,7 @@
             // 
             this.dtpFechaBitacora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpFechaBitacora.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaBitacora.Location = new System.Drawing.Point(343, 11);
+            this.dtpFechaBitacora.Location = new System.Drawing.Point(342, 11);
             this.dtpFechaBitacora.MinDate = new System.DateTime(2025, 8, 9, 16, 29, 5, 0);
             this.dtpFechaBitacora.Name = "dtpFechaBitacora";
             this.dtpFechaBitacora.Size = new System.Drawing.Size(291, 31);
@@ -358,6 +358,50 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(308, 197);
             this.panel2.TabIndex = 4;
+            // 
+            // btnEliminarBitacora
+            // 
+            this.btnEliminarBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
+            this.btnEliminarBitacora.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnEliminarBitacora.BorderRadius = 30;
+            this.btnEliminarBitacora.BorderSize = 0;
+            this.btnEliminarBitacora.FlatAppearance.BorderSize = 0;
+            this.btnEliminarBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarBitacora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarBitacora.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarBitacora.Image = global::Vistas.Properties.Resources.eliminar;
+            this.btnEliminarBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminarBitacora.Location = new System.Drawing.Point(4, 152);
+            this.btnEliminarBitacora.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            this.btnEliminarBitacora.Name = "btnEliminarBitacora";
+            this.btnEliminarBitacora.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEliminarBitacora.Size = new System.Drawing.Size(263, 41);
+            this.btnEliminarBitacora.TabIndex = 7;
+            this.btnEliminarBitacora.Text = "Eliminar";
+            this.btnEliminarBitacora.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminarBitacora.UseVisualStyleBackColor = false;
+            // 
+            // redondearBoton1
+            // 
+            this.redondearBoton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
+            this.redondearBoton1.BorderColor = System.Drawing.Color.Aquamarine;
+            this.redondearBoton1.BorderRadius = 30;
+            this.redondearBoton1.BorderSize = 0;
+            this.redondearBoton1.FlatAppearance.BorderSize = 0;
+            this.redondearBoton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.redondearBoton1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.redondearBoton1.ForeColor = System.Drawing.Color.White;
+            this.redondearBoton1.Image = ((System.Drawing.Image)(resources.GetObject("redondearBoton1.Image")));
+            this.redondearBoton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.redondearBoton1.Location = new System.Drawing.Point(138, 107);
+            this.redondearBoton1.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            this.redondearBoton1.Name = "redondearBoton1";
+            this.redondearBoton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.redondearBoton1.Size = new System.Drawing.Size(130, 39);
+            this.redondearBoton1.TabIndex = 8;
+            this.redondearBoton1.Text = "Editar";
+            this.redondearBoton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.redondearBoton1.UseVisualStyleBackColor = false;
             // 
             // btnVerBitacora
             // 
@@ -459,7 +503,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.78571F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.21429F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel7, 0, 0);
@@ -485,7 +529,7 @@
             this.tableLayoutPanel5.Controls.Add(this.cbEspecialidad, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.cbProyecto, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(543, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(542, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 4;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.72043F));
@@ -590,11 +634,11 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(1045, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(1044, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.35294F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(239, 161);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(240, 161);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // panel6
@@ -605,8 +649,30 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(233, 155);
+            this.panel6.Size = new System.Drawing.Size(234, 155);
             this.panel6.TabIndex = 2;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnEliminar.BorderRadius = 30;
+            this.btnEliminar.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = global::Vistas.Properties.Resources.eliminar;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.Location = new System.Drawing.Point(27, 55);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEliminar.Size = new System.Drawing.Size(169, 46);
+            this.btnEliminar.TabIndex = 6;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // btnLimpiarDatos
             // 
@@ -627,6 +693,28 @@
             this.btnLimpiarDatos.Text = "Limpiar";
             this.btnLimpiarDatos.UseVisualStyleBackColor = false;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
+            this.btnEditar.BorderColor = System.Drawing.Color.Aquamarine;
+            this.btnEditar.BorderRadius = 30;
+            this.btnEditar.BorderSize = 0;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.Location = new System.Drawing.Point(27, 3);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEditar.Size = new System.Drawing.Size(169, 46);
+            this.btnEditar.TabIndex = 4;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.label14);
@@ -636,7 +724,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(534, 161);
+            this.panel7.Size = new System.Drawing.Size(533, 161);
             this.panel7.TabIndex = 3;
             // 
             // label14
@@ -645,7 +733,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(99, 212);
+            this.label14.Location = new System.Drawing.Point(98, 212);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(118, 36);
             this.label14.TabIndex = 10;
@@ -657,7 +745,7 @@
             this.radioButton5.AutoSize = true;
             this.radioButton5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
-            this.radioButton5.Location = new System.Drawing.Point(369, 217);
+            this.radioButton5.Location = new System.Drawing.Point(368, 217);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(129, 34);
             this.radioButton5.TabIndex = 8;
@@ -684,7 +772,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.87097F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.4086F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(534, 122);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(533, 122);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // lblNombre
@@ -693,7 +781,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Black;
-            this.lblNombre.Location = new System.Drawing.Point(69, 82);
+            this.lblNombre.Location = new System.Drawing.Point(68, 82);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(138, 36);
             this.lblNombre.TabIndex = 7;
@@ -703,7 +791,7 @@
             // 
             this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(279, 82);
+            this.txtNombre.Location = new System.Drawing.Point(278, 82);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(252, 31);
             this.txtNombre.TabIndex = 6;
@@ -714,7 +802,7 @@
             this.cbNivelAcademico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNivelAcademico.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNivelAcademico.FormattingEnabled = true;
-            this.cbNivelAcademico.Location = new System.Drawing.Point(279, 3);
+            this.cbNivelAcademico.Location = new System.Drawing.Point(278, 3);
             this.cbNivelAcademico.Name = "cbNivelAcademico";
             this.cbNivelAcademico.Size = new System.Drawing.Size(252, 30);
             this.cbNivelAcademico.TabIndex = 4;
@@ -725,7 +813,7 @@
             this.cbSeccion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSeccion.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSeccion.FormattingEnabled = true;
-            this.cbSeccion.Location = new System.Drawing.Point(279, 41);
+            this.cbSeccion.Location = new System.Drawing.Point(278, 41);
             this.cbSeccion.Name = "cbSeccion";
             this.cbSeccion.Size = new System.Drawing.Size(252, 30);
             this.cbSeccion.TabIndex = 5;
@@ -762,7 +850,7 @@
             this.radioButton6.Checked = true;
             this.radioButton6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(19)))), ((int)(((byte)(56)))));
-            this.radioButton6.Location = new System.Drawing.Point(254, 217);
+            this.radioButton6.Location = new System.Drawing.Point(253, 217);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(109, 34);
             this.radioButton6.TabIndex = 9;
@@ -869,94 +957,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(53, 46);
             this.panel5.TabIndex = 0;
-            // 
-            // btnEliminarBitacora
-            // 
-            this.btnEliminarBitacora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
-            this.btnEliminarBitacora.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnEliminarBitacora.BorderRadius = 30;
-            this.btnEliminarBitacora.BorderSize = 0;
-            this.btnEliminarBitacora.FlatAppearance.BorderSize = 0;
-            this.btnEliminarBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarBitacora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarBitacora.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarBitacora.Image = global::Vistas.Properties.Resources.eliminar;
-            this.btnEliminarBitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminarBitacora.Location = new System.Drawing.Point(4, 152);
-            this.btnEliminarBitacora.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
-            this.btnEliminarBitacora.Name = "btnEliminarBitacora";
-            this.btnEliminarBitacora.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEliminarBitacora.Size = new System.Drawing.Size(263, 41);
-            this.btnEliminarBitacora.TabIndex = 7;
-            this.btnEliminarBitacora.Text = "Eliminar";
-            this.btnEliminarBitacora.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminarBitacora.UseVisualStyleBackColor = false;
-            // 
-            // redondearBoton1
-            // 
-            this.redondearBoton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
-            this.redondearBoton1.BorderColor = System.Drawing.Color.Aquamarine;
-            this.redondearBoton1.BorderRadius = 30;
-            this.redondearBoton1.BorderSize = 0;
-            this.redondearBoton1.FlatAppearance.BorderSize = 0;
-            this.redondearBoton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.redondearBoton1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.redondearBoton1.ForeColor = System.Drawing.Color.White;
-            this.redondearBoton1.Image = ((System.Drawing.Image)(resources.GetObject("redondearBoton1.Image")));
-            this.redondearBoton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.redondearBoton1.Location = new System.Drawing.Point(138, 107);
-            this.redondearBoton1.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
-            this.redondearBoton1.Name = "redondearBoton1";
-            this.redondearBoton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.redondearBoton1.Size = new System.Drawing.Size(130, 39);
-            this.redondearBoton1.TabIndex = 8;
-            this.redondearBoton1.Text = "Editar";
-            this.redondearBoton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.redondearBoton1.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
-            this.btnEliminar.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnEliminar.BorderRadius = 30;
-            this.btnEliminar.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Image = global::Vistas.Properties.Resources.eliminar;
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(27, 55);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEliminar.Size = new System.Drawing.Size(169, 46);
-            this.btnEliminar.TabIndex = 6;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(179)))), ((int)(((byte)(163)))));
-            this.btnEditar.BorderColor = System.Drawing.Color.Aquamarine;
-            this.btnEditar.BorderRadius = 30;
-            this.btnEditar.BorderSize = 0;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(27, 3);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 3, 50, 3);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEditar.Size = new System.Drawing.Size(169, 46);
-            this.btnEditar.TabIndex = 4;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnRegresar
             // 
