@@ -74,5 +74,26 @@ namespace Modelos.Entidades
             add.Fill(virtualTable);
             return virtualTable;
         }
+
+        public bool ActualizarProyectos()
+
+        {
+            SqlConnection conexion = Conexion.Conectar();
+            string comando = "UPDATE Proyecto set nombreProyecto=@nombreProyecto," + "estadoProyecto=@estadoProyecto where idProyecto=@id";
+            SqlCommand cmd = new SqlCommand(comando , conexion);
+            cmd.Parameters.AddWithValue("@nombreProyecto", nombreProyecto);
+            cmd.Parameters.AddWithValue("@estadoProyecto", estadoProyecto);
+            cmd.Parameters.AddWithValue("@id", idProyecto);
+            if(cmd.ExecuteNonQuery()>0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+
+            }
+
+        }
     }
 }

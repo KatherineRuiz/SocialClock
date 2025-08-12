@@ -143,7 +143,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.50746F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.49254F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 350F));
             this.tableLayoutPanel4.Controls.Add(this.panel4, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
@@ -162,9 +162,9 @@
             this.panel4.Controls.Add(this.btnAgregar);
             this.panel4.Controls.Add(this.btnEditar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(957, 3);
+            this.panel4.Location = new System.Drawing.Point(956, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(344, 156);
+            this.panel4.Size = new System.Drawing.Size(345, 156);
             this.panel4.TabIndex = 1;
             // 
             // btnEliminar
@@ -259,7 +259,7 @@
             this.tableLayoutPanel6.Controls.Add(this.lblRol, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.lblEstadoUsuario, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(466, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(465, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.62385F));
@@ -371,13 +371,13 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.63935F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(457, 156);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(456, 156);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // txtClave
             // 
             this.txtClave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtClave.Location = new System.Drawing.Point(210, 98);
+            this.txtClave.Location = new System.Drawing.Point(209, 98);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(244, 34);
             this.txtClave.TabIndex = 7;
@@ -385,7 +385,7 @@
             // txtUsuario
             // 
             this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsuario.Location = new System.Drawing.Point(211, 20);
+            this.txtUsuario.Location = new System.Drawing.Point(210, 20);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(242, 34);
             this.txtUsuario.TabIndex = 8;

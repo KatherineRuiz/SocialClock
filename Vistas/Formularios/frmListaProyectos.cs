@@ -95,6 +95,65 @@ namespace Vistas.Formularios
             }
         }
 
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            Proyecto p = new Proyecto();
+            p.NombreProyecto = txtNombreProyecto.Text;
+            if (rbnActivo.Checked == true)
+            {
+                p.EstadoProyecto = false;
+            }
+            else
+            {
+                p.EstadoProyecto = true;
 
+            }
+
+            p.InsertarProyecto();
+            MessageBox.Show("Exito", "Datos ingresados correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            mostrarProyecto();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Proyecto p = new Proyecto();
+            p.NombreProyecto = txtNombreProyecto.Text;
+            if (rbnActivo.Checked == true)
+            {
+                p.EstadoProyecto = false;
+            }
+            else
+            {
+                p.EstadoProyecto = true;
+
+            }
+            p.IdProyecto = int.Parse(dgvContenido.CurrentRow.Cells[0].Value.ToString());
+            if(p.ActualizarProyectos()==true)
+            {
+                mostrarProyecto();
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error , intenta de nuevo.","Error");
+            }
+        }
+
+        private void dgvContenido_DoubleClick(object sender, EventArgs e)
+        {
+            txtNombreProyecto.Text = dgvContenido.CurrentRow.Cells[1].Value.ToString();
+            if (dgvContenido.CurrentRow.Cells[2].Value.ToString()=="ACTIVO") {
+            rbnActivo.Checked = true;
+            }
+            else { 
+            rbnInactivo.Checked = true;
+            
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombreProyecto.Text = "";
+
+        }
     }
 }

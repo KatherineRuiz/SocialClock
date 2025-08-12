@@ -10,14 +10,14 @@ namespace Modelos
 {
     public class Conexion
     {
-        private static string servidor = "LAB03-DS-EQ08\\SQLEXPRESS";
+        private static string servidor = "LAB03-DS-EQ09\\SQLEXPRESS";
         private static string baseDeDatos = "Social_Clock";
 
         public static SqlConnection Conectar()
         {
             //creamos una cadena de conexion
             string cadena =
-                $"Data Source = {servidor},57157;Initial Catalog = {baseDeDatos};Integrated Security = true;";
+                $"Data Source = {servidor},61798;Initial Catalog = {baseDeDatos};Integrated Security = true;";
 
             //Creamos un objeto de tipo SqlConnection
             SqlConnection con = new SqlConnection(cadena);
