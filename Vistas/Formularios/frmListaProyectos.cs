@@ -130,6 +130,7 @@ namespace Vistas.Formularios
             p.IdProyecto = int.Parse(dgvContenido.CurrentRow.Cells[0].Value.ToString());
             if(p.ActualizarProyectos()==true)
             {
+                MessageBox.Show("Datos Actualizados correctamente","Exito");
                 mostrarProyecto();
             }
             else
@@ -153,6 +154,85 @@ namespace Vistas.Formularios
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txtNombreProyecto.Text = "";
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            // Verificar que haya una fila seleccionada
+            if (dgvContenido.SelectedRows.Count > 0)
+            {
+                try
+                {
+                   
+                    object valorId = dgvContenido.SelectedRows[0].Cells["Num."].Value;
+
+                    if (valorId == null || valorId == DBNull.Value)
+                    {
+                        MessageBox.Show("No se encontró el ID del proyecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    int idProyecto = Convert.ToInt32(valorId);
+
+                    // Confirmar antes de eliminar
+                    DialogResult confirm = MessageBox.Show(
+                        "¿Está seguro de eliminar este proyecto?",
+                        "Confirmar eliminación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning
+                    );
+
+                    if (confirm == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            Proyecto proyecto = new Proyecto();
+                            bool eliminado = proyecto.EliminarProyectos(idProyecto);
+
+                            if (eliminado)
+                            {
+                                MessageBox.Show("Proyecto eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                // Recargar el DataGridView usando método estático
+                                try
+                                {
+                                    dgvContenido.DataSource = Proyecto.cargarTodosProyectos();
+                                }
+                                catch (Exception exRecarga)
+                                {
+                                    MessageBox.Show("Error al recargar los datos: " + exRecarga.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se pudo eliminar el proyecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        catch (Exception exEliminar)
+                        {
+                            MessageBox.Show("Error al eliminar el proyecto: " + exEliminar.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un proyecto para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void frmListaProyectos_Load(object sender, EventArgs e)
+        {
 
         }
     }

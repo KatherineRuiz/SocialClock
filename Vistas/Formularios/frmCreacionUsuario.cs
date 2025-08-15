@@ -78,6 +78,9 @@ namespace Vistas.Formularios
             MostrarUsuario();
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -37,16 +37,22 @@ namespace Vistas.Formularios
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            // Validar que los campos no estén vacíos
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtClave.Text))
+            {
+                MessageBox.Show("Por favor, ingrese el usuario y la contraseña.", "Campos vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Crear instancia de Usuario y consultar clave en la base de datos
             Usuario usr = new Usuario();
+            string claveBD = usr.ConsultarClave(txtUsuario.Text);
 
-            string claveBD = "";
-            claveBD = usr.ConsultarClave(txtUsuario.Text);
-
-            //MessageBox.Show("claveBD " + claveBD, "Error");
             if (claveBD != null)
             {
                 if (txtClave.Text == claveBD)
                 {
+                    
                     frmSocialClock fe = new frmSocialClock();
                     fe.Show();
                     this.Hide();
@@ -60,8 +66,8 @@ namespace Vistas.Formularios
             {
                 MessageBox.Show("Usuario y/o clave no coinciden", "Error");
             }
-            
         }
+
 
         private void frmLogin_Load(object sender, EventArgs e)
         {

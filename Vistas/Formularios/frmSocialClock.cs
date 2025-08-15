@@ -75,9 +75,17 @@ namespace Vistas.Formularios
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            DialogResult confirm = MessageBox.Show(
+                        "¿Está seguro que quieres salir?",
+                        "Confirmar eliminación",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning
+                    );
+            if ( confirm == DialogResult.Yes ) {
             frmSeleccionDeRol se = new frmSeleccionDeRol();
             se.Show();
             this.Close();
+            }
         }
 
         private void btnProyecto_Click(object sender, EventArgs e)

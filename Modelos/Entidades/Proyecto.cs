@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Forms;
 
 namespace Modelos.Entidades
 {
@@ -95,5 +97,34 @@ namespace Modelos.Entidades
             }
 
         }
+        public bool EliminarProyectos(int idProyecto)
+        {
+            SqlConnection conexion = null;
+            try
+            {
+                conexion = Conexion.Conectar();
+                string consultaDelete = "DELETE FROM Proyecto WHERE idProyecto = @idProyecto";
+                SqlCommand delete = new SqlCommand(consultaDelete, conexion);
+                delete.Parameters.AddWithValue("@idProyecto", idProyecto);
+
+                int filasAfectadas = delete.ExecuteNonQuery();
+
+                return filasAfectadas > 0; 
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("No se pudo eliminar el proyecto, intente de nuevo.\nError: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false; 
+            }
+            finally
+            {
+                if (conexion != null && conexion.State == ConnectionState.Open)
+                {
+                    conexion.Close();
+                }
+            }
+        }
+
     }
 }
