@@ -10,8 +10,10 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace Vistas.Formularios
 {
@@ -22,6 +24,7 @@ namespace Vistas.Formularios
             InitializeComponent();
             mostrarProyecto();
             proyectoConexion();
+            CargarDataGrid();
 
         }
         private void RedondearPanel(Panel panel, int radio)
@@ -234,6 +237,82 @@ namespace Vistas.Formularios
         private void frmListaProyectos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dgvContenido.DataSource = null;
+                dgvContenido.DataSource = Proyecto.Buscar(txtNombreProyecto.Text);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Intenta de nuevo", "Error" + ex);
+
+            }
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BitacoraSocial bitacora = new BitacoraSocial
+                {
+                    IdEstudiante = int.Parse(txtEstudianteBitacora.Text),
+                    RegistroHoras = int.Parse(txtHoras.Text),
+                    Descripcion = txtActvidad.Text,
+                    FechaBitacora = dtpFechaBitacora.Value.Date
+                };
+
+                if (bitacora.InsertarBitacoraSocial())
+                {
+                    MessageBox.Show("Registro guardado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Limpiar campos
+                    txtEstudianteBitacora.Clear();
+                    txtHoras.Clear();
+                    txtActvidad.Clear();
+
+                    // Actualizar DataGridView
+                    CargarDataGrid();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar el registro", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar.\nDetalle: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLimpiarBitacora_Click(object sender, EventArgs e)
+        {
+            txtEstudianteBitacora.Text = "";
+            txtHoras.Text = "";
+            txtActvidad.Text = "";
+        }
+
+        private void dgvBitacoraEstudiantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow fila = dgvBitacoraEstudiantes.Rows[e.RowIndex];
+
+                txtEstudianteBitacora.Text = fila.Cells["Estudiante"].Value.ToString();
+                txtHoras.Text = fila.Cells["Horas"].Value.ToString();
+                txtActvidad.Text = fila.Cells["Actividad"].Value.ToString();
+                dtpFechaBitacora.Value = Convert.ToDateTime(fila.Cells["Fecha"].Value);
+            }
+        }
+
+        private void CargarDataGrid()
+        {
+            BitacoraSocial bitacora = new BitacoraSocial();
+            dgvBitacoraEstudiantes.DataSource = bitacora.MostrarBitacoraSocial();
         }
     }
 }

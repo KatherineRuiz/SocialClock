@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using MessageBox = System.Windows.MessageBox;
 
 namespace Modelos.Entidades
 {
@@ -58,6 +59,8 @@ namespace Modelos.Entidades
                 return false;
             }
         }
+
+
         public static DataTable cargarEstudianteProyecto()
         {
 
@@ -125,6 +128,39 @@ namespace Modelos.Entidades
                 }
             }
         }
+
+        public static DataTable Buscar(string termino)
+        {
+            try
+            {
+                SqlConnection connection = Conexion.Conectar();
+                string Comando = @"SELECT 
+                               idProyecto AS NUM,
+                               nombreProyecto AS Proyecto, 
+                               CASE estadoProyecto
+                                   WHEN 0 THEN 'ACTIVO'
+                                   WHEN 1 THEN 'INACTIVO'
+                               END AS [Estado]
+                           FROM Proyecto
+                           WHERE nombreProyecto LIKE @termino";
+
+                SqlDataAdapter ad = new SqlDataAdapter(Comando, connection);
+                ad.SelectCommand.Parameters.AddWithValue("@termino", "%" + termino + "%");
+
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo buscar el registro.\nDetalle: " + ex.Message,
+                                "Error",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Error);
+                return null;
+            }
+        }
+
 
     }
 }

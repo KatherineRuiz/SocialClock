@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\Conexion.cs" />
+    <Compile Include="Entidades\BitacoraSocial.cs" />
     <Compile Include="Entidades\Especialidad.cs" />
     <Compile Include="Entidades\Estudiante.cs" />
     <Compile Include="Entidades\NivelAcademico.cs" />
