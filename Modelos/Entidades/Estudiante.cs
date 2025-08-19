@@ -251,6 +251,86 @@ namespace Modelos.Entidades
             }
         }
 
+        public bool CarnetEstudiante(string carnet)
+        {
+            SqlConnection conexion = Conexion.Conectar();
+
+            string consultaQuery = "select Estudiante.idEstudiante As [N°], carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
+                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante" +
+                "\r\nwhen 0 then 'ACTIVO'" +
+                "\r\nwhen 1 then 'INACTIVO'" +
+                "\r\nEND As [Estado],\r\nProyecto.nombreProyecto As [Proyecto], BitacoraSocial.registroHoras As [No. Horas]" +
+                "\r\nfrom Estudiante " +
+                "\r\nLEFT JOIN \r\nBitacoraSocial on BitacoraSocial.idEstudiante = Estudiante.idEstudiante" +
+                "\r\nINNER JOIN\r\nProyecto on Estudiante.id_Proyecto = Proyecto.idProyecto" +
+                "\r\nINNER JOIN\r\nEsp_Niv_Sec on Estudiante.id_EspNivSec = Esp_Niv_Sec.idEsp_Niv_Sec" +
+                "\r\nINNER JOIN\r\nEspecialidad on Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad" +
+                "\r\nINNER JOIN \r\nNivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico" +
+                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where carnet = @carnet;";
+            using (SqlCommand cmd = new SqlCommand(consultaQuery, conexion))
+            {
+                cmd.Parameters.AddWithValue("@carnet", carnet);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Busqueda exitosa");
+                    return true;
+                }
+                else
+                {
+
+                    MessageBox.Show("El usuario no fue encontrado");
+                    return false;
+                }
+            }
+        }
+
+        public static DataTable CargarBusqueda(string carnet)
+        {
+            //Creamos una variable de tipo SqlConnection y llamamos al metodo de la clase Conexion
+            SqlConnection conexion = Conexion.Conectar();
+
+            string consultaQuery = "select Estudiante.idEstudiante As [N°], carnet As [Carnet], nombreEstudiante As [Nombre],Especialidad.nombreEspecialidad As [Especialidad]," +
+                "\r\nNivelAcademico.nombreNivel As [Nivel académico], Seccion.nombreSeccion As [Seccion], nie As [NIE], CASE estadoEstudiante" +
+                "\r\nwhen 0 then 'ACTIVO'" +
+                "\r\nwhen 1 then 'INACTIVO'" +
+                "\r\nEND As [Estado],\r\nProyecto.nombreProyecto As [Proyecto], BitacoraSocial.registroHoras As [No. Horas]" +
+                "\r\nfrom Estudiante " +
+                "\r\nLEFT JOIN \r\nBitacoraSocial on BitacoraSocial.idEstudiante = Estudiante.idEstudiante" +
+                "\r\nINNER JOIN\r\nProyecto on Estudiante.id_Proyecto = Proyecto.idProyecto" +
+                "\r\nINNER JOIN\r\nEsp_Niv_Sec on Estudiante.id_EspNivSec = Esp_Niv_Sec.idEsp_Niv_Sec" +
+                "\r\nINNER JOIN\r\nEspecialidad on Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad" +
+                "\r\nINNER JOIN \r\nNivelAcademico on Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico" +
+                "\r\nINNER JOIN \r\nSeccion on Esp_Niv_Sec.id_Seccion = Seccion.idSeccion where carnet = @carnet;";
+
+            using (SqlCommand cmd = new SqlCommand(consultaQuery, conexion))
+            {
+                cmd.Parameters.AddWithValue("@carnet", carnet);
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Busqueda exitosa");
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no fue encontrado");
+                }
+            }
+            //Creamos un objeto de tipo SqlDataAdapter para obtener el resultado completo
+            SqlDataAdapter add = new SqlDataAdapter(consultaQuery, conexion);
+            //Creamos un objeto DataTable, una tabla donde se guardara la informacion
+            DataTable dataVirtual = new DataTable();
+            //Pasamos la informacion de adaptador a la tabla
+            try
+            {
+                add.Fill(dataVirtual);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo realizar la busqueda" + ex);
+            }
+
+            return dataVirtual;
+        }
+
     }
 
 

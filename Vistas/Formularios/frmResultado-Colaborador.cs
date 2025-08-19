@@ -16,5 +16,7 @@ namespace Vistas.Formularios
         {
             InitializeComponent();
         }
+
+       
     }
 }

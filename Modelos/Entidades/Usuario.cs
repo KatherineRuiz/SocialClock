@@ -31,12 +31,35 @@ namespace Modelos.Entidades
 
             using (SqlConnection conexion = Conexion.Conectar())
             {
-                string consultaQuery = "SELECT clave FROM Usuario WHERE nombreUsuario = @usr";
+                string consultaQuery = "SELECT clave FROM Usuario WHERE nombreUsuario = @usr and id_Rol = 1";
 
                 using (SqlCommand cmd = new SqlCommand(consultaQuery, conexion))
                 {
                     cmd.Parameters.AddWithValue("@usr", user);
 
+                    object valor = cmd.ExecuteScalar();
+
+                    if (valor != null)
+                    {
+                        resultado = valor.ToString();
+                    }
+                }
+            }
+
+            return resultado;
+        }
+
+        public string ConsultarClaveColaborador(string user)
+        {
+            string resultado = "";
+
+            using (SqlConnection conexion = Conexion.Conectar())
+            {
+                string consultaQuery = "SELECT clave FROM Usuario WHERE nombreUsuario = @usr and id_Rol = 2";
+
+                using (SqlCommand cmd = new SqlCommand(consultaQuery, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@usr", user);
                     object valor = cmd.ExecuteScalar();
 
                     if (valor != null)

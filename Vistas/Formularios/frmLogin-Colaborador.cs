@@ -23,7 +23,7 @@ namespace Vistas.Formularios
             Usuario usr = new Usuario();
 
             string claveBD = "";
-            claveBD = usr.ConsultarClave(txtUsuario.Text);
+            claveBD = usr.ConsultarClaveColaborador(txtUsuario.Text);
 
             //MessageBox.Show("claveBD " + claveBD, "Error");
             if (claveBD != null)

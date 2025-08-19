@@ -149,7 +149,7 @@
             this.btnColaborador.FlatAppearance.BorderSize = 0;
             this.btnColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnColaborador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnColaborador.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnColaborador.ForeColor = System.Drawing.Color.Transparent;
             this.btnColaborador.Image = global::Vistas.Properties.Resources.colaboradores;
             this.btnColaborador.Location = new System.Drawing.Point(130, 47);
             this.btnColaborador.Margin = new System.Windows.Forms.Padding(2);
@@ -167,7 +167,7 @@
             this.btnAdministrador.FlatAppearance.BorderSize = 0;
             this.btnAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdministrador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdministrador.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAdministrador.ForeColor = System.Drawing.Color.Transparent;
             this.btnAdministrador.Image = global::Vistas.Properties.Resources.admin;
             this.btnAdministrador.Location = new System.Drawing.Point(2, 47);
             this.btnAdministrador.Margin = new System.Windows.Forms.Padding(2);

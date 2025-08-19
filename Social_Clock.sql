@@ -434,8 +434,8 @@ insert into Estudiante values
 ('Ariela Melissa Barahona Carranza',20237449,'448559',0,12,1);
 
 insert into BitacoraSocial values 
-(50, 'Creación de stand cultural', 2025/11/26),	
-(40, 'Participación en obra de teatro', 2);
+(50, 'Creación de stand cultural', '2025/8/26', 1),	
+(40, 'Participación en obra de teatro','2025/4/26', 2);
 
 delete Estudiante where idEstudiante=21
 
