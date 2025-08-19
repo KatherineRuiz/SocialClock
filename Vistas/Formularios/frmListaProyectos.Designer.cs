@@ -68,11 +68,12 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtHoras = new System.Windows.Forms.TextBox();
             this.dtpFechaBitacora = new System.Windows.Forms.DateTimePicker();
+            this.txtEstudianteBitacora = new System.Windows.Forms.TextBox();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEstudianteBitacora = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new Vistas.Clases.RedondearBoton();
             this.btnAgregar = new Vistas.Clases.RedondearBoton();
             this.btnEditar = new Vistas.Clases.RedondearBoton();
@@ -189,7 +190,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.5885F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.4115F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 549F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 553F));
             this.tableLayoutPanel5.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.lblEstado, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnLimpiar, 2, 0);
@@ -208,10 +209,10 @@
             this.panel5.Controls.Add(this.rbnInactivo);
             this.panel5.Controls.Add(this.rbnActivo);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(525, 4);
+            this.panel5.Location = new System.Drawing.Point(523, 4);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(694, 27);
+            this.panel5.Size = new System.Drawing.Size(692, 27);
             this.panel5.TabIndex = 21;
             // 
             // rbnInactivo
@@ -220,7 +221,7 @@
             this.rbnInactivo.AutoSize = true;
             this.rbnInactivo.Font = new System.Drawing.Font("Century Gothic", 21.75F);
             this.rbnInactivo.ForeColor = System.Drawing.Color.Black;
-            this.rbnInactivo.Location = new System.Drawing.Point(298, -14);
+            this.rbnInactivo.Location = new System.Drawing.Point(297, -14);
             this.rbnInactivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbnInactivo.Name = "rbnInactivo";
             this.rbnInactivo.Size = new System.Drawing.Size(186, 48);
@@ -249,7 +250,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Century Gothic", 21.75F);
             this.lblEstado.ForeColor = System.Drawing.Color.Black;
-            this.lblEstado.Location = new System.Drawing.Point(186, 0);
+            this.lblEstado.Location = new System.Drawing.Point(185, 0);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(148, 35);
             this.lblEstado.TabIndex = 19;
@@ -261,7 +262,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.34434F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.65566F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 360F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 288F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 292F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.btnAgregar, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblNombreProyecto, 0, 0);
@@ -283,7 +284,7 @@
             this.lblNombreProyecto.AutoSize = true;
             this.lblNombreProyecto.Font = new System.Drawing.Font("Century Gothic", 21.75F);
             this.lblNombreProyecto.ForeColor = System.Drawing.Color.Black;
-            this.lblNombreProyecto.Location = new System.Drawing.Point(54, 15);
+            this.lblNombreProyecto.Location = new System.Drawing.Point(53, 15);
             this.lblNombreProyecto.Name = "lblNombreProyecto";
             this.lblNombreProyecto.Size = new System.Drawing.Size(413, 44);
             this.lblNombreProyecto.TabIndex = 0;
@@ -292,7 +293,7 @@
             // txtNombreProyecto
             // 
             this.txtNombreProyecto.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNombreProyecto.Location = new System.Drawing.Point(525, 18);
+            this.txtNombreProyecto.Location = new System.Drawing.Point(523, 18);
             this.txtNombreProyecto.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreProyecto.Multiline = true;
             this.txtNombreProyecto.Name = "txtNombreProyecto";
@@ -603,7 +604,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.85619F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.14381F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 432F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 436F));
             this.tableLayoutPanel4.Controls.Add(this.lblFecha, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtHoras, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.dtpFechaBitacora, 2, 0);
@@ -622,7 +623,7 @@
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFecha.ForeColor = System.Drawing.Color.Black;
-            this.lblFecha.Location = new System.Drawing.Point(206, 2);
+            this.lblFecha.Location = new System.Drawing.Point(203, 2);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(143, 44);
@@ -636,7 +637,7 @@
             this.txtHoras.Location = new System.Drawing.Point(4, 5);
             this.txtHoras.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoras.Name = "txtHoras";
-            this.txtHoras.Size = new System.Drawing.Size(193, 37);
+            this.txtHoras.Size = new System.Drawing.Size(191, 37);
             this.txtHoras.TabIndex = 8;
             this.txtHoras.Text = "         ";
             // 
@@ -644,14 +645,21 @@
             // 
             this.dtpFechaBitacora.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpFechaBitacora.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaBitacora.Location = new System.Drawing.Point(358, 4);
+            this.dtpFechaBitacora.Location = new System.Drawing.Point(354, 4);
             this.dtpFechaBitacora.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaBitacora.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtpFechaBitacora.MinDate = new System.DateTime(1900, 1, 1, 16, 29, 0, 0);
             this.dtpFechaBitacora.Name = "dtpFechaBitacora";
-            this.dtpFechaBitacora.Size = new System.Drawing.Size(425, 37);
+            this.dtpFechaBitacora.Size = new System.Drawing.Size(429, 37);
             this.dtpFechaBitacora.TabIndex = 10;
             this.dtpFechaBitacora.Value = new System.DateTime(2025, 8, 9, 16, 29, 5, 0);
+            // 
+            // txtEstudianteBitacora
+            // 
+            this.txtEstudianteBitacora.Location = new System.Drawing.Point(520, 3);
+            this.txtEstudianteBitacora.Name = "txtEstudianteBitacora";
+            this.txtEstudianteBitacora.Size = new System.Drawing.Size(416, 41);
+            this.txtEstudianteBitacora.TabIndex = 11;
             // 
             // radioButton8
             // 
@@ -672,6 +680,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.redondearBoton1);
             this.panel2.Controls.Add(this.btnVerBitacora);
             this.panel2.Controls.Add(this.btnLimpiarBitacora);
@@ -682,6 +691,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(419, 184);
             this.panel2.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(352, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 159);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -706,13 +726,6 @@
             this.label2.Size = new System.Drawing.Size(769, 56);
             this.label2.TabIndex = 2;
             this.label2.Text = "Estudiantes del proyecto";
-            // 
-            // txtEstudianteBitacora
-            // 
-            this.txtEstudianteBitacora.Location = new System.Drawing.Point(520, 3);
-            this.txtEstudianteBitacora.Name = "txtEstudianteBitacora";
-            this.txtEstudianteBitacora.Size = new System.Drawing.Size(416, 41);
-            this.txtEstudianteBitacora.TabIndex = 11;
             // 
             // btnLimpiar
             // 
@@ -747,7 +760,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(1165, 7);
+            this.btnAgregar.Location = new System.Drawing.Point(1161, 7);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(277, 59);
@@ -769,7 +782,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(1520, 8);
+            this.btnEditar.Location = new System.Drawing.Point(1518, 8);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
@@ -966,5 +979,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button txtBuscar;
         private System.Windows.Forms.TextBox txtEstudianteBitacora;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -25,7 +25,7 @@ namespace Vistas.Formularios
             mostrarProyecto();
             proyectoConexion();
             CargarDataGrid();
-
+            
         }
         private void RedondearPanel(Panel panel, int radio)
         {
@@ -168,69 +168,40 @@ namespace Vistas.Formularios
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             // Verificar que haya una fila seleccionada
-            if (dgvContenido.SelectedRows.Count > 0)
+            try
             {
-                try
+                if (dgvContenido.CurrentRow == null) return;
+
+                if (!int.TryParse(dgvContenido.CurrentRow.Cells[0].Value?.ToString(), out int id))
                 {
-                   
-                    object valorId = dgvContenido.SelectedRows[0].Cells["Num."].Value;
-
-                    if (valorId == null || valorId == DBNull.Value)
-                    {
-                        MessageBox.Show("No se encontró el ID del proyecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    int idProyecto = Convert.ToInt32(valorId);
-
-                    // Confirmar antes de eliminar
-                    DialogResult confirm = MessageBox.Show(
-                        "¿Está seguro de eliminar este proyecto?",
-                        "Confirmar eliminación",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Warning
-                    );
-
-                    if (confirm == DialogResult.Yes)
-                    {
-                        try
-                        {
-                            Proyecto proyecto = new Proyecto();
-                            bool eliminado = proyecto.EliminarProyectos(idProyecto);
-
-                            if (eliminado)
-                            {
-                                MessageBox.Show("Proyecto eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                // Recargar el DataGridView usando método estático
-                                try
-                                {
-                                    dgvContenido.DataSource = Proyecto.cargarTodosProyectos();
-                                }
-                                catch (Exception exRecarga)
-                                {
-                                    MessageBox.Show("Error al recargar los datos: " + exRecarga.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("No se pudo eliminar el proyecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
-                        catch (Exception exEliminar)
-                        {
-                            MessageBox.Show("Error al eliminar el proyecto: " + exEliminar.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
+                    MessageBox.Show("ID no válido");
+                    return;
                 }
-                catch (Exception ex)
+
+                string registroAEliminar = dgvContenido.CurrentRow.Cells[1].Value?.ToString();
+                DialogResult respuesta = MessageBox.Show("¿Quieres eliminar este registro?\n" + registroAEliminar,
+                                                         "Eliminar registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (respuesta == DialogResult.Yes)
                 {
-                    MessageBox.Show("Error inesperado: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Crear instancia y asignar id
+                    BitacoraSocial bitacora = new BitacoraSocial();
+                    bitacora.IdBitacora = id;
+
+                    if (bitacora.eliminarBitacora(id))
+                    {
+                        MessageBox.Show("Registro eliminado\n" + registroAEliminar, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarDataGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Seleccione un proyecto para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -258,10 +229,27 @@ namespace Vistas.Formularios
         {
             try
             {
+                // Validar ID del estudiante
+                if (!int.TryParse(txtEstudianteBitacora.Text, out int idEstudiante))
+                {
+                    MessageBox.Show("Ingrese un ID de estudiante válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtEstudianteBitacora.Focus();
+                    return;
+                }
+
+                // Validar registro de horas
+                if (!int.TryParse(txtHoras.Text, out int horas))
+                {
+                    MessageBox.Show("Ingrese un número válido de horas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtHoras.Focus();
+                    return;
+                }
+
+                // Crear objeto bitacora
                 BitacoraSocial bitacora = new BitacoraSocial
                 {
-                    IdEstudiante = int.Parse(txtEstudianteBitacora.Text),
-                    RegistroHoras = int.Parse(txtHoras.Text),
+                    IdEstudiante = idEstudiante,
+                    RegistroHoras = horas,
                     Descripcion = txtActvidad.Text,
                     FechaBitacora = dtpFechaBitacora.Value.Date
                 };
@@ -289,6 +277,7 @@ namespace Vistas.Formularios
             }
         }
 
+
         private void btnLimpiarBitacora_Click(object sender, EventArgs e)
         {
             txtEstudianteBitacora.Text = "";
@@ -313,6 +302,62 @@ namespace Vistas.Formularios
         {
             BitacoraSocial bitacora = new BitacoraSocial();
             dgvBitacoraEstudiantes.DataSource = bitacora.MostrarBitacoraSocial();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvContenido.CurrentRow != null)
+                {
+                    // Obtenemos el ID desde la columna "ID" (alias en el SELECT)
+                    int id = Convert.ToInt32(dgvBitacoraEstudiantes.CurrentRow.Cells["ID"].Value);
+
+                    string registroAEliminar = dgvBitacoraEstudiantes.CurrentRow.Cells["Actividad"].Value.ToString();
+
+                    DialogResult respuesta = MessageBox.Show(
+                        "¿Quieres eliminar este registro?\n" + registroAEliminar,
+                        "Eliminando un registro",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question
+                    );
+
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        BitacoraSocial bitacora = new BitacoraSocial();
+
+                        if (bitacora.eliminarBitacora(id))
+                        {
+                            MessageBox.Show(
+                                "Registro eliminado\n" + registroAEliminar,
+                                "Eliminando",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                            );
+
+                            // Recargar el DataGridView
+                            dgvBitacoraEstudiantes.DataSource = bitacora.MostrarBitacoraSocial();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo eliminar el registro.");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debes seleccionar una fila para eliminar.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "No se pudo eliminar, intente de nuevo\nError: " + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
         }
     }
 }
