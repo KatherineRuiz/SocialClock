@@ -50,6 +50,65 @@ namespace Modelos.Entidades
             }
         }
 
+        public static DataTable Buscar(string termino)
+        {
+            try
+            {
+                using (SqlConnection conn = Conexion.Conectar())
+                {
+                    string query = @"
+            SELECT  
+                Estudiante.carnet AS [Carnet],  
+                Estudiante.nombreEstudiante AS [Nombre],  
+                Especialidad.nombreEspecialidad AS [Especialidad],  
+                NivelAcademico.nombreNivel AS [Nivel académico],  
+                Seccion.nombreSeccion AS [Seccion],  
+                Estudiante.nie AS [NIE],  
+                CASE Estudiante.estadoEstudiante  
+                    WHEN 0 THEN 'ACTIVO'  
+                    WHEN 1 THEN 'INACTIVO'  
+                END AS [Estado],  
+                Proyecto.nombreProyecto AS [Proyecto],  
+                BitacoraSocial.registroHoras AS [No. Horas]  
+
+            FROM Estudiante 
+            LEFT JOIN BitacoraSocial  
+                ON BitacoraSocial.idEstudiante = Estudiante.idEstudiante  
+            INNER JOIN Proyecto  
+                ON Estudiante.id_Proyecto = Proyecto.idProyecto  
+            INNER JOIN Esp_Niv_Sec  
+                ON Estudiante.id_EspNivSec = Esp_Niv_Sec.idEsp_Niv_Sec  
+            INNER JOIN Especialidad  
+                ON Esp_Niv_Sec.id_Especialidad = Especialidad.idEspecialidad  
+            INNER JOIN NivelAcademico  
+                ON Esp_Niv_Sec.id_NivelAcademico = NivelAcademico.idNivelAcademico  
+            INNER JOIN Seccion  
+                ON Esp_Niv_Sec.id_Seccion = Seccion.idSeccion  
+            WHERE (@termino = '' 
+                   OR Estudiante.nombreEstudiante LIKE @termino 
+                   OR Estudiante.carnet LIKE @termino 
+                   OR Estudiante.nie LIKE @termino)
+            ORDER BY Estudiante.nombreEstudiante;";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@termino", string.IsNullOrEmpty(termino) ? "" : "%" + termino + "%");
+
+                    SqlDataAdapter ad = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    ad.Fill(dt);
+
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al realizar la búsqueda:\n" + ex.Message, "Error SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable(); // Devuelve vacío si hay error
+            }
+        }
+
+
+
 
 
         public bool eliminarBitacora(int id)

@@ -82,21 +82,45 @@ namespace Vistas.Formularios
 
         private void dgvContenido_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Asegura que no sea encabezado
+            try
             {
-                // Leer los datos del registro seleccionado
-                DataGridViewRow fila = dgvContenido.Rows[e.RowIndex];
+                if (e.RowIndex >= 0) // Asegura que no sea encabezado
+                {
+                    DataGridViewRow fila = dgvContenido.Rows[e.RowIndex];
 
-                string id = fila.Cells["Num."].Value.ToString();
-                string Proyecto = fila.Cells["Proyecto"].Value.ToString();
+                    // Leer columnas necesarias
+                    string carnet = fila.Cells["Carnet"].Value.ToString();
+                    string nombre = fila.Cells["Nombre"].Value.ToString();
+                    string estado = fila.Cells["Estado"].Value.ToString();
+                    string proyecto = fila.Cells["Proyecto"].Value.ToString();
 
+                    txtBusqueda.Text = nombre;
+                  
 
-                // cbProyecto.Text = Proyecto ;
+                    // Rellenar RadioButton según Estado
+                    if (estado == "ACTIVO")
+                    {
+                        rbnActivo.Checked = true;
+                        rbnInactivo.Checked = false;
+                    }
+                    else if (estado == "INACTIVO")
+                    {
+                        rbnActivo.Checked = false;
+                        rbnInactivo.Checked = true;
+                    }
 
+                    
 
-                tabControl1.SelectedTab = tpEstudiantesProyecto;
+                    // Cambiar a la pestaña correspondiente
+                   // tabControl1.SelectedTab = tpEstudiantesProyecto;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al seleccionar el estudiante:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
@@ -314,6 +338,61 @@ namespace Vistas.Formularios
         {
 
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Limpiar el TextBox de búsqueda
+                txtBusqueda.Text = string.Empty;
+                txtEstudianteBitacora.Text = string.Empty;
+
+                // Limpiar los RadioButton 
+                rbnActivo.Checked = false;
+                rbnInactivo.Checked = false;
+                // Volver a cargar todos los datos en el DataGridView
+                DataTable dt = BitacoraSocial.Buscar(""); // Pasando cadena vacía traerá todos los registros
+                dgvContenido.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al reiniciar la búsqueda:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            txtActvidad.Text = "";
+            txtEstudianteBitacora.Text = "";
+            txtHoras.Text = "";
+
+        }
+
+        private void btnBusqueda_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string termino = txtBusqueda.Text.Trim();
+
+                DataTable resultado = BitacoraSocial.Buscar(termino);
+
+                if (resultado.Rows.Count > 0)
+                {
+                    dgvContenido.DataSource = resultado;
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron estudiantes con ese criterio.", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgvContenido.DataSource = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al realizar la búsqueda:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
     }
 }
