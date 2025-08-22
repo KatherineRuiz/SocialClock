@@ -25,7 +25,7 @@ namespace Vistas.Formularios
             mostrarProyecto();
             proyectoConexion();
             CargarDataGrid();
-            
+         
         }
         private void RedondearPanel(Panel panel, int radio)
         {
@@ -89,7 +89,8 @@ namespace Vistas.Formularios
                     DataGridViewRow fila = dgvContenido.Rows[e.RowIndex];
 
                     // Leer columnas necesarias
-                    string carnet = fila.Cells["Carnet"].Value.ToString();
+                    // string carnet = fila.Cells["Carnet"].Value.ToString();
+                    int numero = fila.Cells["Num"].Value();
                     string nombre = fila.Cells["Nombre"].Value.ToString();
                     string estado = fila.Cells["Estado"].Value.ToString();
                     string proyecto = fila.Cells["Proyecto"].Value.ToString();
@@ -181,6 +182,8 @@ namespace Vistas.Formularios
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txtNombreProyecto.Text = "";
+          rbnActivo.Checked=false;
+            rbnInactivo.Checked=false ;
 
         }
 
@@ -393,6 +396,39 @@ namespace Vistas.Formularios
             }
         }
 
+        private void rbnActivo_CheckedChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnEliminarProyecto_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                BitacoraSocial bitacora = new BitacoraSocial();
+                int id = int.Parse(dgvContenido.CurrentRow.Cells[0].Value.ToString());
+                ///Esto me sirve para indicar que registro quiero eliminar y que aparezca en el messagebox
+                string registroAEliminar = dgvContenido.CurrentRow.Cells[1].Value.ToString();
+                DialogResult respuesta = MessageBox.Show("Quieres eliminar este registro ? \n" + registroAEliminar, "Eliminando un registro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (respuesta == DialogResult.Yes)
+                {
+                    if (bitacora.eliminarBitacora(id) == true)
+                    {
+                        MessageBox.Show("Registro eliminado\n" + registroAEliminar, "Eliminando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        CargarDataGrid();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Registro no eliminado", "No seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("No se pudo eliminar , intenta de nuevo","Error catastrofico" + ex);
+            }
+        }
     }
 }
